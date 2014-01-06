@@ -1,7 +1,7 @@
 DJ
 ==
 
-DJ is a set of mixins build in SCSS and Compass.
+DJ is a set of mixins built in SCSS and Compass.
 
 My first attemp at a library.  Done whilst learning  CSS and SASS.
 
