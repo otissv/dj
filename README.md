@@ -20,7 +20,8 @@ Install
 -------
 
 1. Install Comapass. Instructions at http://compass-style.org/
-2. Clone this repo or downlaod from  into you project.
+2. Clone this repo git clone https://github.com/otissv/dj.git or
+   downlaod from https://github.com/otissv/dj/archive/master.zip and unzip into you project.
 3. At the top of your web project .scss file add  @import "dj";
 
 [Demo]
@@ -32,4 +33,4 @@ License
 
 MIT
 
-[Demo]:http://www.otis.com
+[Demo]:http://otissv.github.io/dj
