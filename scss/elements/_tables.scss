@@ -1,0 +1,109 @@
+/* Tables mixins */
+
+//Table
+table {
+  display:                                             inline-block;
+  text-align:                                          $dj-table-cell-align;
+  thead tr{
+    border:                                            0;
+  }
+	th, td {
+    padding:                                           $dj-table-cell-padding;
+  }
+  tr {
+    border-top:                                        $dj-table-border-width $dj-table-border-style $dj-table-border-color;
+    padding:                                           $dj-table-cell-padding;
+  }
+
+}
+
+//Bordered table
+@mixin dj-table-bordered {
+  @include dj-rounded-corners($dj-table-border-radius);
+  @include dj-shadow($dj-table-shadow-color,
+                  $dj-table-shadow-horizontal-offset,
+                  $dj-table-shadow-vertical-offset,
+                  $dj-table-shadow-blur,
+                  $dj-table-shadow-inset
+  );
+  @if $dj-borderless {
+      @include dj-borderless;
+    }
+  @else {
+    border:                                            $dj-table-border-width  $dj-table-border-style $dj-table-border-color;
+  }
+}
+
+//Table striped
+@mixin dj-table-striped {
+  tbody tr:nth-child(odd) {
+  	background-color:                                  $dj-table-striped-color;
+  }
+}
+
+
+//Table hover
+@mixin dj-table-hover{
+	tbody tr:hover {
+		background-color:                                  $dj-table-hover-color;
+	}
+}
+
+
+//Table condensed
+@mixin dj-table-condensed{
+	th, td {
+	 line-height:                                        $dj-table-condensed-line-height;
+	}
+}
+
+//Table responsive
+@mixin dj-table-responsive {
+  display:                                             block;
+  overflow:                                            $dj-table-overflow;
+}
+
+
+//Table flip
+@mixin dj-table-flip {
+  @include dj-clearfix;
+  display:                                           block;
+  thead, thead tr, tbody, th, td {
+    display:                                         block;
+  }
+  thead {
+    float:                                           $dj-thead-float;
+    tr {
+      border:                                        0;
+    }
+  }
+  tbody {
+    padding-bottom:                                  1px;
+    width:                                           auto;
+    overflow:                                        auto;
+    white-space:                                     nowrap;
+    font-size:                                       0;
+    tr {
+      display:                                       inline-block;
+      td {
+        font-size:                                   $dj-table-flip-td-font-size;
+      }
+    }
+  }
+  tr, th, td {
+    text-align:                                      $dj-table-cell-align;
+  }
+  th, td {
+    padding:                                         $dj-table-cell-padding;
+  }
+  th, {
+    font-weight:                                     $dj-th-font-weight;
+  }
+  tr {
+    padding:                                         0;
+    border-top:                                      0;
+    border-left:                                     $dj-table-border-width $dj-table-border-style $dj-table-border-color;
+  }
+
+}
+

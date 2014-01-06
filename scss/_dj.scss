@@ -1,0 +1,57 @@
+/* Semba config */
+
+//Base modules - do not reorder.
+@import "elements/normalize.scss";
+@import "compass";
+@import "elements/icons";
+@import "themes/theme";
+@import "elements/helpers";
+@import "elements/animations";
+@import "elements/fonts";
+@import "elements/typography";
+@import "elements/grid";
+@import "elements/buttons";
+@import "elements/tables";
+@import "elements/forms";
+@import "elements/panels";
+@import "elements/navigation";
+@import "elements/pagination";
+@import "elements/code";
+@import "elements/labels_badges";
+@import "elements/images";
+@import "elements/footer";
+
+
+/* Optional Modules
+*  Optional modules may include CSS classes.
+*  Uncomment only the modules that you are usinfg in your project.
+*/
+
+
+
+@mixin dj-overlay {
+	@include dj-fixed-full-screen;
+	background-color:                $dj-black;
+}
+
+
+@mixin dj-video-overlay {
+  @include dj-overlay;
+  > div {
+    margin:                                      auto;
+    max-width:                                   560px;
+    min-width:                                   $v-320;
+    max-height:                                  315px;
+    text-align:                                  right;
+    @include dj-full-screen;
+    > iframe {
+      width:                                     100%;
+      height:                                    85%;
+      display:                                   block;
+    }
+  }
+}
+
+
+
+

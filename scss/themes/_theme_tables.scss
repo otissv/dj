@@ -1,0 +1,37 @@
+/* Tables variables */
+$dj-table-border-radius:                                  $dj-border-radius;
+$dj-table-cell-align:                                     left;
+$dj-table-overflow:                                       auto;
+
+//table borders
+$dj-table-border-width:                                   $dj-border-width;
+$dj-table-border-color:                                   $dj-border-color;
+$dj-table-border-style:                                   $dj-border-style;
+$dj-table-border-collapse:                                collapse;
+$dj-table-cell-padding:                                   $dj-padding-1t $dj-padding $dj-padding-1t $dj-padding-1t;
+
+//table heading
+$dj-thead-float:                                          left;
+$dj-th-font-weight:                                       bold;
+
+//table colors
+$dj-table-background-color:                               transparent;
+$dj-table-hover-color:                                    $dj-gray-c;
+$dj-table-striped-color:                                  $dj-gray-e;
+
+//table condensed
+$dj-table-condensed-line-height:                          $dj-1;
+
+//table responsive
+$dj-table-responsive-width:                               100%;
+
+//table flipped
+$dj-table-flip-td-font-size:                              $dj-normal-font-size;
+
+// tabel shadow
+$dj-table-shadow-color:                                   $dj-shadow-color;
+$dj-table-shadow-horizontal-offset:                       $dj-shadow-horizontal-offset;
+$dj-table-shadow-vertical-offset:                         $dj-shadow-vertical-offset;
+$dj-table-shadow-blur:                                    $dj-shadow-blur;
+$dj-table-shadow-spread:                                  $dj-shadow-spread;
+$dj-table-shadow-inset:                                   false;

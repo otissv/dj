@@ -1,0 +1,144 @@
+/* Label and badge  */
+@mixin label-gradient($start-col, $end-col, $background-color) {
+  @if $dj-gradiants {
+    @include dj-gradients($start-col, $end-col);
+  }
+  @else {
+    background-color:                                   $background-color;
+  }
+}
+
+//labels
+@mixin dj-label {
+  font-size:                                           $dj-label-font-size;
+  display:                                             inline;
+  padding:                                             $dj-label-padding;
+  font-weight:                                         bold;
+  text-align:                                          bottom;
+  @include dj-rounded-corners($dj-label-border-radius);
+  @include dj-shadow ($dj-form-shadow-color,
+                  $dj-form-shadow-horizontal-offset,
+                  $dj-form-shadow-vertical-offset,
+                  $dj-form-shadow-blur,
+                  $dj-form-shadow-inset
+  );
+  color:                                               $dj-label-font-color;
+  @include panel-gradient($dj-label-gradient-start-col,
+                          $dj-label-gradient-end-col,
+                          $dj-label-background-color);
+}
+
+@mixin dj-label-primary {
+  @include dj-label;
+  color:                                               $dj-label-primary-font-color;
+  @include panel-gradient($dj-label-gradient-primary-start-col,
+                          $dj-label-gradient-primary-end-col,
+                          $dj-label-primary-background-color);
+}
+
+@mixin dj-label-info {
+  @include dj-label;
+  color:                                               $dj-label-info-font-color;
+  @include panel-gradient($dj-label-gradient-info-start-col,
+                          $dj-label-gradient-info-end-col,
+                          $dj-label-info-background-color);
+}
+
+@mixin dj-label-success {
+  @include dj-label;
+  color:                                               $dj-label-success-font-color;
+  @include panel-gradient($dj-label-gradient-success-start-col,
+                          $dj-label-gradient-success-end-col,
+                          $dj-label-success-background-color);
+}
+
+@mixin dj-label-warning {
+  @include dj-label;
+  color:                                               $dj-label-warning-font-color;
+  @include panel-gradient($dj-label-gradient-warning-start-col,
+                          $dj-label-gradient-warning-end-col,
+                          $dj-label-warning-background-color);
+}
+
+@mixin dj-label-danger {
+  @include dj-label;
+  color:                                               $dj-label-danger-font-color;
+  @include panel-gradient($dj-label-gradient-danger-start-col,
+                          $dj-label-gradient-danger-end-col,
+                          $dj-label-danger-background-color);
+}
+
+//Badges
+@mixin dj-badge-base {
+  font-weight:                                         $dj-badge-font-weight;
+  font-size:                                           $dj-badge-font-size;
+  margin:                                              $dj-badge-margin;
+}
+
+@mixin dj-badge {
+  @include dj-label;
+  @include dj-badge-base;
+}
+
+@mixin dj-badge-primary {
+  @include dj-label-primary;
+  @include dj-badge-base;
+}
+
+@mixin dj-badge-info {
+  @include dj-label-info;
+  @include dj-badge-base;
+}
+
+@mixin dj-badge-success {
+  @include dj-label-success;
+  @include dj-badge-base;
+}
+
+@mixin dj-badge-warning {
+  @include dj-label-warning;
+  @include dj-badge-base;
+}
+
+@mixin dj-badge-danger {
+  @include dj-label-danger;
+  @include dj-badge-base;
+}
+
+
+//badge pills
+@mixin dj-badge-pill {
+  @include dj-label;
+  @include dj-badge-base;
+  @include dj-pill;
+}
+
+@mixin dj-badge-pill-primary {
+  @include dj-label-primary;
+  @include dj-badge-base;
+  @include dj-pill;
+}
+
+@mixin dj-badge-pill-info {
+  @include dj-label-info;
+  @include dj-badge-base;
+  @include dj-pill;
+}
+
+@mixin dj-badge-pill-success {
+  @include dj-label-success;
+  @include dj-badge-base;
+  @include dj-pill;
+}
+
+@mixin dj-badge-pill-warning {
+  @include dj-label-warning;
+  @include dj-badge-base;
+  @include dj-pill;
+}
+
+@mixin dj-badge-pill-danger {
+  @include dj-label-danger;
+  @include dj-badge-base;
+  @include dj-pill;
+}

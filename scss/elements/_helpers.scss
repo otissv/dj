@@ -1,0 +1,225 @@
+/* helper mixins */
+
+//hide element
+.hide {
+  display:                           none;
+}
+
+//Show element
+.show {
+  display:                           initial;
+}
+
+//disable scrolling
+.noscroll {
+  overflow:                          hidden;
+}
+
+
+//clear floats
+@mixin dj-clearfix {
+  zoom: 1;
+  &:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+
+//positioning
+@mixin dj-on-top($val: 99999) {
+  z-index:                           $val;
+}
+
+@mixin dj-center-block($center-block-width) {
+  margin-left:                       auto;
+  margin-right:                      auto;
+  width:                             $center-block-width;
+}
+
+@mixin dj-full-screen ($val: absolute) {
+  position:                          $val;
+  top:                               0;
+  bottom:                            0;
+  left:                              0;
+  right:                             0;
+}
+
+@mixin dj-top ($val: absolute) {
+  position:                          $val;
+  top:                               0;
+}
+
+@mixin dj-bottom ($val: absolute) {
+  position:                          $val;
+  bottom:                            0;
+}
+
+@mixin dj-left ($val: absolute) {
+  position:                          $val;
+  left:                              0;
+}
+
+@mixin dj-right ($val: absolute) {
+  position:                          $val;
+  right:                             0;
+}
+
+@mixin dj-full-width ($val: absolute) {
+  position:                          $val;
+  left:                              0;
+  right:                             0;
+}
+
+@mixin dj-full-width-top ($val: absolute) {
+  position:                          $val;
+  left:                              0;
+  right:                             0;
+  top:                               0;
+}
+
+@mixin dj-full-width-bottom ($val: absolute) {
+  position:                          $val;
+  left:                              0;
+  right:                             0;
+  bottom:                            0;
+}
+
+@mixin dj-full-height ($val: absolute) {
+  position:                          $val;
+  top:                               0;
+  bottom:                            0;
+}
+
+@mixin dj-full-height-left ($val: absolute) {
+  position:                          $val;
+  top:                               0;
+  bottom:                            0;
+  left:                              0;
+}
+
+@mixin dj-full-height-right ($val: absolute) {
+  position:                          $val;
+  top:                               0;
+  bottom:                            0;
+  right:                             0;
+}
+
+
+
+
+
+
+
+
+//prepend & append content
+@mixin dj-prepend($pre) {
+  &:before {
+    content:                         $pre;
+  }
+}
+
+@mixin dj-append($app) {
+  &:after {
+    content:                         $app;
+  }
+}
+
+@mixin dj-prepend-append($pre, $app) {
+  &:before {
+    content:                          $pre;
+  }
+  &:after {
+    content:                         $app;
+  }
+}
+
+
+// round corners
+@mixin dj-rounded-corners($radius) {
+  @if $dj-rounded-corners {
+    @include border-radius($radius);
+  }
+}
+
+@mixin dj-rounded-corners-top($radius) {
+  @if $dj-rounded-corners {
+    @include border-top-radius($radius);
+  }
+}
+
+@mixin dj-rounded-corners-bottom($radius) {
+  @if $dj-rounded-corners {
+    @include border-bottom-radius($radius);
+  }
+}
+
+@mixin dj-rounded-corners-left($radius) {
+  @if $dj-rounded-corners {
+    @include border-left-radius($radius);
+  }
+}
+
+@mixin dj-rounded-corners-right($radius) {
+  @if $dj-rounded-corners {
+    @include border-right-radius($radius);
+  }
+}
+
+@mixin dj-round($radius:  $dj-round) {
+ @include border-radius($radius);
+}
+
+@mixin dj-pill {
+  @include border-radius($dj-pill);
+}
+
+@mixin dj-no-appearance{
+	-moz-appearance:                   none;
+  -webkit-appearance:                none;
+	appearance:                        none;
+}
+
+
+@mixin dj-word-wrap {
+	white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+}
+
+
+//shadows
+@mixin dj-shadow($dj-color, $horizontal-offset, $vertical-offset, $blur, $inset ) {
+  @if $dj-shadows {
+    @include dj-box-shadow($dj-color $horizontal-offset $vertical-offset $blur, $inset);
+  }
+  @if $dj-shadow-inside {
+    @include dj-box-shadow($dj-color $horizontal-offset $vertical-offset $blur, $inset);
+  }
+}
+
+//shadow inside
+
+
+
+
+// remove borders
+@mixin dj-borderless {
+  @if $dj-borderless {
+    border:                        0;
+  }
+}
+
+
+//add gradient
+@mixin dj-gradients($start-col, $end-col) {
+  @if $dj-gradiants {
+    @include background-image(linear-gradient(top, $start-col, $end-col));
+  }
+}
+

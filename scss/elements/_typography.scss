@@ -1,0 +1,261 @@
+/* Typography */
+
+//Headings
+@mixin dj-heading-base{
+  font-family:                                         $dj-heading-font;
+}
+
+h1, h2, h3, h4, h5, h5, h6 {
+  @include dj-heading-base;
+}
+
+h1 {
+  font-size:                                        $dj-h1;
+}
+h2 {
+  font-size:                                        $dj-h2;
+}
+h3 {
+  font-size:                                        $dj-h3;
+}
+h4 {
+  font-size:                                        $dj-h4;
+}
+h5 {
+  font-size:                                        $dj-h5;
+}
+h6 {
+  font-size:                                        $dj-h6;
+}
+
+
+//sub headings
+@mixin dj-sub-heading {
+  @include dj-heading-base;
+  color:                                               $dj-sub-heading-font-color;
+}
+
+@mixin dj-smh1 {
+  @include dj-sub-heading;
+  font-size:                                           $smh1;
+}
+
+@mixin dj-smh2 {
+  @include dj-sub-heading;
+  font-size:                                           $smh2;
+}
+
+
+@mixin dj-sh1 {
+  @include dj-sub-heading;
+  font-size:                                           $dj-sh1;
+}
+
+@mixin dj-sh2 {
+  @include dj-sub-heading;
+  font-size:                                           $dj-sh2;
+}
+
+@mixin dj-sh3 {
+  @include dj-sub-heading;
+  font-size:                                           $dj-sh3;
+}
+
+@mixin dj-sh4 {
+  @include dj-sub-heading;
+  font-size:                                           $dj-sh4;
+}
+
+@mixin dj-sh5 {
+  @include dj-sub-heading;
+  font-size:                                           $dj-sh5;
+}
+
+@mixin dj-sh6 {
+  @include dj-sub-heading;
+  font-size:                                           $dj-sh6;
+}
+
+//indent
+@mixin dj-indent {
+  p + p {
+    text-indent:                                       $dj-indent;
+    margin-top:                                        -$dj-indent;
+  }
+}
+
+//samll text
+small {
+  font-size:                                         $dj-small-font-size;
+}
+
+
+//links
+@mixin dj-link {
+  font-weight:                                         bold;
+  text-decoration:                                     none;
+  color:                                               $dj-link-font-color;
+  background-color:                                    $dj-link-background-color;
+  border-bottom:                                       $dj-link-border-width $dj-link-border-style $dj-link-border-color;
+  &:visited {
+    border-bottom:                                     $dj-link-visited-border-width $dj-link-visited-border-style $dj-link-visited-border-color;
+  }
+  &:hover, &:focus {
+    color:                                             $dj-link-hover-font-color;
+    background-color:                                  $dj-link-hover-background-color;
+    border-bottom:                                     $dj-link-hover-border-width $dj-link-hover-border-style $dj-link-hover-border-color;
+  }
+  &:active{
+    color:                                             $dj-link-active-font-color;
+    border-bottom:                                     $dj-link-active-border-width $dj-link-active-border-style $dj-link-active-border-color;
+    background-color:                                  $dj-link-active-background-color;
+  }
+}
+
+a {
+  @include dj-link;
+}
+
+//hyphens
+@mixin dj-hyphens($val) {
+  -webkit-hyphens:                                     $val;
+  -moz-hyphens:                                        $val;
+  -ms-hyphens:                                         $val;
+  -o-hyphens:                                          $val;
+  hyphens:                                             $val;
+}
+
+abbr, acronym, blockquote, code, dir, kbd, listing, plaintext,
+q, samp, tt, var, xmp {
+  @include dj-hyphens(none);
+}
+
+
+
+//abbreviation
+abbr {
+  cursor:                                              help;
+  border-bottom:                                       $dj-abbr-border-bottom-size $dj-abbr-border-bottom-style $dj-abbr-border-bottom-color;
+}
+
+
+//Quotes
+blockquote {
+
+}
+@mixin dj-figcaption {
+  figcaption {
+    display:                                           block;
+    text-align:                                        $dj-figcaption-text-align;
+    @include dj-prepend("—");
+    cite{
+      margin-right:                                    $dj-quote-indent;
+    }
+  }
+}
+
+@mixin dj-block-quote {
+  border-left:                                         $dj-quote-border-left;
+  padding:                                             $dj-quote-padding;
+  margin:                                              0 $dj-quote-indent;
+  blockquote {
+    margin:                                            0;
+  }
+  blockquote, blockquote p {
+    font-family:                                       $dj-quote-font-family;
+    font-size:                                         $dj-quote-font-size;
+    @include dj-indent;
+  }
+  @include dj-figcaption;
+  figcaption {
+    font-size:                                         $dj-cite-font-size;
+  }
+}
+
+@mixin dj-pull-quote{
+  margin:                                              $dj-pull-quote-margin;
+  font-size:                                           $dj-quote-pull-quote-font-size;
+  &:before, &:after {
+    font-family:                                       $dj-quote-font-family;
+    font-size:                                         $dj-pull-quote-mark-font-size;
+  }
+  &:before {
+    margin-right:                                      $dj-pull-quote-before-margin-right;
+    float:                                             left;
+    line-height:                                       $dj-pull-quote-before-line-height;
+    content:                                           "“";
+  }
+  &:after {
+    margin-left:                                       $dj-pull-quote-after-margin-left;
+    float:                                             right;
+    line-height:                                       $dj-pull-quote-after-line-height;
+    content:                                           "”";
+  }
+  blockquote {
+    @include dj-indent;
+  }
+}
+
+//lists
+
+
+
+@mixin dj-unstyled-list {
+  list-style-type:                                     none;
+}
+
+@mixin dj-inline-list {
+  margin:                                              0;
+  li {
+    display:                                           inline;
+    margin-right:                                      $dj-margin-1t;
+  }
+}
+
+@mixin dj-description-inline {
+  dt{
+    float:                                             left;
+  }
+}
+
+@mixin dj-description-ordered {
+  dt {
+      display:                                         inline;
+      counter-reset:                                   definitions;
+    }
+    dd {
+      display: block;
+      counter-increment:                               definitions;
+      &:before {
+        content:                                       counter(definitions, decimal) ". ";
+      }
+    }
+}
+
+@mixin dj-description-numbered {
+  counter-reset:                                       definitions;
+  dt {
+    display: inline;
+    counter-increment:                                  definitions;
+    &:before {
+      content:                                         counter(definitions, decimal) ". ";
+    }
+  }
+}
+
+
+//body text
+html, body, p {
+  font-size:                                           $dj-base-font-size;
+}
+
+body, p {
+  font-family:                                         $dj-base-font-family;
+  color:                                               $dj-base-font-color;
+  line-height:                                         $dj-line-height;
+  @include dj-hyphens(auto);
+}
+
+
+
+

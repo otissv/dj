@@ -1,0 +1,46 @@
+/* Label and badge */
+
+//Labels
+$dj-label-padding:                                       0 $dj-03-r;
+$dj-label-width:                                         $dj-6-r;
+$dj-input-width:                                         $dj-6-r;
+$dj-label-border-radius:                                 $dj-border-radius;
+
+//label background colors
+$dj-label-background-color:                              $dj-gray-d;
+$dj-label-gradient-start-col:                            lighten($dj-gray-d, $dj-button-action-hover-percent);
+$dj-label-gradient-end-col:                              $dj-gray-d;
+
+$dj-label-primary-background-color:                      $dj-primary-color;
+$dj-label-gradient-primary-start-col:                    lighten($dj-primary-color, $dj-button-action-hover-percent);
+$dj-label-gradient-primary-end-col:                      $dj-primary-color;;
+
+$dj-label-info-background-color:                         $dj-info-color;
+$dj-label-gradient-info-start-col:                       lighten($dj-info-color, $dj-button-action-hover-percent);
+$dj-label-gradient-info-end-col:                         $dj-info-color;;
+
+$dj-label-success-background-color:                      $dj-success-color;
+$dj-label-gradient-success-start-col:                    lighten($dj-success-color, $dj-button-action-hover-percent);
+$dj-label-gradient-success-end-col:                      $dj-success-color;
+
+$dj-label-warning-background-color:                      $dj-warning-color;
+$dj-label-gradient-warning-start-col:                    lighten($dj-warning-color, $dj-button-action-hover-percent);
+$dj-label-gradient-warning-end-col:                      $dj-warning-color;
+
+$dj-label-danger-background-color:                       $dj-danger-color;
+$dj-label-gradient-danger-start-col:                     lighten($dj-danger-color, $dj-button-action-hover-percent);
+$dj-label-gradient-danger-end-col:                       $dj-danger-color;
+
+//Lable font colors
+$dj-label-font-size:                                     $dj-small-font-size;
+$dj-label-font-color:                                    $dj-gray-4;
+$dj-label-primary-font-color:                            $dj-white;
+$dj-label-info-font-color:                               $dj-white;
+$dj-label-success-font-color:                            $dj-white;
+$dj-label-warning-font-color:                            $dj-white;
+$dj-label-danger-font-color:                             $dj-white;
+
+//Badges
+$dj-badge-font-weight:                                   bold;
+$dj-badge-font-size:                                     $dj-label-font-size;
+$dj-badge-margin:                                        0 $dj-margin 0 0;

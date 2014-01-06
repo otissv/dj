@@ -1,0 +1,171 @@
+/* Buttons variables */
+$dj-button-font-family:                                  inherit;
+$dj-button-line-height:                                  $dj-1;
+$dj-button-font-weight:                                  normal;
+$dj-button-action-hover-percent:                         10%;
+$dj-button-action-active-percent:                        5%;
+$dj-button-action-border-color:                          20%;
+
+
+
+//button font sizes
+$dj-button-giga-font-size:                               $dj-giga-font-size;
+$dj-button-mega-font-size:                               $dj-mega-font-size;
+$dj-button-large-font-size:                              $dj-large-font-size;
+$dj-button-font-size:                                    $dj-normal-font-size;
+$dj-button-small-font-size:                              $dj-small-font-size;
+
+//button heights
+$dj-button-giga-height:                                  $dj-giga-r;
+$dj-button-mega-height:                                  $dj-mega-r;
+$dj-button-large-height:                                 $dj-large-r;
+$dj-button-height:                                       $dj-normal-r;
+$dj-button-small-height:                                 $dj-small-r;
+
+//button padding
+$dj-button-giga-padding:                                 $dj-1-r $dj-3-r;
+$dj-button-mega-padding:                                 $dj-02-r $dj-2-r;
+$dj-button-large-padding:                                $dj-02-r $dj-2-r;
+$dj-button-padding:                                      $dj-03-r;
+$dj-button-small-padding:                                $dj-05-r $dj-02-r;
+
+//button border
+$dj-button-border-width:                                 $dj-border-width;
+$dj-button-focus-outline-width:                          0;
+$dj-button-border-radius:                                $dj-border-radius;
+$dj-button-border-color:                                 $dj-border-color;
+$dj-button-focus-outline-color:                          $dj-button-border-color;
+
+//button style
+$dj-button-border-style:                                 $dj-border-style;
+$dj-button-focus-outline-style:                          $dj-border-style;
+
+//button font colors
+$dj-button-font-color:                                   $dj-base-font-color;
+$dj-button-hover-font-color:                             $dj-base-font-color;
+$dj-button-active-font-color:                            $dj-base-font-color;
+$dj-button-visited-font-color:                           $dj-base-font-color;
+
+//button background colors
+$dj-button-background-color:                             $dj-gray-e;
+$dj-button-hover-background-color:                       $dj-gray-c;
+$dj-button-active-background-color:                      $dj-gray-a;
+
+$dj-gradient-button-start-col:                           lighten($dj-button-background-color, 30%);
+$dj-gradient-button-end-col:                             $dj-button-background-color;
+$dj-gradient-button-hover-start-col:                     lighten($dj-button-hover-background-color, $dj-button-action-hover-percent);;
+$dj-gradient-button-hover-end-col:                       $dj-button-hover-background-color;
+$dj-gradient-button-active-start-col:                    lighten($dj-button-active-background-color, $dj-button-action-active-percent);
+$dj-gradient-button-active-end-col:                      $dj-button-active-background-color;
+
+
+
+//pill button
+$dj-pill-button-background-color:                        transparent;
+$dj-pill-button-font-color:                              $dj-button-font-color;
+$dj-pill-button-border-width:                            $dj-button-border-width;
+$dj-pill-button-border-color:                            transparent;
+$dj-pill-margin-bottom:                                  $dj-05-r;
+
+//primary button colors
+$dj-button-primary-font-color:                            $dj-white;
+$dj-button-primary-background-color:                      $dj-primary-color;
+$dj-button-primary-border-color:                          darken($dj-primary-color, $dj-button-action-border-color);
+$dj-button-primary-hover-background-color:                lighten($dj-primary-color, $dj-button-action-hover-percent);
+$dj-button-primary-active-background-color:               darken($dj-primary-color, $dj-button-action-active-percent);
+$dj-gradient-button-primary-start-col:                    lighten($dj-primary-color, 30%);
+
+$dj-gradient-button-primary-end-col:                      $dj-primary-color;
+$dj-gradient-button-primary-hover-start-col:              lighten($dj-button-primary-hover-background-color, $dj-button-action-hover-percent);
+$dj-gradient-button-primary-hover-end-col:                $dj-button-primary-hover-background-color;
+$dj-gradient-button-primary-active-start-col:             lighten($dj-button-primary-active-background-color, $dj-button-action-active-percent);
+$dj-gradient-button-primary-active-end-col:               $dj-button-primary-active-background-color;
+
+//info button colors
+$dj-button-info-font-color:                               $dj-white;
+$dj-button-info-background-color:                         $dj-info-color;
+$dj-button-info-border-color:                             darken($dj-info-color, $dj-button-action-border-color);
+$dj-button-info-hover-background-color:                   lighten($dj-info-color, $dj-button-action-hover-percent);
+$dj-button-info-active-background-color:                  darken($dj-info-color, $dj-button-action-active-percent);
+
+$dj-gradient-button-info-start-col:                       lighten($dj-info-color, 30%);
+$dj-gradient-button-info-end-col:                         $dj-info-color;
+$dj-gradient-button-info-hover-start-col:                 lighten($dj-button-info-hover-background-color, $dj-button-action-hover-percent);
+$dj-gradient-button-info-hover-end-col:                   $dj-button-info-hover-background-color;
+$dj-gradient-button-info-active-start-col:                lighten($dj-button-info-active-background-color, $dj-button-action-active-percent);
+$dj-gradient-button-info-active-end-col:                  $dj-button-info-active-background-color;
+
+//success button colors
+$dj-button-success-font-color:                            $dj-white;
+$dj-button-success-background-color:                      $dj-success-color;
+$dj-button-success-border-color:                          darken($dj-success-color, $dj-button-action-border-color);
+$dj-button-success-hover-background-color:                lighten($dj-success-color, $dj-button-action-hover-percent);
+$dj-button-success-active-background-color:               darken($dj-success-color, $dj-button-action-active-percent);
+
+$dj-gradient-button-success-start-col:                    lighten($dj-success-color, 30%);
+$dj-gradient-button-success-end-col:                      $dj-success-color;
+$dj-gradient-button-success-hover-start-col:              lighten($dj-button-success-hover-background-color, $dj-button-action-hover-percent);
+$dj-gradient-button-success-hover-end-col:                $dj-button-success-hover-background-color;
+$dj-gradient-button-success-active-start-col:             lighten($dj-button-success-active-background-color, $dj-button-action-active-percent);
+$dj-gradient-button-success-active-end-col:               $dj-button-success-active-background-color;
+
+//warning button colors
+$dj-button-warning-font-color:                            $dj-white;
+$dj-button-warning-background-color:                      $dj-warning-color;
+$dj-button-warning-border-color:                          darken($dj-warning-color, $dj-button-action-border-color);
+$dj-button-warning-hover-background-color:                lighten($dj-warning-color, $dj-button-action-hover-percent);
+$dj-button-warning-active-background-color:               darken($dj-warning-color, $dj-button-action-active-percent);
+
+$dj-gradient-button-warning-start-col:                    lighten($dj-warning-color, 30%);
+$dj-gradient-button-warning-end-col:                      $dj-warning-color;
+$dj-gradient-button-warning-hover-start-col:              lighten($dj-button-warning-hover-background-color, $dj-button-action-hover-percent);
+$dj-gradient-button-warning-hover-end-col:                $dj-button-warning-hover-background-color;
+$dj-gradient-button-warning-active-start-col:             lighten($dj-button-warning-active-background-color, $dj-button-action-active-percent);
+$dj-gradient-button-warning-active-end-col:               $dj-button-warning-active-background-color;
+
+//danger button colors
+$dj-button-danger-font-color:                             $dj-white;
+$dj-button-danger-background-color:                       $dj-danger-color;
+$dj-button-danger-border-color:                           darken($dj-danger-color, $dj-button-action-border-color);
+$dj-button-danger-hover-background-color:                 lighten($dj-danger-color, $dj-button-action-hover-percent);
+$dj-button-danger-active-background-color:                darken($dj-danger-color, $dj-button-action-active-percent);
+
+$dj-gradient-button-danger-start-col:                     lighten($dj-danger-color, 30%);
+$dj-gradient-button-danger-end-col:                       $dj-danger-color;
+$dj-gradient-button-danger-hover-start-col:               lighten($dj-button-danger-hover-background-color, $dj-button-action-hover-percent);
+$dj-gradient-button-danger-hover-end-col:                 $dj-button-danger-hover-background-color;
+$dj-gradient-button-danger-active-start-col:              lighten($dj-button-danger-active-background-color, $dj-button-action-active-percent);
+$dj-gradient-button-danger-active-end-col:                $dj-button-danger-active-background-color;
+
+//disabled button colors
+$dj-button-disabled-font-color:                           $dj-gray-7;
+$dj-button-diabled-background-color:                      $dj-diabled-color;
+$dj-button-diabled-hover-background-color:                lighten($dj-diabled-color, $dj-button-action-hover-percent);
+$dj-button-diabled-active-background-color:               darken($dj-diabled-color, $dj-button-action-active-percent);
+
+$dj-gradient-button-diabled-start-col:                    lighten($dj-diabled-color, 30%);
+$dj-gradient-button-diabled-end-col:                      $dj-diabled-color;
+$dj-gradient-button-diabled-hover-start-col:              lighten($dj-button-diabled-hover-background-color, $dj-button-action-hover-percent);
+$dj-gradient-button-diabled-hover-end-col:                $dj-button-diabled-hover-background-color;
+$dj-gradient-button-diabled-active-start-col:             lighten($dj-button-diabled-active-background-color, $dj-button-action-active-percent);
+$dj-gradient-button-diabled-active-end-col:               $dj-button-diabled-active-background-color;
+
+// button-shadow
+$dj-button-shadow-color:                                  $dj-shadow-color;
+$dj-button-shadow-horizontal-offset:                      $dj-shadow-horizontal-offset;
+$dj-button-shadow-vertical-offset:                        $dj-shadow-vertical-offset;
+$dj-button-shadow-blur:                                   $dj-shadow-blur;
+$dj-button-shadow-spread:                                 $dj-shadow-spread;
+$dj-button-shadow-inset:                                  false;
+
+//button group
+$button-group-font-size:                                  $dj-normal-font-size;
+$button-group-shadow-color:                               transparent;
+$button-group-shadow-horizontal-offset:                   0;
+$button-group-shadow-vertical-offset:                     0;
+$button-group-shadow-blur:                                0;
+$button-group-shadow-spread:                              0;
+$button-group-shadow-inset:                               false;
+
+//Button split
+$dj-button-split-font-size:                               20px;

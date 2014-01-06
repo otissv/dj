@@ -1,0 +1,70 @@
+/* Forms variables */
+
+$dj-form-padding:                                         0;
+$dj-form-margin:                                          0 0 $dj-margin 0;
+$dj-form-border-width:                                    0;
+$dj-form-border-style:                                    $dj-border-style;
+$dj-form-border-color:                                    transparent;
+
+//labels
+$dj-label-display:                                        inline-block;
+$dj-label-width:                                          $dj-11-r;
+$dj-label-vertical-align:                                 middle;
+$dj-label-text-align:                                     left;
+$dj-label-margin:                                         auto;
+
+//inputs
+$dj-input-font-size:                                      $dj-normal-font-size;
+$dj-input-margin:                                         $dj-margin-2t;
+$dj-input-background-color:                               transparent;
+$dj-input-border-radius:                                  $dj-border-radius;
+$dj-input-padding:                                        $dj-padding-1t;
+$dj-input-border-width:                                   $dj-border-width;
+$dj-input-border-style:                                   $dj-border-style;
+$dj-input-border-color:                                   $dj-border-color;
+$dj-input-height:                                         $dj-button-height;
+
+//buttons
+$dj-form-button-padding:                                  $dj-button-padding;
+
+//validation
+$dj-input-focused-border-color:                           $dj-color-1;
+$dj-input-valid-border-color:                             $dj-success-color;
+$dj-input-invalid-border-color:                           $dj-danger-color;
+$dj-input-required-border-color:                          $dj-gray-3;
+
+
+$dj-input-focused-border-width:                           1px;
+$dj-input-valid-border-width:                             1px;
+$dj-input-invalid-border-width:                           1px;
+$dj-input-required-border-width:                          2px;
+
+$dj-input-focused-border-style:                           $dj-border-style;
+$dj-input-valid-border-style:                             $dj-border-style;
+$dj-input-invalid-border-style:                           $dj-border-style;
+$dj-input-required-border-style:                          $dj-border-style;
+
+//help
+$dj-help-background-color:                                transparent;
+$dj-help-border-width:                                    1px;
+$dj-help-border-style:                                    sold;
+$dj-help-border-color:                                    $dj-border-color;
+$dj-help-font-size:                                       $dj-small-font-size;
+$dj-help-font-weight:                                     normal;
+$dj-help-font-color:                                      $dj-base-font-color;
+$dj-help-margin:                                          0;
+
+$dj-invalid-font-color:                                   $dj-danger-color;
+$dj-invalid-margin:                                       0;
+
+//input button
+$dj-input-button-font-size:                               $dj-normal-font-size;
+$dj-input-button-height:                                  $dj-button-height;
+
+//form-shadow
+$dj-form-shadow-color:                                    $dj-shadow-color;
+$dj-form-shadow-horizontal-offset:                        $dj-shadow-horizontal-offset;
+$dj-form-shadow-vertical-offset:                          $dj-shadow-vertical-offset;
+$dj-form-shadow-blur:                                     $dj-shadow-blur;
+$dj-form-shadow-spread:                                   $dj-shadow-spread;
+$dj-form-shadow-inset:                                    false;

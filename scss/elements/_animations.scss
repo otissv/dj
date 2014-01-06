@@ -1,0 +1,1470 @@
+/* Aminations mixins */
+@import "animation-base";
+
+
+/* Attention seeking animations ===========================================================================================*/
+
+// flash ---------------------------------------------------------------------------
+@mixin dj-animation-flash($duration :$dj-animation-duration) {
+  @include dj-animation(flash $duration);
+}
+
+@include keyframes(flash) {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+// bounce ---------------------------------------------------------------------------
+@mixin dj-animation-bounce($duration :$dj-animation-duration) {
+  @include dj-animation(bounce $duration);
+}
+
+@include keyframes(bounce) {
+  0% {
+    @include translateY(0);
+  }
+  20% {
+    @include translateY(0);
+  }
+  40% {
+    @include translateY(-30px);
+  }
+  50% {
+    @include translateY(0);
+  }
+  60% {
+    @include translateY(-15px);
+  }
+  80% {
+    @include translateY(0);
+  }
+  100% {
+    @include translateY(0);
+  }
+}
+
+
+// shake ---------------------------------------------------------------------------
+@mixin dj-animation-shake($duration :$dj-animation-duration) {
+  @include dj-animation(shake $duration);
+}
+
+@include keyframes(shake) {
+  0% {
+    @include translateX(0);
+  }
+  10% {
+    @include translateX(-10px);
+  }
+  20% {
+    @include translateX(10px);
+  }
+  30% {
+    @include translateX(-10px);
+  }
+  40% {
+    @include translateX(10px);
+  }
+  50% {
+    @include translateX(-10px);
+  }
+  60% {
+    @include translateX(10px);
+  }
+  70% {
+    @include translateX(-10px);
+  }
+  80% {
+    @include translateX(10px);
+  }
+  90% {
+    @include translateX(-10px);
+  }
+  100% {
+    @include translateX(0);
+  }
+}
+
+
+// tada ---------------------------------------------------------------------------
+@mixin dj-animation-tada($duration :$dj-animation-duration) {
+  @include dj-animation(tada $duration);
+}
+
+@include keyframes(tada) {
+  0% {
+    @include scale(1);
+  }
+  10% {
+    @include transform(scale(0.9) rotate(-3deg));
+  }
+  20% {
+    @include transform(scale(0.9) rotate(-3deg));
+  }
+  30% {
+    @include transform(scale(1.1) rotate(3deg));
+  }
+  40% {
+    @include transform(scale(1.1) rotate(-3deg));
+  }
+  50% {
+    @include transform(scale(1.1) rotate(3deg));
+  }
+  60% {
+    @include transform(scale(1.1) rotate(-3deg));
+  }
+  70% {
+    @include transform(scale(1.1) rotate(3deg));
+  }
+  80% {
+    @include transform(scale(1.1) rotate(-3deg));
+  }
+  90% {
+    @include transform(scale(1.1) rotate(3deg));
+  }
+  100% {
+    @include transform(scale(1) rotate(0));
+  } 
+}
+
+
+// swing ---------------------------------------------------------------------------
+@mixin dj-animation-swing($duration :$dj-animation-duration) {
+  @include dj-animation(swing $duration);
+}
+
+@include keyframes(swing) {
+  20%, 40%, 60%, 80%, 100% {
+    @include transform-origin(top center);
+  }
+  20% {
+    @include rotate(15deg);
+  }
+  40% {
+    @include rotate(-10deg);
+  }
+  60% {
+    @include rotate(5deg);
+  }
+  80% {
+    @include rotate(-5deg);
+  }
+  100% {
+    @include rotate(0deg);
+  }
+}
+
+
+// wobble ---------------------------------------------------------------------------
+@mixin dj-animation-wobble($duration :$dj-animation-duration) {
+  @include dj-animation(wobble $duration);
+}
+
+@include keyframes(wobble) {
+  0% {
+    @include translateX(0%);
+  }
+  15% {
+    @include transform(translateX(-25%) rotate(-5deg));
+  }
+  30% {
+    @include transform(translateX(20%) rotate(3deg));
+  }
+  45% {
+    @include transform(translateX(-15%) rotate(-3deg));
+  }
+  60% {
+    @include transform(translateX(10%) rotate(2deg));
+  }
+  75% {
+    @include transform(translateX(-5%) rotate(-1deg));
+  }
+  100% {
+    @include transform(translateX(0%));
+  }
+}
+
+
+// pulse ---------------------------------------------------------------------------
+@mixin dj-animation-pulse($duration :$dj-animation-duration) {
+  @include dj-animation(pulse $duration);
+}
+
+@include keyframes(pulse) {
+  0% {
+    @include scale(1);
+  }
+  50% {
+    @include scale(1.1);
+  }
+  100% {
+    @include scale(1);
+  }
+}
+
+// wiggle ---------------------------------------------------------------------------
+@mixin dj-animation-wiggle($duration :$dj-animation-duration) {
+  @include dj-animation(wiggle $duration);
+}
+
+@include keyframes(wiggle) {
+  0% {
+    @include skewX(9deg);
+  }
+  10% {
+    @include skewX(-8deg);
+  }
+  20% {
+    @include skewX(7deg);
+  }
+  30% {
+    @include skewX(-6deg);
+  }
+  40% {
+    @include skewX(5deg);
+  }
+  50% {
+    @include skewX(-4deg);
+  }
+  60% {
+    @include skewX(3deg);
+  }
+  70% {
+    @include skewX(-2deg);
+  }
+  80% {
+    @include skewX(1deg);
+  }
+  90% {
+    @include skewX(0deg);
+  }
+  100% {
+    @include skewX(0deg);
+  } 
+}
+
+/* Bouncing Entrancing Animation ===========================================================================================*/
+
+// Bounce in---------------------------------------------------------------------------
+@mixin dj-animation-bounce-in($duration :$dj-animation-duration) {
+  @include dj-animation(bounceIn $duration);
+}
+
+@include keyframes(bounceIn) {
+  0% {
+    opacity: 0;
+    @include scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    @include scale(1.05);
+  }
+  70% {
+    @include scale(0.9);
+  }
+  100% {
+    @include scale(1);
+  }
+}
+
+
+// bounce in up--------------------------------------------------------------------------
+@mixin dj-animation-bounce-in-up($duration :$dj-animation-duration) {
+  @include dj-animation(bounceInUp $duration);
+}
+
+@include keyframes(bounceInUp) {
+  0% {
+    opacity: 0;
+    @include translateY(2000px);
+  }
+  60% {
+    opacity: 1;
+    @include translateY(-30px);
+  }
+  80% {
+    @include translateY(10px);
+  }
+  100% {
+    @include translateY(0);
+  }
+}
+
+// bounce in down---------------------------------------------------------------------------
+@mixin dj-animation-bounce-in-down($duration :$dj-animation-duration) {
+  @include dj-animation(bounceInDown $duration);
+}
+
+@include keyframes(bounceInDown) {
+  0% {
+    opacity: 0;
+    @include translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    @include translateY(30px);
+  }
+  80% {
+    @include translateY(-10px);
+  }
+  100% {
+    @include translateY(0);
+  }
+}
+
+// bounce in left---------------------------------------------------------------------------
+@mixin dj-animation-bounce-in-left($duration :$dj-animation-duration) {
+  @include dj-animation(bounceInLeft $duration);
+}
+
+@include keyframes(bounceInLeft) {
+  0% {
+    opacity: 0;
+    @include translateX(-2000px);
+  }
+  60% {
+    opacity: 1;
+    @include translateX(30px);
+  }
+  80% {
+    @include translateX(-10px);
+  }
+  100% {
+    @include translateX(0);
+  }
+}
+
+// bounce in right--------------------------------------------------------------------------
+@mixin dj-animation-bounce-in-right($duration :$dj-animation-duration) {
+  @include dj-animation(bounceInRight $duration);
+}
+
+@include keyframes(bounceInRight) {
+  0% {
+    opacity: 0;
+    @include translateX(2000px);
+  }
+  60% {
+    opacity: 1;
+    @include translateX(-30px);
+  }
+  80% {
+    @include translateX(10px);
+  }
+  100% {
+    @include translateX(0);
+  }
+}
+
+// bounce out ---------------------------------------------------------------------------
+@mixin dj-animation-bounce-out($duration :$dj-animation-duration) {
+  @include dj-animation(bounceOut $duration);
+}
+
+@include keyframes(bounceOut) {
+  0% {
+    @include scale(1);
+  }
+  25% {
+    @include scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    @include scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    @include scale(0.3);
+  }
+}
+
+// bounce out up---------------------------------------------------------------------------
+@mixin dj-animation-bounce-out-up($duration :$dj-animation-duration) {
+  @include dj-animation(bounceOutUp $duration);
+}
+
+@include keyframes(bounceOutUp) {
+  0% {
+    @include translateY(0);
+  }
+  20% {
+    opacity: 1;
+    @include translateY(20px);
+  }
+  100% {
+    opacity: 0;
+    @include translateY(-2000px);
+  }
+}
+
+
+// bounce out down---------------------------------------------------------------------------
+@mixin dj-animation-bounce-out-down($duration :$dj-animation-duration) {
+  @include dj-animation(bounceOutDown $duration);
+}
+
+@include keyframes(bounceOutDown) {
+  0% {
+    @include translateY(0);
+  }
+  20% {
+    opacity: 1;
+    @include translateY(-20px);
+  }
+  100% {
+    opacity: 0;
+    @include translateY(2000px);
+  }
+}
+
+
+// bounce out left---------------------------------------------------------------------------
+@mixin dj-animation-bounce-out-left($duration :$dj-animation-duration) {
+  @include dj-animation(bounceOutLeft $duration);
+}
+
+@include keyframes(bounceOutLeft) {
+  0% {
+    @include translateX(0);
+  }
+  20% {
+    opacity: 1;
+    @include translateX(20px);
+  }
+  100% {
+    opacity: 0;
+    @include translateX(-2000px);
+  }
+}
+
+
+// bounce out right---------------------------------------------------------------------------
+@mixin dj-animation-bounce-out-right($duration :$dj-animation-duration) {
+  @include dj-animation(bounceOutRight $duration);
+}
+
+@include keyframes(bounceOutRight) {
+  0% {
+    @include translateX(0);
+  }
+  20% {
+    opacity: 1;
+    @include translateX(-20px);
+  }
+  100% {
+    opacity: 0;
+    @include translateX(2000px);
+  }
+}
+
+/* Fading Animations ===========================================================================================*/
+
+// fade in ---------------------------------------------------------------------------
+@mixin dj-animation-fade-in($duration :$dj-animation-duration) {
+  @include dj-animation(fadeIn $duration);
+}
+
+@include keyframes(fadeIn) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+// fade in up---------------------------------------------------------------------------
+@mixin dj-animation-fade-in-up($duration :$dj-animation-duration) {
+  @include dj-animation(fadeInUp $duration);
+}
+
+@include keyframes(fadeInUp) {
+  0% {
+    opacity: 0;
+    @include translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    @include translateY(0);
+  }
+}
+
+
+// fade in down---------------------------------------------------------------------------
+@mixin dj-animation-fade-in-down($duration :$dj-animation-duration) {
+  @include dj-animation(fadeInDown $duration);
+}
+
+@include keyframes(fadeInDown) {
+  0% {
+    opacity: 0;
+    @include translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    @include translateY(0);
+  }
+}
+
+
+// fade in left---------------------------------------------------------------------------
+@mixin dj-animation-fade-in-left($duration :$dj-animation-duration) {
+  @include dj-animation(fadeInLeft $duration);
+}
+
+@include keyframes(fadeInLeft) {
+  0% {
+    opacity: 0;
+    @include translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    @include translateX(0);
+  }
+}
+
+// fade in right---------------------------------------------------------------------------
+@mixin dj-animation-fade-in-right($duration :$dj-animation-duration) {
+  @include dj-animation(fadeInRight $duration);
+}
+
+@include keyframes(fadeInRight) {
+  0% {
+    opacity: 0;
+    @include translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    @include translateX(0);
+  }
+}
+
+
+// fade  in up big---------------------------------------------------------------------------
+@mixin dj-animation-fade-in-up-big($duration :$dj-animation-duration) {
+  @include dj-animation(fadeInUpBig $duration);
+}
+
+@include keyframes(fadeInUpBig) {
+  0% {
+    opacity: 0;
+    @include translateY(2000px);
+  }
+  100% {
+    opacity: 1;
+    @include translateY(0);
+  }
+}
+
+
+// fade in down big---------------------------------------------------------------------------
+@mixin dj-animation-fade-in-down-big($duration :$dj-animation-duration) {
+  @include dj-animation(fadeInDownBig $duration);
+}
+
+@include keyframes(fadeInDownBig) {
+  0% {
+    opacity: 0;
+    @include translateY(-2000px);
+  }
+  100% {
+    opacity: 1;
+    @include translateY(0);
+  }
+}
+
+// fade in left big---------------------------------------------------------------------------
+@mixin dj-animation-fade-in-left-big($duration :$dj-animation-duration) {
+  @include dj-animation(fadeInLeftBig $duration);
+}
+
+@include keyframes(fadeInLeftBig) {
+  0% {
+    opacity: 0;
+    @include translateX(-2000px);
+  }
+  100% {
+    opacity: 1;
+    @include translateX(0);
+  }
+}
+
+
+// fade in right big---------------------------------------------------------------------------
+@mixin dj-animation-fade-in-right-big($duration :$dj-animation-duration) {
+  @include dj-animation(fadeInRightBig $duration);
+}
+
+@include keyframes(fadeInRightBig) {
+  0% {
+    opacity: 0;
+    @include translateX(2000px);
+  }
+  100% {
+    opacity: 1;
+    @include translateX(0);
+  }
+}
+
+// fade out---------------------------------------------------------------------------
+@mixin dj-animation-fade-out($duration :$dj-animation-duration) {
+  @include dj-animation(fadeOut $duration);
+}
+
+@include keyframes(fadeOut) {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+// fade out up---------------------------------------------------------------------------
+@mixin dj-animation-fade-out-up($duration :$dj-animation-duration) {
+  @include dj-animation(fadeOutUp $duration);
+}
+
+@include keyframes(fadeOutUp) {
+  0% {
+    opacity: 1;
+    @include translateY(0);
+  }
+  100% {
+    opacity: 0;
+    @include translateY(-20px);
+  }
+}
+
+
+// fade out down---------------------------------------------------------------------------
+@mixin dj-animation-fade-out-down($duration :$dj-animation-duration) {
+  @include dj-animation(fadeOutDown $duration);
+}
+
+@include keyframes(fadeOutDown) {
+  0% {
+    opacity: 1;
+    @include translateY(0);
+  }
+  100% {
+    opacity: 0;
+    @include translateY(20px);
+  }
+}
+
+
+// fade out left---------------------------------------------------------------------------
+@mixin dj-animation-fade-out-left($duration :$dj-animation-duration) {
+  @include dj-animation(fadeOutLeft $duration);
+}
+
+@include keyframes(fadeOutLeft) {
+  0% {
+    opacity: 1;
+    @include translateX(0);
+
+  }
+  100% {
+    opacity: 0;
+    @include translateX(-20px);
+  }
+}
+
+// fade out right---------------------------------------------------------------------------
+@mixin dj-animation-fade-out-right($duration :$dj-animation-duration) {
+  @include dj-animation(fadeOutRight $duration);
+}
+
+@include keyframes(fadeOutRight) {
+  0% {
+    opacity: 1;
+    @include translateX(0);
+  }
+  100% {
+    opacity: 0;
+    @include translateX(20px);
+  }
+}
+
+
+// fade out up big---------------------------------------------------------------------------
+@mixin dj-animation-fade-out-up-big($duration :$dj-animation-duration) {
+  @include dj-animation(fadeOutUpBig $duration);
+}
+
+@include keyframes(fadeOutUpBig) {
+  0% {
+    opacity: 1;
+    @include translateY(0);
+  }
+  100% {
+    opacity: 0;
+    @include translateY(-2000px);
+  }
+}
+
+
+// fade out down big---------------------------------------------------------------------------
+@mixin dj-animation-fade-out-down-big($duration :$dj-animation-duration) {
+  @include dj-animation(fadeOutDownBig $duration);
+}
+
+@include keyframes(fadeOutDownBig) {
+  0% {
+    opacity: 1;
+    @include translateY(0);
+  }
+  100% {
+    opacity: 0;
+    @include translateY(2000px);
+  }
+}
+
+
+// fade out left big---------------------------------------------------------------------------
+@mixin dj-animation-fade-out-left-big($duration :$dj-animation-duration) {
+  @include dj-animation(fadeOutLeftBig $duration);
+}
+
+@include keyframes(fadeOutLeftBig) {
+  0% {
+    opacity: 1;
+    @include translateX(0);
+  }
+  100% {
+    opacity: 0;
+    @include translateX(-2000px);
+  }
+}
+
+
+// fade out right big---------------------------------------------fade ------------------------------
+@mixin dj-animation-fade-out-right-big($duration :$dj-animation-duration) {
+  @include dj-animation(fadeOutRightBig $duration);
+}
+
+@include keyframes(fadeOutRightBig) {
+  0% {
+    opacity: 1;
+    @include translateX(0);
+  }
+  100% {
+    opacity: 0;
+    @include translateX(2000px);
+  }
+}
+
+// fade puff in ---------------------------------------------------------------------------
+@mixin dj-animation-fade-puff-in($duration :$dj-animation-duration) {
+  @include dj-animation(fadePuffIn $duration);
+}
+
+@include keyframes(fadePuffIn) {
+  0% {
+    opacity: 0;
+    @include transform-origin;
+    @include scale(2);
+  }
+  100% {
+    opacity: 1;
+    @include transform-origin;
+    @include scale(1);
+  }
+}
+
+// fade puff out ---------------------------------------------------------------------------
+@mixin dj-animation-fade-puff-out($duration :$dj-animation-duration) {
+  @include dj-animation(fadePuffOut $duration);
+}
+
+@include keyframes(fadePuffOut) {
+  0% {
+    opacity: 1;
+    @include transform-origin;
+    @include scale(1);
+  }
+  100% {
+    opacity: 0;
+    opacity: 0;
+    @include transform-origin;
+    @include scale(2);
+  }
+}
+
+/* Flipping Animations ===========================================================================================*/
+
+// flip ---------------------------------------------------------------------------
+@mixin dj-animation-flip($duration :$dj-animation-duration) {
+  @include dj-animation(flip $duration);
+}
+
+@include keyframes(flip) {
+  0% {
+    @include transform(perspective(400px) rotateY(0));
+    @include animation-timing-function(ease-out);
+  }
+  40% {
+    @include transform(perspective(400px) translateZ(150px) rotateY(170deg));
+    @include animation-timing-function(ease-out);
+  }
+  50% {
+    @include transform(perspective(400px) translateZ(150px) rotateY(190deg) scale(1));
+    @include animation-timing-function(ease-in);
+  }
+  80% {
+    @include transform(perspective(400px) rotateY(360deg) scale(0.95));
+    @include animation-timing-function(ease-in);
+  }
+  100% {
+    @include transform(perspective(400px) scale(1));
+    @include animation-timing-function(ease-in);
+  }
+}
+
+
+// flip in X ---------------------------------------------------------------------------
+@mixin dj-animation-flip-in-x($duration :$dj-animation-duration) {
+  @include dj-animation(flipInX $duration);
+}
+
+@include keyframes(flipInX) {
+  0% {
+    opacity: 0;
+    @include transform(perspective(400px) rotateX(90deg));
+  }
+  40% {
+    @include transform(perspective(400px) rotateX(-10deg));
+  }
+  70% {
+    @include transform(perspective(400px) rotateX(10deg));
+  }
+  100% {
+    opacity: 1;
+    @include transform(perspective(400px) rotateX(0deg));
+  }
+}
+
+
+// flip out X ---------------------------------------------------------------------------
+@mixin dj-animation-flip-out-x($duration :$dj-animation-duration) {
+  @include dj-animation(flipOutX $duration);
+}
+
+@include keyframes(flipOutX) {
+  0% {
+    opacity: 1;
+    @include transform(perspective(400px) rotateX(0deg));
+  }
+  100% {
+    opacity: 0;
+    @include transform(perspective(400px) rotateX(90deg));
+  }
+}
+
+
+// flip in Y ---------------------------------------------------------------------------
+@mixin dj-animation-flip-in-y($duration :$dj-animation-duration) {
+  @include dj-animation(flipInY $duration);
+}
+
+@include keyframes(flipInY) {
+  0% {
+    opacity: 0;
+    @include transform(perspective(400px) rotateY(90deg));
+  }
+  40% {
+    @include transform(perspective(400px) rotateY(-10deg));
+  }
+  70% {
+    @include transform(perspective(400px) rotateY(10deg));
+  }
+  100% {
+    opacity: 1;
+    @include transform(perspective(400px) rotateY(0deg));
+  }
+}
+
+
+// flip out Y ---------------------------------------------------------------------------
+@mixin dj-animation-flip-out-y($duration :$dj-animation-duration) {
+  @include dj-animation(flipOutY $duration);
+}
+
+@include keyframes(flipOutY) {
+  0% {
+    opacity: 1;
+    @include transform(perspective(400px) rotateY(0deg));
+  }
+  100% {
+    opacity: 0;
+    @include transform(perspective(400px) rotateY(90deg));
+  }
+}
+
+
+/* Light Speed Animations ===========================================================================================*/
+
+// light speed in ---------------------------------------------------------------------------
+@mixin dj-animation-light-speed-in($duration :$dj-animation-duration) {
+  @include dj-animation(lightSpeedIn $duration);
+}
+
+@include keyframes(lightSpeedIn) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(100%) skewX(-30deg));
+  }
+  60% {
+    opacity: 1;
+    @include transform(translateX(-20%) skewX(30deg));
+  }
+  80% {
+    opacity: 1;
+    @include transform(translateX(0%) skewX(-15deg));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0%) skewX(0deg));
+  }
+}
+
+
+// light speed out---------------------------------------------------------------------------
+@mixin dj-animation-light-speed-out($duration :$dj-animation-duration) {
+  @include dj-animation(lightSpeedOut $duration);
+}
+
+@include keyframes(lightSpeedOut) {
+  0% {
+    opacity: 1;
+    @include transform(translateX(0%) skewX(0deg));
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateX(100%) skewX(-30deg));
+  }
+}
+
+
+/* Rotating Animations ===========================================================================================*/
+
+// rotate in ---------------------------------------------------------------------------
+@mixin dj-animation-rotate-in($duration :$dj-animation-duration) {
+  @include dj-animation(rotateIn $duration);
+}
+
+@include keyframes(rotateIn) {
+  0% {
+    opacity: 0;
+    @include transform-origin(center center);
+    @include rotate(-200deg);
+  }
+  100% {
+    opacity: 1;
+    @include transform-origin(center center);
+    @include rotate(0);
+  }
+}
+
+// rotate in up left ---------------------------------------------------------------------------
+@mixin dj-animation-rotate-in-up-left($duration :$dj-animation-duration) {
+  @include dj-animation(rotateInUpLeft $duration);
+}
+
+@include keyframes(rotateInUpLeft) {
+  0% {
+    opacity: 0;
+    @include transform-origin(left bottom);
+    @include rotate(90deg);
+  }
+  100% {
+    opacity: 1;
+    @include transform-origin(left bottom);
+    @include rotate(0);
+  }
+}
+
+
+// rotate in down left ---------------------------------------------------------------------------
+@mixin dj-animation-rotate-in-down-left($duration :$dj-animation-duration) {
+  @include dj-animation(rotateInDownLeft $duration);
+}
+
+@include keyframes(rotateInDownLeft) {
+  0% {
+    opacity: 0;
+    @include transform-origin(left bottom);
+    @include rotate(-90deg);
+  }
+  100% {
+    opacity: 1;
+    @include transform-origin(left bottom);
+    @include rotate(0);
+  }
+}
+
+
+// rotate in up right ---------------------------------------------------------------------------
+@mixin dj-animation-rotate-in-up-right($duration :$dj-animation-duration) {
+  @include dj-animation(rotateInUpRight $duration);
+}
+
+@include keyframes(rotateInUpRight) {
+  0% {
+    opacity: 0;
+    @include transform-origin(right bottom);
+    @include rotate(-90deg);
+  }
+  100% {
+    opacity: 1;
+    @include transform-origin(right bottom);
+    @include rotate(0);
+  }
+}
+
+
+// rotate in down right ---------------------------------------------------------------------------
+@mixin dj-animation-rotate-in-down-right($duration :$dj-animation-duration) {
+  @include dj-animation(rotateInDownRight $duration);
+}
+
+@include keyframes(rotateInDownRight) {
+  0% {
+    opacity: 0;
+    @include transform-origin(right bottom);
+    @include rotate(90deg);
+  }
+  100% {
+    opacity: 1;
+    @include transform-origin(right bottom);
+    @include rotate(0)
+  }
+}
+
+
+// rotate out ---------------------------------------------------------------------------
+@mixin dj-animation-rotate-out($duration :$dj-animation-duration) {
+  @include dj-animation(rotateOut $duration);
+}
+
+@include keyframes(rotateOut) {
+  0% {
+    opacity: 1;
+    @include transform-origin(center center);
+    @include rotate(0);
+  }
+  100% {
+    opacity: 0;
+    @include transform-origin(center center);
+    @include rotate(200deg);
+  }
+}
+
+
+// rotate  out up left ---------------------------------------------------------------------------
+@mixin dj-animation-rotate-out-up-left($duration :$dj-animation-duration) {
+  @include dj-animation(rotateOutUpLeft $duration);
+}
+
+@include keyframes(rotateOutUpLeft) {
+  0% {
+    opacity: 1;
+    @include transform-origin(left bottom);
+    @include rotate(0);
+  }
+  100% {
+    opacity: 0;
+    @include transform-origin(left bottom);
+    @include rotate(-90deg);
+  }
+}
+
+
+// rotate out down left--------------------------------------------------------------------------
+@mixin dj-animation-rotate-out-down-left($duration :$dj-animation-duration) {
+  @include dj-animation(rotateOutDownLeft $duration);
+}
+
+@include keyframes(rotateOutDownLeft) {
+  0% {
+    opacity: 1;
+    @include transform-origin(left bottom);
+    @include rotate(0);
+  }
+  100% {
+    opacity: 0;
+    @include transform-origin(left bottom);
+    @include rotate(90deg);
+  }
+}
+
+// rotate out up right ---------------------------------------------------------------------------
+@mixin dj-animation-rotate-out-up-right($duration :$dj-animation-duration) {
+  @include dj-animation(rotateOutUpRight $duration);
+}
+
+@include keyframes(rotateOutUpRight) {
+  0% {
+    opacity: 1;
+    @include transform-origin(right bottom);
+    @include rotate(0);
+  }
+  100% {
+    opacity: 0;
+    @include transform-origin(right bottom);
+    @include rotate(90deg);
+  }
+}
+
+
+// rotate out down right ---------------------------------------------------------------------------
+@mixin dj-animation-rotate-out-down-right($duration :$dj-animation-duration) {
+  @include dj-animation(rotateOutDownRight $duration);
+}
+
+@include keyframes(rotateOutDownRight) {
+  0% {
+    opacity: 1;
+    @include transform-origin(right bottom);
+    @include rotate(0);
+  }
+  100% {
+    opacity: 0;
+    @include transform-origin(right bottom);
+    @include rotate(-90deg);
+  }
+}
+
+/* Open and Close Animations ===========================================================================================*/
+
+// open up left  ---------------------------------------------------------------------------
+@mixin dj-animation-open-up-left($duration :$dj-animation-duration) {
+  @include dj-animation(openUpLeft $duration);
+}
+
+@include keyframes(openUpLeft) {
+  0% {
+    @include transform-origin(top, left);
+    @include rotate(0deg);
+    @include transition-timing-function(ease-out);
+  }
+  100% {
+    @include transform-origin(top, left);
+    @include rotate(110deg);
+    @include transition-timing-function(ease-out);
+  }
+}
+
+// open up right  ---------------------------------------------------------------------------
+@mixin dj-animation-open-up-right($duration :$dj-animation-duration) {
+  @include dj-animation(openUpRight $duration);
+}
+
+@include keyframes(openUpRight) {
+  0% {
+    @include transform-origin(top, right);
+    @include rotate(0deg);
+    @include transition-timing-function(ease-out);
+  }
+  100% {
+    @include transform-origin(top, right);
+    @include rotate(-110deg);
+    @include transition-timing-function(ease-out);
+  }
+}
+
+
+// open down left  ---------------------------------------------------------------------------
+@mixin dj-animation-open-down-left($duration :$dj-animation-duration) {
+  @include dj-animation(openDownLeft $duration);
+}
+
+@include keyframes(openDownLeft) {
+  0% {
+    @include transform-origin(bottom, left);
+    @include rotate(0deg);
+    @include transition-timing-function(ease-out);
+  }
+  100% {
+    @include transform-origin(bottom, left);
+    @include rotate(-110deg);
+    @include transition-timing-function(ease-out);
+  }
+}
+
+// open down right  ---------------------------------------------------------------------------
+@mixin dj-animation-open-down-right($duration :$dj-animation-duration) {
+  @include dj-animation(openDownRight $duration);
+}
+
+@include keyframes(openDownRight) {
+  0% {
+    @include transform-origin(bottom, right);
+    @include rotate(0deg);
+    @include transition-timing-function(ease-out);
+  }
+  100% {
+    @include transform-origin(bottom, right);
+    @include rotate(110deg);
+    @include transition-timing-function(ease-out);
+  }
+}
+
+// close up left  ---------------------------------------------------------------------------
+@mixin dj-animation-close-up-left($duration :$dj-animation-duration) {
+  @include dj-animation(closeUpLeft $duration);
+}
+@include keyframes(closeUpLeft) {
+  0% {
+    @include transform-origin(top, left);
+    @include rotate(110deg);
+    @include transition-timing-function(ease-out);
+  }
+
+  100% {
+    @include transform-origin(top, left);
+    @include rotate(0deg);
+    @include transition-timing-function(ease-out);
+  }
+}
+
+
+// close up right  ---------------------------------------------------------------------------
+@mixin dj-animation-close-up-right($duration :$dj-animation-duration) {
+  @include dj-animation(closeUpRight $duration);
+}
+
+@include keyframes (closeUpRight) {
+  0% {
+    @include transform-origin(top, right);
+    @include rotate(-110deg);
+    @include transition-timing-function(ease-out);
+  }
+  100% {
+    @include transform-origin(top, right);
+     @include rotate(0deg);
+     @include transition-timing-function(ease-out);
+  }
+}
+
+
+// close down left  ---------------------------------------------------------------------------
+@mixin dj-animation-close-down-left($duration :$dj-animation-duration) {
+  @include dj-animation(closeDownLeft $duration);
+}
+
+@include keyframes(closeDownLeft) {
+  0% {
+    @include transform-origin(bottom, left);
+    @include rotate(-110deg);
+    @include transition-timing-function(ease-out);
+  }
+  100% {
+    @include transform-origin(bottom, left);
+     @include rotate(0deg);
+     @include transition-timing-function(ease-out);
+  }
+}
+
+
+// close down right  ---------------------------------------------------------------------------
+@mixin dj-animation-close-down-right($duration :$dj-animation-duration) {
+  @include dj-animation(closeDownRight $duration);
+}
+
+@include keyframes(closeDownRight) {
+  0% {
+    @include transform-origin(bottom, right);
+    @include rotate(110deg);
+    @include transition-timing-function(ease-out);
+  }
+  100% {
+    @include transform-origin(bottom, right);
+     @include rotate(0deg);
+     @include transition-timing-function(ease-out);
+  }
+}
+
+// open up left out ---------------------------------------------------------------------------
+@mixin dj-animation-open-up-left-out($duration :$dj-animation-duration) {
+  @include dj-animation(openUpLeftOut $duration);
+}
+
+@include keyframes(openUpLeftOut) {
+  0% {
+    opacity: 1;
+    @include transform-origin(top, left);
+    @include rotate(0deg);
+    @include transition-timing-function(ease-out);
+  }
+
+  100% {
+    opacity: 0;
+    @include transform-origin(top, left);
+    @include rotate(110deg);
+    @include transition-timing-function(ease-out);
+  }
+}
+
+// open up right out ---------------------------------------------------------------------------
+@mixin dj-animation-open-up-right-out($duration :$dj-animation-duration) {
+  @include dj-animation(openUpRightOut $duration);
+}
+
+@include keyframes(openUpRightOut) {
+  0% {
+    opacity: 1;
+    @include transform-origin(top, left);
+    @include rotate(0deg);
+    @include transition-timing-function(ease-out);
+  }
+
+  100% {
+    opacity: 0;
+    @include transform-origin(top, left);
+    @include rotate(-110deg);
+    @include transition-timing-function(ease-out);
+  }
+}
+
+
+// open down left out ---------------------------------------------------------------------------
+@mixin dj-animation-open-down-left-out($duration :$dj-animation-duration) {
+  @include dj-animation(openDownLeftOut $duration);
+}
+
+@include keyframes(openDownLeftOut) {
+  0% {
+    opacity: 1;
+    @include transform-origin(bottom, left);
+    @include rotate(0deg);
+    @include transition-timing-function(ease-out);
+  }
+
+  100% {
+    opacity: 0;
+    @include transform-origin(bottom, left);
+    @include rotate(-110deg);
+    @include transition-timing-function(ease-out);
+  }
+}
+
+
+// open down right out ---------------------------------------------------------------------------
+@mixin dj-animation-open-down-right-out($duration :$dj-animation-duration) {
+  @include dj-animation(openDownRightOut $duration);
+}
+
+@include keyframes(openDownRightOut) {
+  0% {
+    opacity: 1;
+    @include transform-origin(bottom, right);
+    @include rotate(0deg);
+    @include transition-timing-function(ease-out);
+  }
+
+  100% {
+    opacity: 0;
+    @include transform-origin(bottom, right);
+    @include rotate(110deg);
+    @include transition-timing-function(ease-out);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Specials Animations ===========================================================================================*/
+
+// hinge ---------------------------------------------------------------------------
+@mixin dj-animation-hinge($duration :$dj-animation-duration) {
+  @include dj-animation(hinge $duration);
+}
+
+@include keyframes(hinge) {
+  0% {
+    @include rotate(0);
+    @include transform-origin(top left);
+    @include animation-timing-function(ease-in-out);
+  }
+  20%, 60% {
+    @include rotate(80deg);
+    @include transform-origin(top left);
+    @include animation-timing-function(ease-in-out);
+  }
+  40% {
+    @include rotate(60deg);
+    @include transform-origin(top left);
+    @include animation-timing-function(ease-in-out);
+  }
+  80% {
+    @include transform(rotate(60deg) translateY(0));
+    opacity: 1;
+    @include transform-origin(top left);
+    @include animation-timing-function(ease-in-out);
+  }
+  100% {
+    @include translateY(700px);
+    opacity: 0;
+  }
+}
+
+
+// roll in ---------------------------------------------------------------------------
+@mixin dj-animation-roll-in($duration :$dj-animation-duration) {
+  @include dj-animation(rollIn $duration);
+}
+
+@include keyframes(rollIn) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(-100%) rotate(-120deg));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0px) rotate(0deg));
+  }
+}
+
+
+// roll out ---------------------------------------------------------------------------
+@mixin dj-animation-roll-out($duration :$dj-animation-duration) {
+  @include dj-animation(rollOut $duration);
+}
+
+@include keyframes(rollOut) {
+  0% {
+    opacity: 1;
+    @include transform(translateX(0px) rotate(0deg));
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateX(-100%) rotate(-120deg));
+  }
+}
+

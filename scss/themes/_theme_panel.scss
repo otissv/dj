@@ -1,0 +1,62 @@
+/* Panel variables  */
+
+//Panels
+$dj-panel-border-radius:                                  $dj-border-radius;
+$dj-panel-border-color:                                   $dj-border-color;
+$dj-panel-margin:                                         $dj-margin;
+$dj-panel-padding:                                        $dj-padding;
+
+//well colors
+$dj-well-margin:                                          $dj-margin;
+$dj-well-padding:                                         $dj-padding;
+$dj-well-color:                                           $dj-gray-c;
+$dj-well-border-color:                                    $dj-gray-a;
+$dj-well-start-col:                                       lighten($dj-well-color, $dj-button-action-hover-percent);
+$dj-well-end-col:                                         $dj-well-color;
+
+//alert
+$dj-alert-padding:                                        $dj-07-r $dj-padding;
+
+$dj-alert-info-text-color:                                $dj-color-1-darken-20;
+$dj-alert-info-background-color:                          $dj-color-1-lighten-40;
+$dj-alert-info-border-color:                              $dj-color-1-lighten-30;
+$dj-alert-info-start-col:                                 lighten($dj-color-1-lighten-40, $dj-button-action-hover-percent);
+$dj-alert-info-end-col:                                   $dj-color-1-lighten-40;
+
+$dj-alert-success-text-color:                             $dj-color-3-darken-20;
+$dj-alert-success-background-color:                       $dj-color-3-lighten-40;
+$dj-alert-success-border-color:                           $dj-color-3-lighten-30;
+$dj-alert-success-start-col:                              lighten($dj-color-3-lighten-40, $dj-button-action-hover-percent);
+$dj-alert-success-end-col:                                $dj-color-3-lighten-40;
+
+$dj-alert-warning-text-color:                             $dj-color-5-darken-20;
+$dj-alert-warning-background-color:                       $dj-color-5-lighten-40;
+$dj-alert-warning-border-color:                           $dj-color-5-lighten-30;
+$dj-alert-warning-start-col:                              lighten($dj-color-5-lighten-40, $dj-button-action-hover-percent);
+$dj-alert-warning-end-col:                                $dj-color-5-lighten-40;
+
+$dj-alert-danger-text-color:                              $dj-color-7-darken-20;
+$dj-alert-danger-background-color:                        $dj-color-7-lighten-40;
+$dj-alert-danger-border-color:                            $dj-color-7-lighten-30;
+$dj-alert-danger-start-col:                               lighten($dj-color-7-lighten-40, $dj-button-action-hover-percent);
+$dj-alert-danger-end-col:                                 $dj-color-7-lighten-40;
+
+//list panel
+$dj-panel-list-padding:                                   $dj-03-r $dj-padding;
+$dj-panel-list-border-width:                              1px;
+$dj-panel-list-border-style:                              $dj-border-style;
+$dj-panel-list-background-color:                          transparent;
+$dj-panel-list-border-color:                              $dj-border-color;
+$dj-panel-list-hover-background-color:                    $dj-hover-color;
+$dj-panel-list-hover-font-color:                          $dj-white;
+$dj-panel-list-active-background-color:                   $dj-active-color;
+$dj-panel-list-active-font-color:                         $dj-white;
+$dj-gradient-panel-list-active-start-col:                 lighten($dj-panel-list-active-background-color, $dj-button-action-hover-percent);
+$dj-gradient-panel-list-active-end-col:                   $dj-panel-list-active-background-color;
+//panel-shadow
+$dj-panel-shadow-color:                                   $dj-shadow-color;
+$dj-panel-shadow-horizontal-offset:                       $dj-shadow-horizontal-offset;
+$dj-panel-shadow-vertical-offset:                         $dj-shadow-vertical-offset;
+$dj-panel-shadow-blur:                                    $dj-shadow-blur;
+$dj-panel-shadow-spread:                                  $dj-shadow-spread;
+$dj-panel-shadow-inset:                                   false;

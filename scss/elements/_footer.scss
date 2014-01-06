@@ -1,0 +1,9 @@
+/* Footer */
+
+@mixin dj-footer {
+  background-color:                                    $dj-footer-background-color;
+  color:                                               $dj-footer-color;
+  font-size:                                           $dj-footer-font-size;
+  padding:                                             $dj-margin;
+ 	@include dj-full-width;
+}

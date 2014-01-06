@@ -1,0 +1,250 @@
+/* Forms mixins */
+
+form {
+  margin:                                              $dj-form-margin;
+  padding:                                             $dj-form-padding;
+  border:                                              $dj-form-border-width $dj-form-border-style $dj-form-border-color
+}
+
+//buttons
+input[type="button"], input[type="submit"] {
+  margin-bottom:                                       $dj-input-margin;
+  @include dj-button;
+  padding:                                             $dj-form-button-padding;
+  @include dj-rounded-corners ($dj-input-border-radius);
+  @include dj-shadow ($dj-form-shadow-color,
+                   $dj-form-shadow-horizontal-offset,
+                   $dj-form-shadow-vertical-offset,
+                   $dj-form-shadow-blur,
+                   $dj-form-shadow-inset
+  );
+}
+
+//inputs
+input, select, textarea {
+  margin-bottom:                                       $dj-input-margin;
+}
+
+input[type="text"], input[type="password"] {
+  height :                                             $dj-input-height;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+textarea {
+  background-color:                                    $dj-input-background-color;
+  border:                                              $dj-input-border-width $dj-input-border-style $dj-input-border-color;
+	padding:                                             $dj-input-padding;
+	@include dj-no-appearance;
+	&:focus {
+		border:                                            $dj-input-focused-border-width $dj-input-focused-border-style $dj-input-focused-border-color;
+		@include reset-focus;
+	}
+  @include dj-rounded-corners ($dj-input-border-radius);
+  @include dj-shadow ($dj-form-shadow-color,
+                   $dj-form-shadow-horizontal-offset,
+                   $dj-form-shadow-vertical-offset,
+                   $dj-form-shadow-blur,
+                   $dj-form-shadow-inset
+  );
+}
+
+//select
+  select {
+    @include dj-button;
+    &:active {
+      background-color:                                $dj-gray-c;
+    }
+  }
+
+  select, textarea {
+  	font-size:                                         inherit;
+  	line-height:                                       inherit;
+  }
+
+@mixin dj-inline-checkbox {
+
+}
+
+//labels
+label {
+  display:                                             $dj-label-display;
+  vertical-align:                                      $dj-label-vertical-align;
+  text-align:                                          $dj-label-text-align;
+  margin:                                              $dj-label-margin;
+
+}
+
+//form stack
+@mixin dj-form-stack {
+  label, input, textarea, button {
+    display:                                           block;
+    width:                                             auto;
+  }
+  label[for=radio], label[for=checkbox], input[type=radio], input[type=checkbox] {
+    display:                                           inline;
+  }
+}
+
+@mixin dj-inline-field {
+  input[type=checkbox] {
+    display:                                           inline;
+  }
+}
+
+//validation
+@mixin dj-field-required {
+  border:                                             $dj-input-required-border-width $dj-input-focused-border-style $dj-input-required-border-color;
+}
+@mixin dj-field-invalid {
+  border:                                             $dj-input-invalid-border-width $dj-input-focused-border-style $dj-input-invalid-border-color;
+}
+
+@mixin dj-field-valid {
+  border:                                             $dj-input-valid-border-width $dj-input-focused-border-style $dj-input-valid-border-color;
+}
+
+@mixin dj-form-validation {
+  input[required].ng-prestine {
+    @include dj-field-required
+  }
+
+  input.ng-invalid.ng-dirty {
+    @include dj-field-invalid
+  }
+
+  input.ng-valid.ng-dirty{
+    @include dj-field-valid
+  }
+}
+
+//help messages
+@mixin dj-help-text {
+  background-color:                                     $dj-help-background-color;
+  border:                                               $dj-help-border-width $dj-help-border-style $dj-help-border-color;
+  font-size:                                            $dj-help-font-size;
+  font-weight:                                          $dj-help-font-weight;
+  color:                                                $dj-help-font-color;
+  margin:                                               $dj-help-margin;
+}
+
+@mixin dj-invalid-text {
+  color:                                                $dj-invalid-font-color;
+  margin:                                               $dj-invalid-margin;
+}
+
+@mixin dj-input-group {
+  input {
+    display:                                            block;
+    margin:                                             0;
+    border-radius:                                      0;
+    @if ($dj-borderless) {
+      border:                                           0;
+      border-bottom:                                    $dj-border;
+    }
+    @else {
+      &:first-child {
+        border-bottom:                                    0;
+        @include dj-rounded-corners-top($dj-border-radius);
+      }
+      &:last-child {
+        border-top:                                       0;
+        @include dj-rounded-corners-bottom($dj-border-radius);
+      }
+    }
+  }
+}
+
+@mixin dj-input-button($dj-input-button-position) {
+  display:                                              inline-block;
+  font-size:                                            0;
+  button, input {
+    font-size:                                          $dj-input-button-font-size;
+  }
+  button {
+    padding:                                            $dj-padding-1t;
+    height:                                             $dj-input-button-height;
+  }
+  @if ($dj-borderless) {
+    input {
+      border-radius:                                    0;
+      border:                                           0;
+      border-bottom:                                    $dj-border;
+    }
+  }
+  @if ($dj-input-button-position == 'left') {
+    button {
+      border-right:                                     0;
+      border-top-right-radius:                          0;
+      border-bottom-right-radius:                       0;
+    }
+    input {
+      border-top-left-radius:                          0;
+      border-bottom-left-radius:                       0;
+    }
+  }
+  @if ($dj-input-button-position == 'right') {
+    button {
+      border-left:                                      0;
+      border-top-left-radius:                           0;
+      border-bottom-left-radius:                        0;
+    }
+    input {
+      border-top-right-radius:                          0;
+      border-bottom-right-radius:                       0;
+    }
+  }
+  @if ($dj-input-button-position == 'top') {
+    button {
+      display:                                          block;
+      width:                                            100%;
+      border-bottom:                                    0;
+      border-bottom-left-radius:                        0;
+      border-bottom-right-radius:                       0;
+    }
+    input {
+      display:                                          block;
+      border-top-left-radius:                           0;
+      border-top-right-radius:                          0;
+    }
+  }
+  @if ($dj-input-button-position == 'bottom') {
+    button {
+      display:                                          block;
+      width:                                            100%;
+      border-top:                                       0;
+      border-top-left-radius:                           0;
+      border-top-right-radius:                          0;
+      margin-bottom:                                    $dj-input-margin;
+    }
+    input {
+      display:                                          block;
+      margin:                                           0;
+      border-bottom-left-radius:                        0;
+      border-bottom-right-radius:                       0;
+    }
+  }
+}
+
+
+@mixin dj-input-button-split ($dj-input-button-split-position, $dj-button-icon) {
+  @include dj-input-button($dj-input-button-split-position);
+  @include dj-button-split($dj-button-icon);
+  > button + button, > button + a {
+    &:nth-child(2) {
+      font-size:                                         $dj-1-r;
+    }
+  }
+}

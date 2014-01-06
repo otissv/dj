@@ -1,0 +1,111 @@
+/* Cards */
+
+@mixin dj-card {
+	border:                                 $card-border-width $card-border-style $card-border-color;
+	float:                                  $card-float;
+	margin-top:                             $card-margin-top;
+	margin-right:                           $card-margin-right;
+	margin-bottom:                          $card-margin-bottom;
+	width:                                  $card-width;
+	height:                                 $card-height;
+	.card-image {
+	  line-height:                          0;
+	  // &:hover {
+
+	  // }
+  }
+  a {
+  	&:visited {
+  		color:                              $link-font-color;////////////
+  	}
+  	&:hover {
+  		color:                              $link-hover-font-color;
+  	}
+  	&:link, &:visited, &:active {
+  		border-color:                       transparent;
+  	}
+  }
+}
+
+@mixin dj-card-image {
+	.card-image {
+		line-height:                          0;
+	}
+}
+
+@mixin dj-card-body {
+	.card-body{
+    border-top:                           $card-body-border-width $card-body-border-style $card-body-border-color;
+	  padding:                              $card-body-padding;
+	  h1, h2, h3, h4, h5, h6 {
+	   	font-size:                          $card-body-font-size;
+      font-weight:                        $card-body-font-weight;
+      color:                              $card-body-color;
+      text-align:                         $card-body-text-align;
+    }
+	}
+
+}
+
+@mixin dj-card-footer {
+	.card-footer {
+
+	}
+
+}
+
+
+
+// Card summary
+@mixin dj-card-summary {
+	border:                                 $card-summary-border-width $card-summary-border-style $card-summary-border-color;
+	float:                                  $card-summary-float;
+	margin:                                 $card-summary-margin;
+	width:                                  $card-summary-width;
+	height:                                 $card-summary-height;
+	.card-summary-image {
+	  line-height:                          0;
+	  display:                              $card-summary-img-display;
+
+	  a {
+		  &:link, &:visited {
+        border:                           $card-summary-img-link-border-weight $card-summary-img-link-border-style $card-summary-img-link-border-color;
+		  }
+		  &:hover, &:active {
+		  	border:                           $card-summary-img-link-border-weight $card-summary-img-link-border-style $card-summary-img-link-hover-border-color;                                           
+		  }
+	  }
+  }
+}
+
+@mixin dj-card-summary-image {
+	.card-summary-image {
+		line-height:                          0;
+		float:                                $card-summary-img-float;
+	}
+}
+
+@mixin dj-card-summary-body {
+	.card-summary-body{
+		border-top:                           $card-summary-body-border-width $card-summary-body-border-style $card-summary-body-border-color;
+	  padding:                              $card-summary-body-padding;
+	  h1, h2, h3, h4, h5, h6 {
+	   	font-size:                          $card-summary-body-font-size;
+      font-weight:                        $card-summary-body-font-weight;
+      color:                              $card-summary-body-color;
+      text-align:                         $card-summary-body-text-align;
+    }
+    p {
+			text-overflow: ellipsis;
+	    overflow:hidden;
+	  }
+	}
+}
+
+@mixin dj-card-summary-footer {
+	.card-summary-footer {
+
+	}
+
+}
+

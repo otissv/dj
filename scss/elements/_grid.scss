@@ -1,0 +1,68 @@
+/* Grid mixins */
+html, body {
+	background-color:                                 $dj-background-color;
+}
+
+body {
+  position:                                         absolute;
+  top:                                              0;
+	width:                                            $dj-body-width;
+	height:                                           $dj-body-height;
+}
+
+*, *:after, *:before {
+  @include box-sizing(border-box);
+}
+
+//new row
+@mixin dj-row {
+	margin:                                            0  0 $dj-row-margin 0;
+	@include dj-clearfix;
+}
+
+//sets element width
+@mixin dj-column-base {
+	float:                                             left;
+	padding:                                           0 $dj-column-padding;
+}
+
+
+// grid columns
+@mixin dj-column($dj-col-span: 1, $dj-col-offset: 0) {
+	@include dj-column-base;
+    width:                                           $dj-grid-width  * ($dj-col-span / $dj-c-320);
+    margin-left:                                     ($dj-grid-width * (1 / $dj-c-320)) * $dj-col-offset;
+  @media (min-width: $dj-w-480) {
+    width:                                           $dj-grid-width  * ($dj-col-span / $dj-c-480);
+    margin-left:                                     ($dj-grid-width * (1 / $dj-c-480)) * $dj-col-offset;
+  }
+  @media (min-width: $dj-w-768) {
+    width:                                           $dj-grid-width  * ($dj-col-span / $dj-c-768);
+    margin-left:                                     ($dj-grid-width * (1 / $dj-c-768) * $dj-col-offset);
+  }
+  @media (min-width: $dj-w-1024) {
+    width:                                           $dj-grid-width  *  ($dj-col-span / $dj-c-1024);
+    margin-left:                                     ($dj-grid-width * (1 / $dj-c-1024)) * $dj-col-offset;
+  }
+  @media (min-width: $dj-w-1366) {
+    width:                                           $dj-grid-width  * ($dj-col-span / $dj-c-1366);
+    margin-left:                                     ($dj-grid-width * (1 / $dj-c-1366)) * $dj-col-offset;
+  }
+  @media (min-width: $dj-w-1600) {
+    width:                                           $dj-grid-width  * ($dj-col-span / $dj-c-1600);
+    margin-left:                                     ($dj-grid-width * (1 / $dj-c-1600)) * $dj-col-offset;
+  }
+}
+
+//nested grid columns
+@mixin dj-column-nested($dj-cols, $dj-col-span: 1, $dj-col-offset: 0) {
+	@include dj-column-base;
+  width:                                             $dj-grid-width   * ($dj-col-span / $dj-cols);
+  margin-left:                                       ($dj-grid-width * (1 / $dj-cols)) * $dj-col-offset;
+}
+
+//Column padding
+@mixin dj-column-edge {
+  padding-left:                                      0;
+  padding-right:                                     0;
+}

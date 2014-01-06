@@ -1,0 +1,103 @@
+/* Unit variables ======================================================================================*/
+
+$dj-scale:                                            1.618;
+$dj-scale-base:                                       18;
+$dj-base-font-size:                                   18px; // default body font size equal to 1rem.
+
+
+//Unitless value scale
+$dj-1:                                                 1;
+$dj-2:                                                 ($dj-scale-base / 100) + $dj-1;
+$dj-3:                                                 $dj-1  * $dj-scale;
+$dj-4:                                                 $dj-2  * $dj-scale;
+$dj-5:                                                 $dj-3  * $dj-scale;
+$dj-6:                                                 $dj-4  * $dj-scale;
+$dj-7:                                                 $dj-5  * $dj-scale;
+$dj-8:                                                 $dj-6  * $dj-scale;
+$dj-9:                                                 $dj-7  * $dj-scale;
+$dj-10:                                                $dj-8  * $dj-scale;
+$dj-11:                                                $dj-9  * $dj-scale;
+$dj-12:                                                $dj-10 * $dj-scale;
+$dj-13:                                                $dj-11 * $dj-scale;
+$dj-14:                                                $dj-12 * $dj-scale;
+$dj-15:                                                $dj-13 * $dj-scale;
+$dj-16:                                                $dj-14 * $dj-scale;
+$dj-17:                                                $dj-15 * $dj-scale;
+$dj-18:                                                $dj-16 * $dj-scale;
+$dj-19:                                                $dj-17 * $dj-scale;
+$dj-20:                                                $dj-18 * $dj-scale;
+//Unitless scale below 0
+$dj-01:                                                $dj-2   / $dj-scale;
+$dj-02:                                                $dj-1   / $dj-scale;
+$dj-03:                                                $dj-02  / $dj-scale;
+$dj-04:                                                $dj-03  / $dj-scale;
+$dj-05:                                                $dj-04  / $dj-scale;
+$dj-06:                                                $dj-05  / $dj-scale;
+$dj-07:                                                $dj-06  / $dj-scale;
+$dj-08:                                                $dj-07  / $dj-scale;
+
+
+
+//Rem units
+$dj-1-r:                                               1rem;
+$dj-2-r:                                               ($dj-scale-base / 100) + $dj-1-r;
+$dj-3-r:                                               $dj-1-r * $dj-scale;
+$dj-4-r:                                               $dj-2-r * $dj-scale;
+$dj-5-r:                                               $dj-3-r * $dj-scale;
+$dj-6-r:                                               $dj-4-r * $dj-scale;
+$dj-7-r:                                               $dj-5-r * $dj-scale;
+$dj-8-r:                                               $dj-6-r * $dj-scale;
+$dj-9-r:                                               $dj-7-r * $dj-scale;
+$dj-10-r:                                              $dj-8-r * $dj-scale;
+$dj-11-r:                                              $dj-9-r * $dj-scale;
+$dj-12-r:                                              $dj-10-r * $dj-scale;
+$dj-13-r:                                              $dj-11-r * $dj-scale;
+$dj-14-r:                                              $dj-12-r * $dj-scale;
+$dj-15-r:                                              $dj-13-r * $dj-scale;
+$dj-16-r:                                              $dj-14-r * $dj-scale;
+$dj-17-r:                                              $dj-15-r * $dj-scale;
+$dj-18-r:                                              $dj-16-r * $dj-scale;
+$dj-19-r:                                              $dj-17-r * $dj-scale;
+$dj-20-r:                                              $dj-18-r * $dj-scale;
+//Rem units scale below 0
+$dj-01-r:                                              $dj-2-r   / $dj-scale;
+$dj-02-r:                                              $dj-1-r   / $dj-scale;
+$dj-03-r:                                              $dj-02-r  / $dj-scale;
+$dj-04-r:                                              $dj-03-r  / $dj-scale;
+$dj-05-r:                                              $dj-04-r  / $dj-scale;
+$dj-06-r:                                              $dj-05-r  / $dj-scale;
+$dj-07-r:                                              $dj-06-r  / $dj-scale;
+$dj-08-r:                                              $dj-07-r  / $dj-scale;
+
+
+
+//Percentage units
+$dj-1-p:                                               1%;
+$dj-2-p:                                               ($dj-scale-base / 100) + $dj-1-p;
+$dj-3-p:                                               $dj-1-p * $dj-scale;
+$dj-4-p:                                               $dj-2-p * $dj-scale;
+$dj-5-p:                                               $dj-3-p * $dj-scale;
+$dj-6-p:                                               $dj-4-p * $dj-scale;
+$dj-7-p:                                               $dj-5-p * $dj-scale;
+$dj-8-p:                                               $dj-6-p * $dj-scale;
+$dj-9-p:                                               $dj-7-p * $dj-scale;
+$dj-10-p:                                              $dj-8-p * $dj-scale;
+$dj-11-p:                                              $dj-9-p * $dj-scale;
+$dj-12-p:                                              $dj-10-p * $dj-scale;
+$dj-13-p:                                              $dj-11-p * $dj-scale;
+$dj-14-p:                                              $dj-12-p * $dj-scale;
+$dj-15-p:                                              $dj-13-p * $dj-scale;
+$dj-16-p:                                              $dj-14-p * $dj-scale;
+$dj-17-p:                                              $dj-15-p * $dj-scale;
+$dj-18-p:                                              $dj-16-p * $dj-scale;
+$dj-19-p:                                              $dj-17-p * $dj-scale;
+$dj-20-p:                                              $dj-18-p * $dj-scale;
+//Percentage units scale below 0
+$dj-01-p:                                              $dj-2-p   / $dj-scale;
+$dj-02-p:                                              $dj-1-p   / $dj-scale;
+$dj-03-p:                                              $dj-02-p  / $dj-scale;
+$dj-04-p:                                              $dj-03-p  / $dj-scale;
+$dj-05-p:                                              $dj-04-p  / $dj-scale;
+$dj-06-p:                                              $dj-05-p  / $dj-scale;
+$dj-07-p:                                              $dj-06-p  / $dj-scale;
+$dj-08-p:                                              $dj-07-p  / $dj-scale;

@@ -1,0 +1,1451 @@
+@import "dj";
+
+//variables
+$panel-border:                                         $dj-04-r;
+$main-nav-width:                                       $dj-6-r  + $dj-12-r;
+$top-margin:                                           $dj-2-r;
+
+
+.main-nav {
+  nav {
+    @include dj-panel-list-hover;
+
+    margin:                                            $dj-margin;
+    a:after {
+      float:                                           right;
+      color:                                           $dj-gray-b;
+      margin-left:                                     $dj-margin;
+      @include dj-icon($fa-var-angle-right);
+    }
+  }
+  @media (min-width: $dj-w-1024)   {
+    font-size:                                         $dj-1-r;
+    position:                                          absolute;
+    top:                                               0;
+    display:                                           initial;
+    width:                                             $main-nav-width;
+  }
+}
+
+//grid
+.page-content {
+	padding:                                             0 $dj-grid-padding 0 $dj-grid-padding;
+  > h1 {
+    margin:                                            0;
+    + p {
+      margin-top:                                      0;
+      border-bottom:                                   $dj-border-width  $dj-border-style $dj-gray-b;
+    }
+  }
+  > h2 {
+    margin-top:                                        $dj-6-r;
+    border-bottom:                                     $panel-border $dj-border-style $dj-base-font-color;
+  }
+  > h3 {
+    margin-top:                                        $dj-6-r;
+    border-bottom:                                     $dj-border-width $dj-border-style $dj-gray-c;
+  }
+  @media (min-width: $dj-w-1024)   {
+    position:                                          absolute;
+    left:                                              $main-nav-width;
+    right:                                             0;
+    margin-top:                                        0;
+  }
+}
+
+.footer {
+  @include dj-footer;
+}
+
+.example,.html, .scss, .js {
+  @include dj-row;
+  pre {
+    margin:                                            0;
+  }
+  h1, h2, h3, h4, h5, h5, h6 {
+    border:                                            0;
+    margin:                                            0;
+  }
+}
+
+.example {
+  margin-top:                                          $dj-margin;
+}
+
+.html, .scss, .js {
+	pre {
+		@include dj-code-block;
+    line-height:                                       $dj-2;
+  }
+}
+
+.table-code {
+  pre {
+    margin:           0;
+  }
+  @include dj-table-bordered;
+  td:first-child, th:first-child  {
+    background-color: $dj-gray-e;
+    color:            $dj-code-font-color;
+  }
+}
+
+
+//Getting Started
+
+.install-info {
+  button {
+    @include dj-button-primary;
+    display:                                           inline;
+    margin:                                            $dj-margin-1t 0;
+  }
+}
+
+//grid
+@mixin dj-col-base {
+	background-color:                                    $dj-gray-e;
+	text-align:                                          center;
+	border:                                              $dj-border-width $dj-border-style $dj-border-color;
+  height:                                              30px;
+}
+
+.row-0 {
+	@include dj-row;
+  div {
+ 	  @include dj-col-base;
+ 	  @include dj-column(1);
+  }
+}
+
+.row-1 {
+@include dj-row;
+ div {
+   	@include dj-col-base;
+    @include dj-column(6);
+    @media (min-width: $dj-w-768) {
+       @include dj-column(12);
+    }
+  }
+}
+
+.row-2 {
+@include dj-row;
+ div {
+ 	@include dj-col-base;
+ 	@include dj-column(2);
+   &:last-child {
+      @include dj-column(4);
+    }
+    @media (min-width: $dj-w-768) {
+      @include dj-column(3);
+      &:last-child {
+         @include dj-column(9);
+       }
+    }
+  }
+}
+
+.row-3 {
+@include dj-row;
+  div {
+ 	  @include dj-col-base;
+ 	  @include dj-column(2);
+  }
+  div:first-child {
+    @include dj-column(2);
+  }
+  div:nth-child(2) {
+    @include dj-column(1, 1);
+  }
+  @media (min-width: $dj-w-768) {
+    div {
+      @include dj-col-base;
+      @include dj-column(4);
+    }
+    div:first-child {
+      @include dj-column(4);
+    }
+    div:nth-child(2) {
+      @include dj-column(2, 2);
+    }
+  }
+}
+
+.row-4 {
+	@include dj-row;
+	div:first-child {
+		@include dj-col-base;
+		@include dj-column(2);
+    @media (min-width: $dj-w-768) {
+      @include dj-column(4);
+    }
+	}
+	div:last-child {
+		@include dj-col-base;
+		@include dj-column(4);
+    border-top:                                        0;
+    border-bottom:                                     0;
+		div {
+			background-color:                                $dj-gray-d;
+      border:                                          $dj-border-width $dj-border-style $dj-border-color;
+      @include dj-column-nested(2, 1);
+		}
+    @media (min-width: $dj-w-768) {
+      @include dj-column(8);
+      @include dj-column-edge;
+      div {
+        @include dj-column-nested(4, 2);
+      }
+    }
+    @include dj-column-edge;
+	}
+}
+
+//Fonts
+.sans {
+  font-family:                                         $dj-font-family-sans;
+}
+
+.serif {
+  font-family:                                         $dj-font-family-serif;
+}
+
+.code {
+  font-family:                                         $dj-font-family-code;
+}
+
+//Headings
+.sh1 {
+  @include dj-sh1;
+}
+
+.sh2 {
+  @include dj-sh2;
+}
+
+.sh3 {
+  @include dj-sh3;
+}
+
+.sh4 {
+  @include dj-sh4;
+}
+
+.sh5 {
+  @include dj-sh5;
+}
+
+.sh6 {
+  @include dj-sh6;
+}
+
+//Pargarphs
+.indent {
+	@include dj-indent;
+}
+
+//Links
+.hypertext {
+  @include dj-unstyled-list;
+}
+
+.link {
+   &:link, &:visited, &:hover, &:focus, &:active {
+    color:                           $dj-link-font-color;
+    background-color:                $dj-link-background-color;
+    border-bottom:                   $dj-link-border-width solid $dj-link-border-color;
+    margin-left:                     $dj-margin;
+  }
+}
+
+.visited {
+   &:link, &:visited, &:hover, &:focus, &:active{
+    color:                           $dj-link-font-color;
+    background-color:                $dj-background-color;
+    border-bottom:                   $dj-link-visited-border-width solid $dj-link-visited-border-color;
+    margin-left:                     $dj-margin;
+  }
+}
+
+.hover {
+   &:link, &:visited, &:hover, &:focus, &:active {
+    color:                           $dj-link-hover-font-color;
+    background-color:                $dj-link-hover-background-color;
+    border-bottom:                   $dj-link-hover-border-width solid $dj-link-hover-border-color;
+    margin-left:                     $dj-margin;
+  }
+}
+
+.active {
+   &:link, &:visited, &:hover, &:focus, &:active{
+    color:                           $dj-link-active-font-color;
+    border-bottom:                   $dj-link-active-border-width solid $dj-link-active-border-color;
+    background-color:                $dj-link-active-background-color;
+    margin-left:                     $dj-margin;
+  }
+}
+
+//Quotes
+.block-quote {
+  @include dj-block-quote;
+}
+
+.pull-quote {
+  @include dj-pull-quote;
+}
+
+.unstyled-list {
+  @include dj-unstyled-list;
+}
+
+.inline-list{
+  @include dj-inline-list;
+}
+
+.description-inline {
+  @include dj-description-inline;
+}
+
+.description-ordered {
+  @include dj-description-ordered;
+}
+
+.description-numbered {
+  @include dj-description-numbered;
+}
+
+//lables
+
+.label {
+  @include dj-label;
+}
+
+.label-primary {
+  @include dj-label-primary;
+}
+
+.label-info {
+  @include dj-label-info;
+}
+
+.label-success {
+  @include dj-label-success;
+}
+
+.label-warning {
+  @include dj-label-warning;
+}
+
+.label-danger {
+  @include dj-label-danger;
+}
+
+
+//badges
+.badges {
+  margin:                             0;
+  li {
+    display:                          inline;
+  }
+}
+
+.badge {
+  @include dj-badge;
+}
+
+.badge-primary {
+  @include dj-badge-primary;
+}
+
+.badge-info {
+  @include dj-badge-info;
+}
+
+.badge-success {
+  @include dj-badge-success;
+}
+
+.badge-warning {
+  @include dj-badge-warning;
+}
+
+.badge-danger {
+  @include dj-badge-danger;
+}
+
+
+//badge pills
+.badge-pill {
+  @include dj-badge-pill;
+}
+
+.badge-pill-primary {
+  @include dj-badge-pill-primary;
+}
+
+.badge-pill-info {
+  @include dj-badge-pill-info;
+}
+
+.badge-pill-success {
+  @include dj-badge-pill-success;
+}
+
+.badge-pill-warning {
+  @include dj-badge-pill-warning;
+}
+
+.badge-pill-danger {
+  @include dj-badge-pill-danger;
+}
+
+//code-block
+.code-block {
+  @include dj-code-block;
+}
+
+.code-numbered {
+  @include dj-code-numbered;
+}
+
+//buttons
+@mixin dj-button-layout {
+  display:                                              block;
+  margin:                                               0 $dj-margin $dj-margin 0;
+}
+
+.sys-button {
+  width:                                               100px;
+}
+
+.button {
+  @include dj-button;
+  width:                                               100px;
+}
+
+
+.button-round {
+  @include dj-button-round($dj-9-r);
+  @include dj-button-layout;
+}
+
+
+.button-pill {
+  @include dj-button-pill;
+  @include dj-button-layout;
+  width:                                               100px;
+  margin-top:                                          $dj-margin;
+}
+
+
+.button-block {
+  @include dj-button-block;
+}
+
+
+.giga-button {
+  @include dj-button-giga;
+  @include dj-button-layout;
+}
+
+.mega-button {
+  @include dj-button-mega;
+  @include dj-button-layout;
+}
+
+.large-button {
+  @include dj-button-large;
+  @include dj-button-layout;
+}
+
+.button-normal {
+  @include dj-button-layout;
+}
+
+.small-button {
+  @include dj-button-small;
+  @include dj-button-layout;
+}
+
+.button-primary {
+  @include dj-button-primary;
+  @include dj-button-layout;
+  width:                                               100px;
+}
+
+.button-info {
+  @include dj-button-info;
+  @include dj-button-layout;
+  width:                                               100px;
+}
+
+.button-success {
+  @include dj-button-success;
+  @include dj-button-layout;
+  width:                                               100px;
+}
+
+.button-warning {
+  @include dj-button-warning;
+  @include dj-button-layout;
+  width:                                               100px;
+}
+
+.button-danger {
+  @include dj-button-danger;
+  @include dj-button-layout;
+  width:                                               100px;
+}
+
+.button-disabled {
+  @include dj-button-disabled;
+  @include dj-button-layout;
+  width:                                               100px;
+}
+
+.button-group {
+  @include dj-button-group;
+}
+
+.button-group-block {
+  @include dj-button-group-block(3);
+}
+
+.button-stack{
+  @include dj-button-stack($dj-9-r);
+  li:last-child {
+    margin-bottom:                                     $dj-margin;
+  }
+}
+
+.button-pill-stack{
+  @include dj-button-pill-stack($dj-9-r);
+  li:last-child {
+    margin-bottom:                                     $dj-margin;
+  }
+}
+
+.button-round-stack{
+  @include dj-button-round-stack;
+  //remove left padding on <a> to center icon
+  li a {
+    padding-left: 0;
+  }
+}
+
+.button-split {
+  @include dj-button-split($fa-var-caret-down);
+}
+
+.button-split-save {
+  @include dj-button-split($fa-var-floppy-o);
+  margin:                                              0 0 0 $dj-margin ;
+}
+
+.button-drop-down {
+  @include dj-button-drop-down($fa-var-caret-down);
+}
+
+//pagination
+.pagination {
+  @include dj-pagination;
+}
+
+//navigation
+.nav-active {
+  @include dj-nav-active;
+}
+.nav {
+  @include dj-nav;
+}
+
+.nav-stack {
+  @include dj-nav-stack;
+}
+
+.nav-pill {
+  @include dj-nav-pill;
+}
+
+.nav-pill-stack{
+  @include dj-nav-pill-stack;
+}
+
+//tabels
+.table-bordered {
+  @include dj-table-bordered;
+}
+
+.table-striped {
+  @include dj-table-striped;
+}
+
+.table-hover {
+  @include dj-table-hover;
+}
+
+.table-condensed {
+  @include dj-table-condensed;
+}
+
+.table-combined {
+  @include dj-table-bordered;
+  @include dj-table-striped;
+  @include dj-table-hover;
+  @include dj-table-condensed;
+  @media (max-width: $dj-w-768) {
+    @include dj-table-responsive;
+  }
+}
+
+.table-flip-combined {
+  @include dj-table-flip;
+  @include dj-table-bordered;
+  @include dj-table-striped;
+  @include dj-table-hover;
+  @include dj-table-condensed;
+}
+
+.icons-table {
+  @include dj-table-bordered;
+  @include dj-table-condensed;
+  font-size: $dj-02-r;
+}
+
+//forms
+.form-field {
+  width: $dj-11-r;
+}
+.form-stack {
+  @include dj-form-stack;
+}
+
+//validation
+input.validation-focused {
+  border:                              $dj-input-focused-border-width $dj-input-focused-border-style $dj-input-focused-border-color;
+}
+
+input.validation-valid {
+  border:                              $dj-input-valid-border-width $dj-input-focused-border-style $dj-input-valid-border-color;
+}
+
+input.validation-invalid {
+  border:                              $dj-input-invalid-border-width $dj-input-focused-border-style $dj-input-invalid-border-color;
+}
+
+input.validation-required {
+  border:                              $dj-input-required-border-width $dj-input-focused-border-style $dj-input-required-border-color;
+}
+
+.inline-field {
+  @include dj-inline-field;
+}
+
+//validation messages
+.help-text {
+  @include dj-help-text;
+}
+
+.invalid-text {
+  @include dj-invalid-text;
+}
+
+//input-button
+.input-button-left {
+  @include dj-input-button('left');
+}
+
+.input-button-right {
+  @include dj-input-button('right');
+}
+
+.input-button-top {
+  @include dj-input-button('top');
+}
+
+.input-button-bottom {
+  @include dj-input-button('bottom');
+}
+
+.input-button-split-left {
+  @include dj-input-button-split('left', $fa-var-caret-down);
+}
+
+.input-button-split-right {
+  @include dj-input-button-split('right', $fa-var-caret-down);
+}
+
+
+//input group
+.input-group {
+  @include dj-input-group;
+}
+
+
+//panels
+.panel {
+  @include dj-panel;
+}
+.well {
+  @include dj-well;
+}
+
+.alert-info {
+  @include dj-alert-info;
+  margin-bottom:                       $dj-margin;
+}
+
+.alert-success {
+  @include dj-alert-success;
+  margin-bottom:                       $dj-margin;
+}
+
+.alert-warning {
+  @include dj-alert-warning;
+  margin-bottom:                       $dj-margin;
+}
+
+.alert-danger {
+  @include dj-alert-danger;
+}
+
+.panel-list {
+  @include dj-panel-list;
+}
+
+.panel-list-hover {
+  @include dj-panel-list-hover;
+}
+
+.panel-active {
+  @include panel-active;
+}
+
+//images
+.img-rounded{
+  @include dj-img-rounded;
+  width:  140px;
+  height: 140px;
+}
+
+.img-circle {
+  @include dj-img-circle(140px);
+}
+
+.img-thumbnail{
+  @include dj-img-thumbnail;
+  width:  140px;
+  height: 140px;
+}
+
+.img-thumbnail-circle {
+  @include dj-img-thumbnail-circle(140px);
+}
+
+
+//colors
+@mixin dj-cell-color-width{
+  width:              $dj-5-r;
+}
+
+//Gray Colors
+.cell-black {
+  background-color:   $dj-black;
+  @include dj-cell-color-width;
+}
+.cell-gray-1 {
+  background-color:   $dj-gray-1;
+  @include dj-cell-color-width;
+}
+.cell-gray-2 {
+  background-color:   $dj-gray-2;
+  @include dj-cell-color-width;
+}
+.cell-gray-3 {
+  background-color:   $dj-gray-3;
+  @include dj-cell-color-width;
+}
+.cell-gray-4 {
+  background-color:   $dj-gray-4;
+  @include dj-cell-color-width;
+}
+.cell-gray-5 {
+  background-color:   $dj-gray-5;
+  @include dj-cell-color-width;
+}
+.cell-gray-6 {
+  background-color:   $dj-gray-6;
+  @include dj-cell-color-width;
+}
+.cell-gray-7 {
+  background-color:   $dj-gray-7;
+  @include dj-cell-color-width;
+}
+.cell-gray-8 {
+  background-color:   $dj-gray-8;
+  @include dj-cell-color-width;
+}
+.cell-gray-9 {
+  background-color:   $dj-gray-9;
+  @include dj-cell-color-width;
+}
+.cell-gray-a {
+  background-color:   $dj-gray-a;
+  @include dj-cell-color-width;
+}
+.cell-gray-b {
+  background-color:   $dj-gray-b;
+  @include dj-cell-color-width;
+}
+.cell-gray-c {
+  background-color:   $dj-gray-c;
+  @include dj-cell-color-width;
+}
+.cell-gray-d {
+  background-color:   $dj-gray-d;
+  @include dj-cell-color-width;
+}
+.cell-gray-e {
+  background-color:   $dj-gray-e;
+  @include dj-cell-color-width;
+}
+.cell-white {
+  background-color:   $dj-white;
+  @include dj-cell-color-width;
+}
+
+//Colors
+.cell-color-1 {
+  background-color:   $dj-color-1;
+  @include dj-cell-color-width;
+}
+.cell-color-2 {
+  background-color:   $dj-color-2;
+  @include dj-cell-color-width;
+}
+.cell-color-3 {
+  background-color:   $dj-color-3;
+  @include dj-cell-color-width;
+}
+.cell-color-4 {
+  background-color:   $dj-color-4;
+  @include dj-cell-color-width;
+}
+.cell-color-5 {
+  background-color:   $dj-color-5;
+  @include dj-cell-color-width;
+}
+.cell-color-6 {
+  background-color:   $dj-color-6;
+  @include dj-cell-color-width;
+}
+.cell-color-7 {
+  background-color:   $dj-color-7;
+  @include dj-cell-color-width;
+}
+.cell-color-8 {
+  background-color:   $dj-color-8;
+  @include dj-cell-color-width;
+}
+
+
+//Darken colors
+.cell-color-1-darken-10 {
+  background-color:   $dj-color-1-darken-10;
+  @include dj-cell-color-width;
+}
+.cell-color-1-darken-20 {
+  background-color:   $dj-color-1-darken-20;
+  @include dj-cell-color-width;
+}
+.cell-color-1-darken-30 {
+  background-color:   $dj-color-1-darken-30;
+  @include dj-cell-color-width;
+}
+.cell-color-1-darken-40 {
+  background-color:   $dj-color-1-darken-40;
+  @include dj-cell-color-width;
+}
+
+.cell-color-2-darken-10 {
+  background-color:   $dj-color-2-darken-10;
+  @include dj-cell-color-width;
+}
+.cell-color-2-darken-20 {
+  background-color:   $dj-color-2-darken-20;
+  @include dj-cell-color-width;
+}
+.cell-color-2-darken-30 {
+  background-color:   $dj-color-2-darken-30;
+  @include dj-cell-color-width;
+}
+.cell-color-2-darken-40 {
+  background-color:   $dj-color-2-darken-40;
+  @include dj-cell-color-width;
+}
+
+
+.cell-color-3-darken-10 {
+  background-color:   $dj-color-3-darken-10;
+  @include dj-cell-color-width;
+}
+.cell-color-3-darken-20 {
+  background-color:   $dj-color-3-darken-20;
+  @include dj-cell-color-width;
+}
+.cell-color-3-darken-30 {
+  background-color:   $dj-color-3-darken-30;
+  @include dj-cell-color-width;
+}
+.cell-color-3-darken-40 {
+  background-color:   $dj-color-3-darken-40;
+  @include dj-cell-color-width;
+}
+
+.cell-color-4-darken-10 {
+  background-color:   $dj-color-4-darken-10;
+  @include dj-cell-color-width;
+}
+.cell-color-4-darken-20 {
+  background-color:   $dj-color-4-darken-20;
+  @include dj-cell-color-width;
+}
+.cell-color-4-darken-30 {
+  background-color:   $dj-color-4-darken-30;
+  @include dj-cell-color-width;
+}
+.cell-color-4-darken-40 {
+  background-color:   $dj-color-4-darken-40;
+  @include dj-cell-color-width;
+}
+
+.cell-color-5-darken-10 {
+  background-color:   $dj-color-5-darken-10;
+  @include dj-cell-color-width;
+}
+.cell-color-5-darken-20 {
+  background-color:   $dj-color-5-darken-20;
+  @include dj-cell-color-width;
+}
+.cell-color-5-darken-30 {
+  background-color:   $dj-color-5-darken-30;
+  @include dj-cell-color-width;
+}
+.cell-color-5-darken-40 {
+  background-color:   $dj-color-5-darken-40;
+  @include dj-cell-color-width;
+}
+
+.cell-color-6-darken-10 {
+  background-color:   $dj-color-6-darken-10;
+  @include dj-cell-color-width;
+}
+.cell-color-6-darken-20 {
+  background-color:   $dj-color-6-darken-20;
+  @include dj-cell-color-width;
+}
+.cell-color-6-darken-30 {
+  background-color:   $dj-color-6-darken-30;
+  @include dj-cell-color-width;
+}
+.cell-color-6-darken-40 {
+  background-color:   $dj-color-6-darken-40;
+  @include dj-cell-color-width;
+}
+
+.cell-color-7-darken-10 {
+  background-color:   $dj-color-7-darken-10;
+  @include dj-cell-color-width;
+}
+.cell-color-7-darken-20 {
+  background-color:   $dj-color-7-darken-20;
+  @include dj-cell-color-width;
+}
+.cell-color-7-darken-30 {
+  background-color:   $dj-color-7-darken-30;
+  @include dj-cell-color-width;
+}
+.cell-color-7-darken-40 {
+  background-color:   $dj-color-7-darken-40;
+  @include dj-cell-color-width;
+}
+
+.cell-color-8-darken-10 {
+  background-color:   $dj-color-8-darken-10;
+  @include dj-cell-color-width;
+}
+.cell-color-8-darken-20 {
+  background-color:   $dj-color-8-darken-20;
+  @include dj-cell-color-width;
+}
+.cell-color-8-darken-30 {
+  background-color:   $dj-color-8-darken-30;
+  @include dj-cell-color-width;
+}
+.cell-color-8-darken-40 {
+  background-color:   $dj-color-8-darken-40;
+  @include dj-cell-color-width;
+}
+
+
+//Lighten colors
+.cell-color-1-lighten-10 {
+  background-color:   $dj-color-1-lighten-10;
+  @include dj-cell-color-width;
+}
+.cell-color-1-lighten-20 {
+  background-color:   $dj-color-1-lighten-20;
+  @include dj-cell-color-width;
+}
+.cell-color-1-lighten-30 {
+  background-color:   $dj-color-1-lighten-30;
+  @include dj-cell-color-width;
+}
+.cell-color-1-lighten-40 {
+  background-color:   $dj-color-1-lighten-40;
+  @include dj-cell-color-width;
+}
+
+.cell-color-2-lighten-10 {
+  background-color:   $dj-color-2-lighten-10;
+  @include dj-cell-color-width;
+}
+.cell-color-2-lighten-20 {
+  background-color:   $dj-color-2-lighten-20;
+  @include dj-cell-color-width;
+}
+.cell-color-2-lighten-30 {
+  background-color:   $dj-color-2-lighten-30;
+  @include dj-cell-color-width;
+}
+.cell-color-2-lighten-40 {
+  background-color:   $dj-color-2-lighten-40;
+  @include dj-cell-color-width;
+}
+
+
+.cell-color-3-lighten-10 {
+  background-color:   $dj-color-3-lighten-10;
+  @include dj-cell-color-width;
+}
+.cell-color-3-lighten-20 {
+  background-color:   $dj-color-3-lighten-20;
+  @include dj-cell-color-width;
+}
+.cell-color-3-lighten-30 {
+  background-color:   $dj-color-3-lighten-30;
+  @include dj-cell-color-width;
+}
+.cell-color-3-lighten-40 {
+  background-color:   $dj-color-3-lighten-40;
+  @include dj-cell-color-width;
+}
+
+
+.cell-color-4-lighten-10 {
+  background-color:   $dj-color-4-lighten-10;
+  @include dj-cell-color-width;
+}
+.cell-color-4-lighten-20 {
+  background-color:   $dj-color-4-lighten-20;
+  @include dj-cell-color-width;
+}
+.cell-color-4-lighten-30 {
+  background-color:   $dj-color-4-lighten-30;
+  @include dj-cell-color-width;
+}
+.cell-color-4-lighten-40 {
+  background-color:   $dj-color-4-lighten-40;
+  @include dj-cell-color-width;
+}
+
+.cell-color-5-lighten-10 {
+  background-color:   $dj-color-5-lighten-10;
+  @include dj-cell-color-width;
+}
+.cell-color-5-lighten-20 {
+  background-color:   $dj-color-5-lighten-20;
+  @include dj-cell-color-width;
+}
+.cell-color-5-lighten-30 {
+  background-color:   $dj-color-5-lighten-30;
+  @include dj-cell-color-width;
+}
+.cell-color-5-lighten-40 {
+  background-color:   $dj-color-5-lighten-40;
+  @include dj-cell-color-width;
+}
+
+.cell-color-6-lighten-10 {
+  background-color:   $dj-color-6-lighten-10;
+  @include dj-cell-color-width;
+}
+.cell-color-6-lighten-20 {
+  background-color:   $dj-color-6-lighten-20;
+  @include dj-cell-color-width;
+}
+.cell-color-6-lighten-30 {
+  background-color:   $dj-color-6-lighten-30;
+  @include dj-cell-color-width;
+}
+.cell-color-6-lighten-40 {
+  background-color:   $dj-color-6-lighten-40;
+  @include dj-cell-color-width;
+}
+
+.cell-color-7-lighten-10 {
+  background-color:   $dj-color-7-lighten-10;
+  @include dj-cell-color-width;
+}
+.cell-color-7-lighten-20 {
+  background-color:   $dj-color-7-lighten-20;
+  @include dj-cell-color-width;
+}
+.cell-color-7-lighten-30 {
+  background-color:   $dj-color-7-lighten-30;
+  @include dj-cell-color-width;
+}
+.cell-color-7-lighten-40 {
+  background-color:   $dj-color-7-lighten-40;
+  @include dj-cell-color-width;
+}
+
+.cell-color-8-lighten-10 {
+  background-color:   $dj-color-8-lighten-10;
+  @include dj-cell-color-width;
+}
+.cell-color-8-lighten-20 {
+  background-color:   $dj-color-8-lighten-20;
+  @include dj-cell-color-width;
+}
+.cell-color-8-lighten-30 {
+  background-color:   $dj-color-8-lighten-30;
+  @include dj-cell-color-width;
+}
+.cell-color-8-lighten-40 {
+  background-color:   $dj-color-8-lighten-40;
+  @include dj-cell-color-width;
+}
+
+
+//Icons
+
+.icon:before {
+  @include dj-icon($fa-var-heart);
+}
+
+.icon-before {
+  @include dj-icon-before($fa-var-cog);
+}
+
+.icon-after {
+  @include dj-icon-after($fa-var-coffee);
+}
+
+.icon-before-after {
+  @include dj-icon-before-after($fa-var-flag, $fa-var-globe);
+}
+
+.animation {
+  div {
+    cursor: pointer;
+    text-align: center;
+    width: 6.85353rem;
+    height: 4.2358rem;
+    background-color: #dddddd;
+    padding: 0.33333rem;
+    border: 1px solid #bbbbbb;
+    float: left;
+    margin: 0 $dj-margin $dj-margin 0;
+  }
+  @include dj-clearfix;
+}
+
+//Attention Seeking animations
+.animation-flash {
+ @include dj-animation-flash;
+}
+
+.animation-bounce {
+ @include dj-animation-bounce;
+}
+
+.animation-shake {
+ @include dj-animation-shake;
+}
+
+.animation-tada {
+ @include dj-animation-tada;
+}
+
+.animation-swing {
+ @include dj-animation-swing;
+}
+
+.animation-wobble {
+ @include dj-animation-wobble;
+}
+
+
+.animation-pulse {
+ @include dj-animation-pulse;
+}
+
+.animation-wiggle {
+ @include dj-animation-wiggle;
+}
+
+//Bouncing Entrancing animations
+.animation-bounce-in {
+ @include dj-animation-bounce-in;
+}
+
+.animation-bounce-in-up {
+ @include dj-animation-bounce-in-up;
+}
+
+.animation-bounce-in-down {
+ @include dj-animation-bounce-in-down;
+}
+
+.animation-bounce-in-left {
+ @include dj-animation-bounce-in-left;
+}
+
+.animation-bounce-in-right {
+ @include dj-animation-bounce-in-right;
+}
+
+.animation-bounce-out {
+ @include dj-animation-bounce-out;
+}
+
+.animation-bounce-out-up {
+ @include dj-animation-bounce-out-up;
+}
+
+.animation-bounce-out-down {
+ @include dj-animation-bounce-out-down;
+}
+
+.animation-bounce-out-left {
+ @include dj-animation-bounce-out-left;
+}
+
+.animation-bounce-out-right {
+ @include dj-animation-bounce-out-right;
+}
+
+// Fading Animations
+.animation-fade-in {
+ @include dj-animation-fade-in;
+}
+
+.animation-fade-in-up {
+ @include dj-animation-fade-in-up;
+}
+
+.animation-fade-in-down {
+ @include dj-animation-fade-in-down;
+}
+
+.animation-fade-in-left {
+ @include dj-animation-fade-in-left;
+}
+
+.animation-fade-in-right {
+ @include dj-animation-fade-in-right;
+}
+
+.animation-fade-in-up-big {
+ @include dj-animation-fade-in-up-big;
+}
+
+.animation-fade-in-down-big {
+ @include dj-animation-fade-in-down-big;
+}
+
+.animation-fade-in-left-big {
+ @include dj-animation-fade-in-left-big;
+}
+
+.animation-fade-in-right-big {
+ @include dj-animation-fade-in-right-big;
+}
+
+.animation-fade-out {
+ @include dj-animation-fade-out;
+}
+
+.animation-fade-out-up {
+ @include dj-animation-fade-out-up;
+}
+
+.animation-fade-out-down {
+ @include dj-animation-fade-out-down;
+}
+
+.animation-fade-out-left {
+ @include dj-animation-fade-out-left;
+}
+
+.animation-fade-out-right {
+ @include dj-animation-fade-out-right;
+}
+
+.animation-fade-out-up-big {
+ @include dj-animation-fade-out-up-big;
+}
+
+.animation-fade-out-down-big {
+ @include dj-animation-fade-out-down-big;
+}
+
+.animation-fade-out-left-big {
+ @include dj-animation-fade-out-left-big;
+}
+
+.animation-fade-out-right-big {
+ @include dj-animation-fade-out-right-big;
+}
+
+.animation-fade-puff-in {
+ @include dj-animation-fade-puff-in;
+}
+
+.animation-fade-puff-out {
+ @include dj-animation-fade-puff-out;
+}
+
+// Flipping Animations 
+.animation-flip{
+ @include dj-animation-flip;
+}
+
+.animation-flip-out-x {
+ @include dj-animation-flip-out-x;
+}
+
+.animation-flip-in-x {
+ @include dj-animation-flip-in-x;
+}
+
+.animation-flip-out-y {
+ @include dj-animation-flip-out-y;
+}
+
+.animation-flip-in-y {
+ @include dj-animation-flip-in-y;
+}
+
+//Light Speed Animations
+.animation-light-speed-in {
+ @include dj-animation-light-speed-in;
+}
+
+.animation-light-speed-out {
+ @include dj-animation-light-speed-out;
+}
+
+//Rotating Animations
+.animation-rotate-in {
+ @include dj-animation-rotate-in;
+}
+
+.animation-rotate-in-up-left {
+ @include dj-animation-rotate-in-up-left;
+}
+
+.animation-rotate-in-down-left {
+ @include dj-animation-rotate-in-down-left;
+}
+
+.animation-rotate-in-up-right {
+ @include dj-animation-rotate-in-up-right;
+}
+
+.animation-rotate-in-down-right {
+ @include dj-animation-rotate-in-down-right;
+}
+
+.animation-rotate-out {
+ @include dj-animation-rotate-out;
+}
+
+.animation-rotate-out-up-left {
+ @include dj-animation-rotate-out-up-left;
+}
+
+.animation-rotate-out-down-left {
+ @include dj-animation-rotate-out-down-left;
+}
+
+.animation-rotate-out-up-right {
+ @include dj-animation-rotate-out-up-right;
+}
+
+.animation-rotate-out-down-right {
+ @include dj-animation-rotate-out-down-right;
+}
+
+// Open and Close Animations
+.animation-open-up-left {
+ @include dj-animation-open-up-left;
+}
+
+.animation-open-up-right {
+ @include dj-animation-open-up-right;
+}
+
+.animation-open-down-left {
+ @include dj-animation-open-down-left;
+}
+
+.animation-open-down-right {
+ @include dj-animation-open-down-right;
+}
+
+.animation-open-up-left-out {
+ @include dj-animation-open-up-left-out;
+}
+
+.animation-open-up-right-out {
+ @include dj-animation-open-up-right-out;
+}
+
+.animation-open-down-left-out {
+ @include dj-animation-open-down-left-out;
+}
+
+.animation-open-down-right-out {
+ @include dj-animation-open-down-right-out;
+}
+
+.animation-close-up-left {
+ @include dj-animation-close-up-left;
+}
+
+.animation-close-up-right {
+ @include dj-animation-close-up-right;
+}
+
+.animation-close-down-left {
+ @include dj-animation-close-down-left;
+}
+
+.animation-close-down-right {
+ @include dj-animation-close-down-right;
+}
+
+//Specials Animations
+.animation-hinge {
+ @include dj-animation-hinge;
+}
+
+.animation-roll-in {
+ @include dj-animation-roll-in;
+}
+
+.animation-roll-out {
+ @include dj-animation-roll-out;
+}

@@ -1,0 +1,57 @@
+/* Code */
+@mixin dj-code-base {
+  font-family:                                         $dj-font-family-code;
+  border:                                              $dj-code-border-width $dj-code-border-style $dj-code-border-color;
+  background-color:                                    $dj-code-background-color;
+  color:                                               $dj-code-font-color;
+  font-size:                                           $dj-code-font-size;
+  @include dj-borderless;
+  @include dj-rounded-corners($dj-code-border-radius);
+  span {
+    color:                                             $dj-code-comment-font-color;
+  }
+}
+
+code {
+  @include dj-code-base;
+  padding:                                             0 $dj-04-r 0 $dj-04-r;
+  display:                                             inline;
+  }
+
+
+@mixin dj-code-block-base {
+  @include dj-code-base;
+  @include dj-word-wrap;
+  @include dj-shadow($dj-code-shadow-color,
+                  $dj-code-shadow-horizontal-offset,
+                  $dj-code-shadow-vertical-offset,
+                  $dj-code-shadow-blur,
+                  $dj-code-shadow-inset
+  );
+  padding:                                             $dj-04-r;
+  line-height:                                         $dj-code-line-height;
+}
+
+@mixin dj-code-block {
+  @include dj-code-block-base;
+}
+
+@mixin dj-code-numbered {
+  @include dj-code-block-base;
+  padding:                                             0;
+  ol {
+    padding-left:                                      $dj-3-r;
+    margin:                                            0;
+    list-style:                                        $dj-code-block-numbered-list-style;
+    li {
+      margin-left:                                     $dj-1-r;
+      padding-left:                                    $dj-padding;
+      @if ($dj-borderless) {
+        border:                                              0;
+      }
+      @else {
+        border-left:                                   $dj-code-border-width $dj-code-border-style $dj-code-border-color;
+      }
+    }
+  }
+}

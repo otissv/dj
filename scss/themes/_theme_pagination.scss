@@ -1,0 +1,36 @@
+/* Pagination variables */
+
+//pagination
+$dj-pagination-font-family:                               $dj-button-font-family;
+$dj-pagination-font-color:                                $dj-link-color;
+$dj-pagination-font-size:                                 $dj-base-font-size;
+$dj-pagination-font-weight:                               $dj-button-font-weight;
+$dj-pagination-line-height:                               $dj-1;
+$dj-pagination-padding:                                   $dj-button-padding;
+$dj-pagination-border-width:                              $dj-button-border-width;
+$dj-pagination-border-color:                              $dj-button-border-color;
+$dj-pagination-border-radius:                             $dj-button-border-radius;
+//pagination background
+$dj-pagination-background-color:                          transparent;
+
+
+$dj-pagination-hover-font-color:                          $dj-white;
+$dj-pagination-hover-background-color:                    $dj-hover-color;
+$dj-pagination-active-font-color:                         $dj-active-color;
+$dj-pagination-active-background-color:                   transparent;
+
+//pagination gradient
+$dj-gradient-pagination-start-col:                        $dj-gradient-button-start-col;
+$dj-gradient-pagination-end-col:                          $dj-gradient-button-end-col;
+$dj-gradient-pagination-hover-start-col:                  lighten($dj-pagination-hover-background-color, $dj-button-action-hover-percent);
+$dj-gradient-pagination-hover-end-col:                    $dj-pagination-hover-background-color;
+$dj-gradient-pagination-active-start-col:                 lighten($dj-pagination-active-font-color, $dj-button-action-active-percent);
+$dj-gradient-pagination-active-end-col:                   $dj-pagination-active-font-color;
+$dj-gradient-pagination-hover-color:                      $dj-white;
+
+//pagination shadows
+$dj-pagination-shadow-color:                              $dj-button-shadow-color;
+$dj-pagination-shadow-horizontal-offset:                  $dj-button-shadow-horizontal-offset;
+$dj-pagination-shadow-vertical-offset:                    $dj-button-shadow-vertical-offset;
+$dj-pagination-shadow-blur:                               $dj-button-shadow-blur;
+$dj-pagination-shadow-inset:                              $dj-button-shadow-inset;

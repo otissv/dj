@@ -1,0 +1,474 @@
+/* Buttons */
+
+//button borderless
+@mixin dj-button-borderless {
+  &:focus {
+      outline:                                         $dj-button-focus-outline-width $dj-button-focus-outline-style $dj-button-focus-outline-color;
+    }
+  @if ($dj-borderless) {
+      @include dj-borderless;
+    }
+  @else {
+    border:                                            $dj-button-border-width $dj-button-border-style $dj-button-border-color;
+    &:link, &:visited, &:hover, &:active, {
+    border:                                            $dj-button-border-width $dj-button-border-style $dj-button-border-color;
+    }
+  }
+}
+
+//button gradiants
+@mixin dj-button-gradiants {
+  @if $dj-gradiants {
+    @include dj-gradients($dj-gradient-button-start-col,
+                       $dj-gradient-button-end-col
+    );
+    &:hover {
+      @include dj-gradients($dj-gradient-button-hover-start-col,
+                         $dj-gradient-button-hover-end-col
+      );
+    }
+    &:active {
+      @include dj-gradients($dj-gradient-button-active-start-col,
+                         $dj-gradient-button-active-end-col
+      );
+    }
+  }
+  @else {
+    background-color:                                  $dj-button-background-color;
+    &:hover {
+      color:                                           $dj-button-hover-font-color;
+      background-color:                                $dj-button-hover-background-color;
+    }
+    &:active{
+      color:                                           $dj-button-active-font-color;
+      background-color:                                $dj-button-active-background-color;
+    }
+    &:visited{
+      color:                                           $dj-button-visited-font-color;
+    }
+  }
+}
+
+//button base
+@mixin dj-button-base{
+  @include dj-button-gradiants;
+  font-family:                                         $dj-button-font-family;
+  font-weight:                                         $dj-button-font-weight;
+  line-height:                                         $dj-button-line-height;
+  display:                                             inline-block;
+  padding:                                             $dj-button-padding;
+  text-align:                                          center;
+  cursor:                                              pointer;
+  color:                                               $dj-button-font-color;
+  text-decoration:                                     none;
+}
+
+//button styles
+@mixin dj-button {
+  @include dj-button-base;
+  font-size:                                           $dj-button-font-size;
+  @include dj-rounded-corners($dj-button-border-radius);
+  @include dj-shadow($dj-button-shadow-color,
+                  $dj-button-shadow-horizontal-offset,
+                  $dj-button-shadow-vertical-offset,
+                  $dj-button-shadow-blur,
+                  $dj-button-shadow-inset
+  );
+  @include dj-button-borderless;
+}
+
+button {
+  @include dj-button;
+  height:                                              $dj-button-height;
+}
+
+@mixin dj-button-round($val: $dj-round-button-unit) {
+  @include dj-round;
+  height:                                              $val;
+  width:                                               $val;
+}
+
+@mixin dj-button-pill {
+  @include dj-pill;
+}
+
+@mixin dj-button-block{
+  width:                                               100%;
+}
+
+//button sizes
+@mixin dj-button-giga {
+  font-size:                                           $dj-button-giga-font-size;
+  height:                                              $dj-button-giga-height;
+  padding:                                             $dj-button-giga-padding;
+}
+
+@mixin dj-button-mega {
+  font-size:                                           $dj-button-mega-font-size;
+  height:                                              $dj-button-mega-height;
+  padding:                                             $dj-button-mega-padding;
+}
+
+@mixin dj-button-large {
+  font-size:                                           $dj-button-large-font-size;
+  height:                                              $dj-button-large-height;
+  padding:                                             $dj-button-large-padding;
+}
+
+@mixin dj-button-small {
+  font-size:                                           $dj-button-small-font-size;
+  height:                                              $dj-button-small-height;
+  padding:                                             $dj-button-small-padding;
+}
+
+
+@mixin dj-button-primary {
+	color:                                               $dj-button-primary-font-color;
+  border-color:                                        $dj-button-primary-border-color;
+  &:hover, &:link, &:active, &:visited &:focus {
+    color:                                             $dj-button-primary-font-color;
+  }
+   @if $dj-gradiants {
+    @include dj-gradients($dj-gradient-button-primary-start-col,
+                       $dj-gradient-button-primary-end-col
+    );
+    &:hover {
+      @include dj-gradients($dj-gradient-button-primary-hover-start-col,
+                         $dj-gradient-button-primary-hover-end-col
+      );
+    }
+    &:active {
+      @include dj-gradients($dj-gradient-button-primary-active-start-col,
+                         $dj-gradient-button-primary-active-end-col
+      );
+    }
+  }
+  @else {
+    background-color:                                  $dj-button-primary-background-color;
+    &:hover {
+      background-color:                                $dj-button-primary-hover-background-color;
+    }
+    &:active{
+      background-color:                                $dj-button-primary-active-background-color;
+    }
+  }
+}
+
+@mixin dj-button-info {
+	color:                                               $dj-button-info-font-color;
+  border-color:                                        $dj-button-info-border-color;
+  &:hover, &:link, &:active, &:visited &:focus {
+    color:                                             $dj-button-info-font-color;
+  }
+   @if $dj-gradiants {
+    @include dj-gradients($dj-gradient-button-info-start-col,
+                       $dj-gradient-button-info-end-col
+    );
+    &:hover {
+      @include dj-gradients($dj-gradient-button-info-hover-start-col,
+                         $dj-gradient-button-info-hover-end-col
+      );
+    }
+    &:active {
+      @include dj-gradients($dj-gradient-button-info-active-start-col,
+                         $dj-gradient-button-info-active-end-col
+     );
+    }
+  }
+  @else {
+    background-color:                                  $dj-button-info-background-color;
+    &:hover {
+      background-color:                                $dj-button-info-hover-background-color;
+    }
+    &:active{
+      background-color:                                $dj-button-info-active-background-color;
+    }
+  }
+}
+
+@mixin dj-button-success {
+	color:                                               $dj-button-success-font-color;
+  border-color:                                        $dj-button-success-border-color;
+  &:hover, &:link, &:active, &:visited &:focus {
+    color:                               $dj-button-success-font-color;
+  }
+   @if $dj-gradiants {
+    @include dj-gradients($dj-gradient-button-success-start-col,
+                       $dj-gradient-button-success-end-col
+    );
+    &:hover {
+      @include dj-gradients($dj-gradient-button-success-hover-start-col,
+                         $dj-gradient-button-success-hover-end-col
+      );
+    }
+    &:active {
+      @include dj-gradients($dj-gradient-button-success-active-start-col,
+                         $dj-gradient-button-success-active-end-col
+      );
+    }
+  }
+  @else {
+    background-color:                                  $dj-button-success-background-color;
+    &:hover {
+      background-color:                                $dj-button-success-hover-background-color;
+    }
+    &:active{
+      background-color:                                $dj-button-success-active-background-color;
+    }
+  }
+}
+
+@mixin dj-button-warning {
+	color:                                               $dj-button-warning-font-color;
+  border-color:                                        $dj-button-warning-border-color;
+  &:hover, &:link, &:active, &:visited &:focus {
+    color:                                             $dj-button-warning-font-color;
+  }
+   @if $dj-gradiants {
+    @include dj-gradients($dj-gradient-button-warning-start-col,
+                       $dj-gradient-button-warning-end-col
+    );
+    &:hover {
+      @include dj-gradients($dj-gradient-button-warning-hover-start-col,
+                         $dj-gradient-button-warning-hover-end-col
+      );
+    }
+    &:active {
+      @include dj-gradients($dj-gradient-button-warning-active-start-col,
+                         $dj-gradient-button-warning-active-end-col
+      );
+    }
+  }
+  @else {
+    background-color:                                  $dj-button-warning-background-color;
+    &:hover {
+      background-color:                                $dj-button-warning-hover-background-color;
+    }
+    &:active{
+      background-color:                                $dj-button-warning-active-background-color;
+    }
+  }
+}
+
+@mixin dj-button-danger {
+	color:                                               $dj-button-danger-font-color;
+  border-color:                                        $dj-button-danger-border-color;
+  &:hover, &:link, &:active, &:visited &:focus {
+    color:                                             $dj-button-danger-font-color;
+  }
+   @if $dj-gradiants {
+    @include dj-gradients($dj-gradient-button-danger-start-col,
+                      $dj-gradient-button-danger-end-col
+    );
+    &:hover {
+      @include dj-gradients($dj-gradient-button-danger-hover-start-col,
+                         $dj-gradient-button-danger-hover-end-col
+      );
+    }
+    &:active {
+      @include dj-gradients($dj-gradient-button-danger-active-start-col,
+                         $dj-gradient-button-danger-active-end-col
+      );
+    }
+  }
+  @else {
+    background-color:                                  $dj-button-danger-background-color;
+    &:hover {
+      background-color:                                $dj-button-danger-hover-background-color;
+    }
+    &:active{
+      background-color:                                $dj-button-danger-active-background-color;
+    }
+  }
+}
+
+@mixin dj-button-disabled {
+  cursor:                                              initial;
+  color:                                               $dj-button-disabled-font-color;
+  border:                                              0 $dj-border-style transparent;
+  background-color:                                    $dj-button-diabled-background-color;
+  @include dj-gradients($dj-button-diabled-background-color,
+                    $dj-button-diabled-background-color
+  );
+  &:hover, &:visited, &:focus, &:active &:link {
+    color:                                             $dj-button-disabled-font-color;
+    border:                                            0 $dj-border-style transparent;
+    background-color:                                  $dj-button-diabled-background-color;
+    @include dj-gradients($dj-button-diabled-background-color,
+                      $dj-button-diabled-background-color
+    );
+  }
+}
+
+/* Button Groups  ======================================================================================*/
+@mixin dj-button-group-base {
+  @include dj-shadow($button-group-shadow-color,
+                  $button-group-shadow-horizontal-offset,
+                  $button-group-shadow-vertical-offset,
+                  $button-group-shadow-blur,
+                  $button-group-shadow-inset
+  );
+  margin:                            0;
+  padding:                           0;
+  font-size:                         0;
+  display:                           inline;
+  li {
+    display:                         inline-block;
+    *display:                        inline;
+    zoom: 1;
+    height:                          inherit;
+    button, a {
+      @include dj-button;
+      @include border-radius(0);
+      margin:                        0;
+      margin-right:                  -1px;
+      font-size:                     $button-group-font-size;
+    }
+  }
+}
+
+//button group
+@mixin dj-button-group {
+  @include dj-button-group-base;
+  @if $dj-border-radius{
+    li {
+      &:first-child button, &:first-child a{
+        @include dj-rounded-corners-left($dj-button-border-radius);
+      }
+      &:last-child button, &:last-child a{
+        @include dj-rounded-corners-right($dj-button-border-radius);
+      }
+    }
+  }
+}
+
+
+
+//buttun block
+@mixin dj-button-group-block($dj-butts) {
+  width:                             100%;
+  @include dj-button-group;
+  li {
+    margin-right:                    -1px;
+    width:                           100% / $dj-butts;
+    button, a {
+      width:                         100%;
+    }
+  }
+}
+
+//button group stacked
+@mixin dj-button-stack-base {
+  @include dj-button-group-base;
+  li {
+    display:                         block;
+    margin-bottom:                   $dj-pill-margin-bottom;
+    button, a {
+      text-align:                    left;
+      i {
+        width:                       auto;
+      }
+    }
+    a {
+        padding-right:               0;
+    }
+  }
+}
+
+@mixin dj-button-stack($dj-width: $dj-4-r) {
+  @include dj-button-stack-base;
+  width:                             $dj-width;
+  li {
+    margin-bottom:                    -1px;
+    &:first-child button, &:first-child a{
+      @include dj-rounded-corners-top($dj-button-border-radius);
+    }
+    &:last-child button, &:last-child a{
+      @include dj-rounded-corners-bottom($dj-button-border-radius);
+    }
+    width:                           $dj-width;
+    button, a {
+      width:                         $dj-width;
+      text-align:                    left;
+    }
+  }
+}
+
+@mixin dj-button-pill-stack($dj-width: $dj-4-r) {
+  @include dj-button-stack-base;
+  width:                             $dj-width;
+  li {
+    width:                           $dj-width;
+    button, a {
+      @include border-radius($dj-pill);
+      width:                         $dj-width;
+    }
+  }
+}
+
+@mixin dj-button-round-stack($dj-width: $dj-4-r) {
+  @include dj-button-stack-base;
+  width:                             $dj-width;
+  li {
+    width:                           $dj-width;
+    button, a {
+      @include border-radius($dj-round);
+      width:                         $dj-width;
+      text-align:                       center;
+      i {
+        width:                          auto;
+     }
+    }
+  }
+}
+
+
+//Button split
+@mixin dj-button-split-menu {
+  > ul {
+    @include dj-unstyled-list;
+    @include border-radius($dj-button-border-radius);
+    margin-top:                         $dj-08-r;
+    padding:                            0;
+    border:                             $dj-border-width $dj-border-style $dj-button-border-color;
+    display:                            block;
+    z-index:                            999;
+    a {
+      font-weight:                      normal;
+      display:                          block;
+      padding:                          0 $dj-button-padding;
+      border-color:                     transparent;
+    }
+  }
+}
+
+@mixin dj-button-split($dj-button-split-icon) {
+  @include dj-button-split-menu;
+  display:                              inline-block;
+  font-size:                            0;
+  > button, a {
+    &:first-child {
+      border-top-right-radius:          0;
+      border-bottom-right-radius:       0;
+      border-right:                     0;
+    }
+  }
+  > button + button, > button + a {
+     &:nth-child(2) {
+      border-top-left-radius:           0;
+      border-bottom-left-radius:        0;
+      @include dj-icon-after($dj-button-split-icon);
+      font-size:                        $dj-button-split-font-size;
+    }
+  }
+}
+
+//button drop down
+@mixin dj-button-drop-down($dj-button-split-icon) {
+  @include dj-icon-after($dj-button-split-icon);
+  &:after {
+    margin-left:                       $dj-button-padding;
+  }
+}
+
+

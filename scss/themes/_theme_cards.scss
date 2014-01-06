@@ -1,0 +1,71 @@
+/* Card */
+//Card
+$dj-card-float:                                           left;
+$dj-card-width:                                           auto;
+$dj-card-height:                                          auto;
+$dj-card-border-width:                                    $dj-border-width;
+$dj-card-border-style:                                    $dj-border-style;
+$dj-card-border-color:                                    $dj-border-color;
+$dj-card-margin-top:                                      $dj-margin;
+$dj-card-margin-right:                                    $dj-margin; //Zero on even cards
+$dj-card-margin-bottom:                                   $dj-margin;
+$dj-card-margin-left:                                     $dj-margin; //only on even cards
+
+$dj-card-img-link-border-weight:                          1px;
+$dj-card-img-link-border-style:                           $dj-border-style;
+$dj-card-img-link-border-color:                           transparent;
+
+$dj-card-img-link-hover-border-weight:                    $dj-card-img-link-border-weight;
+$dj-card-img-link-hover-border-style:                     $dj-card-img-link-border-style;
+$dj-card-img-link-hover-border-color:                     $dj-link-hover-border-color;
+
+$dj-card-img-link-hover-border-weight:                    $dj-card-img-link-border-weight;
+$dj-card-img-link-hover-border-style:                     $dj-card-img-link-border-style;
+$dj-card-img-link-hover-border-color:                     $dj-link-hover-border-color;
+
+
+$dj-card-body-font-size:                                  $dj-2-r;
+$dj-card-body-font-weight:                                bold;
+$dj-card-body-color:                                      $dj-base-font-color;
+$dj-card-body-padding:                                    $dj-padding;
+$dj-card-body-border-width:                               $dj-border-width;
+$dj-card-body-border-style:                               $dj-border-style;
+$dj-card-body-border-color:                               $dj-border-color;
+$dj-card-body-text-align:                                 center;
+
+$dj-card-body-font-size:                                  inherit;
+$dj-card-body-line-height:                                inherit;
+$dj-card-body-text-overflow:                              ellipsis;
+
+// Card summary
+$dj-card-summary-float:                                   left;
+$dj-card-summary-width:                                   300px;
+$dj-card-summary-height:                                  auto;
+$dj-card-summary-border-width:                            $dj-border-width;
+$dj-card-summary-border-style:                            $dj-border-style;
+$dj-card-summary-border-color:                            $dj-border-color;
+$dj-card-summary-margin:                                  0 $dj-margin $dj-margin 0;
+
+$dj-card-summary-img-link-border-weight:                  1px;
+$dj-card-summary-img-link-border-style:                   $dj-border-style;
+$dj-card-summary-img-link-border-color:                   transparent;
+$dj-card-summary-img-display:                             inline-block;
+$dj-card-summary-img-float:                               left;
+
+$dj-card-summary-img-link-hover-border-weight:            $dj-card-img-link-border-weight;
+$dj-card-summary-img-link-hover-border-style:             $dj-card-img-link-border-style;
+$dj-card-summary-img-link-hover-border-color:             $dj-link-hover-border-color;
+
+
+$dj-card-summary-body-display:                          inline-block;
+$dj-card-summary-body-font-size:                        $dj-2-r;
+$dj-card-summary-body-font-weight:                      bold;
+$dj-card-summary-body-color:                            $dj-base-font-color;
+$dj-card-summary-body-padding:                          $dj-padding;
+$dj-card-summary-body-border-width:                     $dj-border-width;
+$dj-card-summary-body-border-style:                     $dj-border-style;
+$dj-card-summary-body-border-color:                     transparent;
+$dj-card-summary-body-text-align:                       center;
+
+$dj-card-summary-body-font-size:                        inherit;
+$dj-card-summary-body-line-height:                      inherit;

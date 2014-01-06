@@ -1,0 +1,82 @@
+/* Sliding menus minx */
+
+// Add @include dj-sliding-menus to iclude sliding drwas
+
+@mixin dj-sliding-menus {
+  body {
+	  background-color:                                $dj-gray-7;
+	}
+
+	.sliding-menus, .sliding-menus-view {
+	  height:                                          100%;
+	}
+
+	.sliding-menus-view {
+	  margin-top:                                      $dj-sliding-menus-bar-height;
+	  z-index:                                         $dj-sliding-menus-view-z-index;
+	  background-color:                                $dj-sliding-menus-view-background-color;
+	  @include transition-property(margin-left);
+	  @include transition-duration ($dj-animation-duration-fast);
+	  @media (min-width: $dj-w-1024 + 1px) {
+      margin-top:                                    0;
+	  }
+	}
+
+	.slidingMenusViewRight {
+	  margin-left:                                     $dj-sliding-menus-view-margin-left;
+	}
+
+	.slidingmenusMenu {
+		display:                                         none;
+	}
+
+	.sliding-menus-bar {
+	  @include dj-fixed-width-top;
+	  @include transition-property(margin-left);
+	  @include transition-duration ($dj-animation-duration-fast);
+	  background-color:                                $dj-sliding-menus-bar-background-color;
+	  height:                                          $dj-sliding-menus-bar-height;
+	  z-index:                                         $dj-sliding-menus-nav-z-index;
+	  border-bottom:                                   $dj-border-width $dj-border-style $dj-border-color;
+	  @media (min-width: $dj-w-1024 + 1px) {
+      display:                                       none;
+    }
+
+	}
+
+	.sliding-menus-nav {
+		@media (max-width: $dj-w-1024) {
+		  background-color:                              $dj-sliding-menus-nav-background-color;
+		  @include dj-fixed-height;
+		  @include transition-property(left);
+		  @include transition-duration ($dj-animation-duration-fast);
+		  @include dj-nav-stack;
+		  width:                                         $dj-sliding-menus-nav-width;
+		  overflow-y:                                    scroll;
+		  overflow-x:                                    hidden;
+		}
+	  left:                                            -$dj-sliding-menus-nav-width;
+	  @media (min-width: $dj-w-1024 + 1px) {
+	    @include dj-nav;
+	  }
+	}
+
+	.slidingMenusNavRight {
+		@media (max-width: $dj-w-1024) {
+		  left:                                          0;
+		}
+	}
+
+}
+
+//top navigation centered
+@mixin dj-sliding-menus-centered {
+	.sliding-menus-nav {
+	  @media (min-width: $dj-w-1024 + 1px) {
+		@include dj-center-block ($dj-body-width);
+		height:                                          $dj-sliding-menus-bar-height;
+		padding-top:                                     $dj-padding;
+		padding-bottom:                                  $dj-padding;
+	  }
+	}
+}

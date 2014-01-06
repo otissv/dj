@@ -1,0 +1,27 @@
+/* Grid variables */
+$dj-body-width:                                          100%;        // px or %
+$dj-body-height:                                         100%;        // px or %
+$dj-grid-width:                                          $dj-body-width; // px or %
+$dj-grid-padding:                                        $dj-padding;
+$dj-row-margin:                                          $dj-margin;
+$dj-column-padding:                                      $dj-padding;
+
+//device widths
+$dj-w-320:                                               320px;
+$dj-w-480:                                               480px;
+$dj-w-768:                                               768px;
+$dj-w-1024:                                              1024px;
+$dj-w-1366:                                              1366px;
+$dj-w-1600:                                              1600px;
+
+//device columns
+$dj-c-320:         	                                     6; //default
+$dj-c-480:         	                                     6;
+$dj-c-768:         	                                     12;
+$dj-c-1024:         	                                 12;
+$dj-c-1366:         	                                 12;
+$dj-c-1600:         	                                 12;
+
+
+
+

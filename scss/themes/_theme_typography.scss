@@ -1,0 +1,85 @@
+/* Typography variables ======================================================================================*/
+
+//Text
+$dj-base-font-family:                                    $dj-font-family-sans;
+$dj-base-font-color:                                     $dj-gray-4;
+$dj-line-height:                                         $dj-scale;
+$dj-indent:                                              $dj-2-r;
+$dj-small-font-size:                                     $dj-02-r + $dj-06-r;
+
+//Headings
+$dj-heading-color:                                       $dj-gray-2;
+$dj-heading-font:                                        $dj-base-font-family;
+$dj-h1:                                                  $dj-5-r;
+$dj-h2:                                                  $dj-4-r;
+$dj-h3:                                                  $dj-3-r;
+$dj-h4:                                                  $dj-2-r;
+$dj-h5:                                                  $dj-1-r;
+$dj-h6:                                                  $dj-02-r;
+
+//Sub heading
+$dj-sub-font:                                            $dj-base-font-family;
+$dj-sub-heading-weight:                                  normal;
+$dj-sub-heading-font-color:                              $dj-gray-8;
+$dj-sh1:                                                 $dj-1-r  + $dj-2-r;
+$dj-sh2:                                                 $dj-02-r + $dj-1-r;
+$dj-sh3:                                                 $dj-02-r + $dj-02-r;
+$dj-sh4:                                                 $dj-03-r + $dj-02-r;
+$dj-sh5:                                                 $dj-04-r + $dj-03-r;
+$dj-sh6:                                                 $dj-05-r + $dj-04-r;
+
+//Quotes
+$dj-quote-font-family:                                   $dj-base-font-family;
+$dj-quote-pull-quote-font-size:                          $dj-1-r;
+$dj-quote-indent:                                        $dj-4-r;
+$dj-quote-border-left:                                   5px $dj-border-style $dj-gray-d;
+$dj-quote-padding:                                       0 0 0 $dj-2-r;
+$dj-quote-font-size:                                     $dj-1-r;
+$dj-cite-font-size:                                      $dj-small-font-size;
+$dj-figcaption-text-align:                               right;
+$dj-pull-quote-margin:															     $dj-4-r$dj-quote-indent 0 0;
+
+$dj-pull-quote-before-margin-right:											 $dj-06-r;
+$dj-pull-quote-after-margin-left:											   $dj-06-r;
+$dj-pull-quote-before-line-height:                       $dj-04;
+$dj-pull-quote-after-line-height:                        0;
+$dj-pull-quote-mark-font-size:                           $dj-9-r;
+
+//Links colors
+$dj-link-font-color:                                     $dj-link-color;
+$dj-link-hover-font-color:                               $dj-white;
+$dj-link-active-font-color:                              $dj-active-color;
+
+//Link background colors
+$dj-link-background-color:                               transparent;
+$dj-link-hover-background-color:                         $dj-hover-color;
+$dj-link-active-background-color:                        transparent;
+
+//Link border-widths
+$dj-link-border-width:                                   2px;
+$dj-link-hover-border-width:                             $dj-link-border-width;
+$dj-link-active-border-width:                            $dj-link-border-width;
+$dj-link-visited-border-width:                           $dj-link-border-width;
+
+//Link border colors
+$dj-link-border-color:                                   $dj-link-color;
+$dj-link-hover-border-color:                             $dj-hover-color;
+$dj-link-active-border-color:                            $dj-active-color;
+$dj-link-visited-border-color:                           $dj-visited-color;
+
+//Link border styles
+$dj-link-border-style:                                   $dj-border-style;
+$dj-link-hover-border-style:                             $dj-border-style;
+$dj-link-active-border-style:                            $dj-border-style;
+$dj-link-visited-border-style:                           $dj-border-style;
+
+//Abbreviation
+$dj-abbr-border-bottom-size:                             $dj-border-width;
+$dj-abbr-border-bottom-style:                            dotted;
+$dj-abbr-border-bottom-color:                            $dj-base-font-color;
+
+//Lists
+$dj-ul-margin:                                           0;
+$dj-ol-margin:                                           0;
+
+

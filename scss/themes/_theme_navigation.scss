@@ -1,0 +1,41 @@
+/* Navigation variables */
+
+//nav
+$dj-nav-backgroud-color:                                  transparent;
+$dj-nav-size:                                             $dj-normal-font-size;
+$dj-nav-font-weight:                                      normal;
+$dj-nav-height:                                           auto;
+$dj-nav-line-height:                                      1;
+$dj-nav-vertical-align:                                   top;
+$dj-nav-margin:                                           $dj-margin / 2;
+//nav border
+$dj-nav-border-width:                                     2px;
+$dj-nav-border-style:                                     $dj-border-style;
+$dj-nav-border-color:                                     transparent;
+$dj-nav-border-rasdius:                                   $dj-border-radius;
+
+//nav link
+$dj-nav-link-font-color:                                  $dj-link-font-color;
+$dj-nav-link-border-color:                                $dj-link-font-color;
+
+//nav hover
+$dj-nav-hover-border-color:                               $dj-link-color;
+
+//nav active
+$dj-nav-active-font-color:                                $dj-link-active-font-color;
+$dj-nav-active-border-color:                              transparent;
+$dj-nav-active-background-color:                          transparent;
+
+//nav sub menu
+$dj-nav-sub-menu-margin:                                  $dj-margin;
+
+//nav stacked
+$dj-nav-stacked-hover-backgroud-color:                    $dj-link-color;
+$dj-nav-stacked-hover-font-color:                         $dj-white;                   //from theme_colors
+
+//nav pill
+$dj-nav-pill-padding:                                     0 $dj-03-r;
+$dj-nav-pill-border-width:                                     0;
+
+//nav fixed
+$dj-nav-fixed-background-color:                           $dj-button-background-color;

@@ -1,0 +1,33 @@
+/* Quick theming variables */
+$dj-background-color:                                    $dj-white;  // default background color.
+$dj-border-color:                                        $dj-gray-b; // default for all border colors except tables.
+$dj-border-radius:                                       $dj-03-r;   // default for border-raidus (and rounnded-corners).
+$dj-border-width:                                        1px;        // default border width.
+$dj-border-style:                                        solid;
+$dj-border:                                              $dj-border-width $dj-border-style $dj-border-color;
+
+$dj-rounded-corners:                                     true;  // if true, turns on rounder corners on elements. False to switch them off.
+$dj-shadows:                                             false; // if true, turns on shadows on elements. False to switch them off.
+$dj-shadow-inside:                                       false; // if true, turns on shadow-inside elements. False to switch them off.
+$dj-borderless:                                          false; // if true, makes all borders transparent. False to show borders.
+$dj-gradiants:                                           false; // if true, turns on gradiants. False to switch them off.
+
+//margins rems
+$dj-margin:                                              $dj-1-r;
+$dj-margin-2:                                            $dj-2-r;
+$dj-margin-3:                                            $dj-3-r;
+$dj-margin-1t:                                           $dj-margin / 3;
+$dj-margin-2t:                                           $dj-margin-1t * 2;
+
+//padding rems
+$dj-padding:                                             $dj-1-r;
+$dj-padding-2:                                           $dj-2-r;
+$dj-padding-3:                                           $dj-3-r;
+$dj-padding-1t:                                          $dj-padding / 3;
+$dj-padding-2t:                                          $dj-padding-1t * 2;
+
+$dj-giga-r:                                              $dj-9-r;
+$dj-mega-r:                                              $dj-7-r;
+$dj-large-r:                                             $dj-6-r;
+$dj-normal-r:                                            $dj-4-r;
+$dj-small-r:                                             $dj-2-r;

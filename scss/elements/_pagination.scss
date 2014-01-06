@@ -1,0 +1,81 @@
+/* Pagination minxins */
+
+@mixin dj-pagination-button {
+  font-family:                         $dj-pagination-font-family;
+  font-size:                           $dj-pagination-font-size;
+  font-weight:                         $dj-pagination-font-weight;
+  line-height:                         $dj-pagination-line-height;
+  display:                             inline-block;
+  padding:                             $dj-button-padding;
+  text-align:                          center;
+  vertical-align:                      middle;
+  cursor:                              pointer;
+  color:                               $dj-pagination-font-color;
+  text-decoration:                     none;
+  @if $dj-gradiants {
+    @include dj-gradients($dj-gradient-pagination-start-col, $dj-gradient-pagination-end-col);
+    &:hover {
+      @include dj-gradients($dj-gradient-pagination-hover-start-col, $dj-gradient-pagination-hover-end-col);
+      color:                           $dj-gradient-pagination-hover-color;
+    }
+    &:active {
+      @include dj-gradients($dj-gradient-pagination-active-start-col,
+                         $dj-gradient-pagination-active-end-col
+      );
+    }
+  }
+  @else {
+    background-color:                  $dj-pagination-background-color;
+    &:hover {
+      color:                           $dj-pagination-hover-font-color;
+      background-color:                $dj-pagination-hover-background-color;
+    }
+    &:active{
+      color:                           $dj-pagination-active-font-color;
+      background-color:                $dj-pagination-active-background-color;
+    }
+  }
+  @if $dj-borderless {
+      @include dj-borderless;
+    }
+  @else {
+    border:                             $dj-pagination-border-width $dj-border-style $dj-pagination-border-color;
+    &:visited, &:hover, &:active {
+    border:                             $dj-pagination-border-width $dj-border-style $dj-pagination-border-color;
+    }
+  }
+}
+@mixin dj-pagination {
+  @include dj-shadow($dj-pagination-shadow-color,
+                  $dj-pagination-shadow-horizontal-offset,
+                  $dj-pagination-shadow-vertical-offset,
+                  $dj-pagination-shadow-blur,
+                  $dj-pagination-shadow-inset
+  );
+  margin:                            0;
+  padding:                           0;
+  font-size:                         0;
+  display:                           inline;
+  li {
+    display:                         inline-block;
+    *display:                        inline;
+    zoom: 1;
+    height:                          inherit;
+    button, a {
+      @include dj-pagination-button;
+      @include border-radius(0);
+      margin:                        0;
+      margin-right:                  -1px;
+    }
+  }
+  @if $dj-rounded-corners{
+    li {
+      &:first-child button, &:first-child a{
+        @include border-left-radius($dj-pagination-border-radius);
+      }
+      &:last-child button, &:last-child a{
+        @include border-right-radius($dj-pagination-border-radius);
+      }
+    }
+  }
+}

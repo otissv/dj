@@ -1,0 +1,59 @@
+/* Fonts */
+
+//Sans
+@font-face {
+  font-family: 'Open Sans';
+  src: url($dj-sans-url);
+  font-weight:                                         normal;
+  font-style:                                          normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url($dj-sans-url-italic);
+  font-weight:                                         normal;
+  font-style:                                          italic;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url($dj-sans-url-bold);
+  font-weight:                                         bold;
+  font-style:                                          normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url($dj-sans-url-bold-italic);
+  font-weight:                                         bold;
+  font-style:                                          italic;
+}
+
+//Serif
+@font-face {
+  font-family: 'Lora';
+  src: url($dj-serif-url);
+  font-weight:                                         normal;
+  font-style:                                          normal;
+}
+@font-face {
+  font-family: 'Lora';
+  src: url($dj-serif-url-italic);
+  font-weight:                                         normal;
+  font-style:                                          italic;
+}
+@font-face {
+  font-family: 'Lora';
+  src: url($dj-serif-url-bold);
+  font-weight:                                         bold;
+  font-style:                                          normal;
+}
+@font-face {
+  font-family: 'Lora';
+  src: url($dj-serif-url-bold-italic);
+  font-weight:                                         bold;
+  font-style:                                          italic;
+}
+
+//Code
+@font-face {
+  font-family: 'Droid Sans Mono';
+  src: url($dj-code-url);
+}

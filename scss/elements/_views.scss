@@ -1,0 +1,51 @@
+.viewports{
+  background:                                     $dj-black;
+  padding:                                        ($dj-padding * 2) $dj-padding $dj-padding $dj-padding;
+  p {
+    margin-top:                                   $dj-margin * 3;
+    margin-bottom:                                0;
+  }
+  input{
+    margin-bottom:                                $dj-margin * 2;
+    color:                                        $dj-link-font-color;
+  }
+  h1, p {
+  color:                                         $dj-white;
+}
+}
+
+.viewport{
+  display:                                        block;
+  margin:                                         $dj-margin 0;
+}
+
+//device widths
+.v-320-500   { width:320;  height:500;  }
+.v-480-800   { width:480;  height:800;  }
+.v-480-854   { width:480;  height:854;  }
+.v-540-960   { width:540;  height:960;  }
+.v-600-800   { width:600;  height:800;  }
+.v-600-1024  { width:600;  height:1024; }
+.v-640-960   { width:640;  height:960;  }
+.v-640-1136  { width:640;  height:1136; }
+.v-720-720   { width:720;  height:720;  }
+.v-720-1280  { width:720;  height:1280; }
+.v-768-1024  { width:768;  height:1024; }
+.v-768-1280  { width:768;  height:1280; }
+.v-800-1280  { width:800;  height:1280; }
+.v-1024-600  { width:1024; height:600;  }
+.v-1080-1920 { width:1080; height:1920; }
+.v-1200-1920 { width:1200; height:1920; }
+.v-1280-800  { width:1280; height:800;  }
+.v-1366-768  { width:1366; height:768;  }
+.v-1440-900  { width:1440; height:900;  }
+.v-1536-2048 { width:1536; height:2048; }
+.v-1600-900  { width:1600; height:900;  }
+.v-1680-1050 { width:1680; height:1050; }
+.v-1920-1080 { width:1920; height:1080; }
+.v-1920-1200 { width:1920; height:1200; }
+.v-2048-1536 { width:2048; height:1536; }
+.v-2560-1440 { width:2560; height:1440; }
+.v-2560-1600 { width:2560; height:1600; }
+.v-2560-1700 { width:2560; height:1700; }
+.v-2880-1800 { width:2880; height:1800; }

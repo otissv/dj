@@ -1,0 +1,30 @@
+/* Fonts */
+
+//font sizes
+$dj-giga-font-size:                                      $dj-7-r;
+$dj-mega-font-size:                                      $dj-5-r;
+$dj-large-font-size:                                     $dj-4-r;
+$dj-normal-font-size:                                    $dj-1-r;
+$dj-small-font-size:                                     $dj-01-r;
+
+//Sans font
+$dj-sans:                                                'Open Sans';
+$dj-sans-url:                                            '../styles/fonts/Open_Sans/OpenSans-Regular.ttf';
+$dj-sans-url-italic:                                     '../styles/fonts/Open_Sans/OpenSans-Italic.ttf';
+$dj-sans-url-bold:                                       '../styles/fonts/Open_Sans/OpenSans-Bold.ttf';
+$dj-sans-url-bold-italic:                                '../styles/fonts/Open_Sans/OpenSans-BoldItalic.ttf';
+$dj-font-family-sans:                                    $dj-sans, sans-serif;  //defualt sans font.
+
+//Sans-font
+$dj-serif:                                               'Lora';
+$dj-serif-url:                                           '../styles/fonts/Lora/Lora-Regular.ttf';
+$dj-serif-url-italic:                                    '../styles/fonts/Lora/Lora-Italic.ttf';
+$dj-serif-url-bold:                                      '../styles/fonts/Lora/Lora-Bold.ttf';
+$dj-serif-url-bold-italic:                               '../styles/fonts/Lora/Lora-BoldItalic.ttf';
+$dj-font-family-serif:                                   $dj-serif, serif;      //defualt serif font.
+
+//Code font
+$dj-code:                                                'Droid Sans Mono';
+$dj-code-url:                                            '../styles/fonts/Droid_Sans_Mono/DroidSansMono.ttf';
+$dj-font-family-code:                                    'Droid Sans Mono', monospace; //defualt font used for coding.
+

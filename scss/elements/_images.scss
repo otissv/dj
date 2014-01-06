@@ -1,0 +1,42 @@
+/* Media minxins */
+
+img {
+	display:                                     inline-block;
+  height:                                      auto;
+  max-width:                                   100%;
+  padding:                                     0;
+}
+
+@mixin dj-img-rounded($radius: $dj-border-radius) {
+  @include dj-round($radius);
+  margin-right:                                $dj-margin;
+}
+
+@mixin dj-img-circle ($val) {
+  @include dj-round($dj-round);
+  height:                                      $val;
+  width:                                       $val;
+  padding:                                     0;
+  margin-right:                                $dj-margin;
+}
+
+
+@mixin dj-img-thumbnail-circle ($val) {
+  @include dj-round($dj-round);
+  height:                                      $val;
+  width:                                       $val;
+  padding:                                     0;
+  margin-right:                                $dj-margin;
+  padding:                                     $dj-thumbnail-padding;
+  border:                                      $dj-thumbnail-border-width $dj-thumbnail-border-style $dj-thumbnail-border-color;
+}
+
+@mixin dj-img-thumbnail {
+  padding:                                     $dj-thumbnail-padding;
+  margin-right:                                $dj-margin;
+  line-height:                                 $dj-thumbnail-line-height;
+  background-color:                            $dj-thumbnail-background-color;
+  border:                                      $dj-thumbnail-border-width $dj-thumbnail-border-style $dj-thumbnail-border-color;
+  @include dj-round($radius: $dj-border-radius)
+}
+

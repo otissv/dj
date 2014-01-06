@@ -1,0 +1,136 @@
+/* Panel mixins*/
+@mixin panel-gradient($start-col, $end-col, $background-color) {
+  @if $dj-gradiants {
+    @include dj-gradients($start-col, $end-col);
+  }
+  @else {
+    background-color:                                   $background-color;
+  }
+}
+
+@mixin panel-active {
+  color:                                                 $dj-panel-list-active-font-color;
+  background-color:                                      $dj-panel-list-active-background-color;
+}
+
+@mixin dj-panel {
+	display:                                               block;
+	border:                                                $dj-border-width $dj-border-style $dj-panel-border-color;
+	overflow:                                              auto;
+	@include dj-rounded-corners($dj-panel-border-radius);
+  @include dj-shadow($dj-panel-shadow-color,
+                  $dj-panel-shadow-horizontal-offset,
+                  $dj-panel-shadow-vertical-offset,
+                  $dj-panel-shadow-blur,
+                  $dj-panel-shadow-inset
+  );
+
+  @if $dj-borderless {
+    @include dj-borderless;
+    padding:                                             $dj-panel-padding 0;
+  }
+  @else {
+  	padding:                                             $dj-panel-padding;
+  }
+}
+
+@mixin dj-well {
+	@include dj-panel;
+	margin:                                                $dj-well-margin;
+	background-color:                                      $dj-well-color;
+	padding:                                               $dj-well-padding;
+  @include panel-gradient($dj-well-start-col, $dj-well-end-col, $dj-well-border-color);
+}
+
+@mixin dj-alert-base {
+  padding:                                               $dj-alert-padding;
+}
+
+@mixin dj-alert-info {
+	@include dj-panel;
+	@include dj-alert-base;
+	border-color:                                          $dj-alert-info-border-color;
+	color:                                                 $dj-alert-info-text-color;
+  @include panel-gradient($dj-alert-info-start-col, $dj-alert-info-end-col, $dj-alert-info-border-color);
+}
+
+@mixin dj-alert-success {
+	@include dj-panel;
+	@include dj-alert-base;
+	border-color:                                          $dj-alert-success-border-color;
+	color:                                                 $dj-alert-success-text-color;
+  @include panel-gradient($dj-alert-success-start-col, $dj-alert-success-end-col, $dj-alert-success-border-color);
+}
+
+@mixin dj-alert-danger {
+	@include dj-panel;
+	@include dj-alert-base;
+	border-color:                                          $dj-alert-danger-border-color;
+	color:                                                 $dj-alert-danger-text-color;
+  @include panel-gradient($dj-alert-danger-start-col, $dj-alert-danger-end-col, $dj-alert-danger-border-color);
+}
+
+@mixin dj-alert-warning {
+	@include dj-panel;
+	@include dj-alert-base;
+	border-color:                                          $dj-alert-warning-border-color;
+	color:                                                 $dj-alert-warning-text-color;
+  @include panel-gradient($dj-alert-warning-start-col, $dj-alert-warning-end-col, $dj-alert-warning-border-color);
+}
+
+@mixin dj-panel-list {
+  padding:                                               0;
+  ul {
+    padding:                                             0;
+    margin:                                              0;
+  }
+  li {
+  	list-style:                                          none;
+  	padding:                                             $dj-panel-list-padding;
+  }
+  &:first-child {
+    @include dj-rounded-corners-top($dj-panel-border-radius);
+  }
+  &:last-child {
+    @include dj-rounded-corners-bottom($dj-panel-border-radius);
+  }
+  @if ($dj-borderless) {
+    border:                                              0;
+  }
+  @else {
+    border:                                                $dj-panel-list-border-width $dj-panel-list-border-style $dj-panel-list-border-color;
+    li {
+      border-top:                                          $dj-panel-list-border-width $dj-panel-list-border-style $dj-panel-list-border-color;
+      &:first-child {
+        border-top:                                        0;
+      }
+    }
+  }
+}
+
+
+@mixin dj-panel-list-hover {
+  @include dj-panel-list;
+  li, li a {
+    &:hover {
+      background-color:                                  $dj-panel-list-hover-background-color;
+      color:                                             $dj-panel-list-hover-font-color;
+    }
+    &:active {
+      @include panel-active;
+    }
+  }
+  li {
+    padding:                                             0;
+    > a {
+      padding:                                             $dj-panel-list-padding;
+      display:                                           block;
+      &:link, &:active, &:visited, &:hover {
+        border:                                          0;
+      }
+    }
+  }
+  @if $dj-gradiants {
+    @include dj-gradients($dj-gradient-pagination-start-col, $dj-gradient-pagination-end-col);
+  }
+}

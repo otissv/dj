@@ -1,0 +1,138 @@
+/* Colors variables */
+
+//Grays
+$dj-black:                                              #000;
+$dj-gray-1:                                             #111;
+$dj-gray-2:                                             #222;
+$dj-gray-3:                                             #333;
+$dj-gray-4:                                             #444;
+$dj-gray-5:                                             #555;
+$dj-gray-6:                                             #666;
+$dj-gray-7:                                             #777;
+$dj-gray-8:                                             #888;
+$dj-gray-9:                                             #999;
+$dj-gray-a:                                             #aaa;
+$dj-gray-b:                                             #bbb;
+$dj-gray-c:                                             #ccc;
+$dj-gray-d:                                             #ddd;
+$dj-gray-e:                                             #eee;
+$dj-white:                                              #fff;
+
+//Colors
+$dj-color-1:                                            #3498db;
+$dj-color-2:                                            #3448db;
+$dj-color-3:                                            #2ecc71;
+$dj-color-4:                                            #9b59b6;
+$dj-color-5:                                            #f1c40f;
+$dj-color-6:                                            #e67e22;
+$dj-color-7:                                            #e74c3c;
+$dj-color-8:                                            #1F8B39;
+
+
+//action colors
+$dj-primary-color:                                      #3448db;
+$dj-info-color:                                         #3498db;
+$dj-success-color:                                      #2ecc71;
+$dj-warning-color:                                      #f1c40f;
+$dj-danger-color:                                       #e74c3c;
+$dj-diabled-color:                                      $dj-gray-e;
+
+
+//Color 1
+$dj-color-1-darken-10:                                  darken($dj-color-1, 10%);
+$dj-color-1-darken-20:                                  darken($dj-color-1, 20%);
+$dj-color-1-darken-30:                                  darken($dj-color-1, 30%);
+$dj-color-1-darken-40:                                  darken($dj-color-1, 40%);
+
+$dj-color-1-lighten-10:                                 lighten($dj-color-1, 10%);
+$dj-color-1-lighten-20:                                 lighten($dj-color-1, 20%);
+$dj-color-1-lighten-30:                                 lighten($dj-color-1, 30%);
+$dj-color-1-lighten-40:                                 lighten($dj-color-1, 40%);
+
+
+//Color  2
+$dj-color-2-darken-10:                                   darken($dj-color-2, 10%);
+$dj-color-2-darken-20:                                   darken($dj-color-2, 20%);
+$dj-color-2-darken-30:                                   darken($dj-color-2, 30%);
+$dj-color-2-darken-40:                                   darken($dj-color-2, 40%);
+
+$dj-color-2-lighten-10:                                  lighten($dj-color-2, 10%);
+$dj-color-2-lighten-20:                                  lighten($dj-color-2, 20%);
+$dj-color-2-lighten-30:                                  lighten($dj-color-2, 30%);
+$dj-color-2-lighten-40:                                  lighten($dj-color-2, 40%);
+
+//Color 3
+$dj-color-3-darken-10:                                   darken($dj-color-3, 10%);
+$dj-color-3-darken-20:                                   darken($dj-color-3, 20%);
+$dj-color-3-darken-30:                                   darken($dj-color-3, 30%);
+$dj-color-3-darken-40:                                   darken($dj-color-3, 40%);
+
+$dj-color-3-lighten-10:                                  lighten($dj-color-3, 10%);
+$dj-color-3-lighten-20:                                  lighten($dj-color-3, 20%);
+$dj-color-3-lighten-30:                                  lighten($dj-color-3, 30%);
+$dj-color-3-lighten-40:                                  lighten($dj-color-3, 40%);
+
+//Color 4
+$dj-color-4-darken-10:                                   darken($dj-color-4, 10%);
+$dj-color-4-darken-20:                                   darken($dj-color-4, 20%);
+$dj-color-4-darken-30:                                   darken($dj-color-4, 30%);
+$dj-color-4-darken-40:                                   darken($dj-color-4, 40%);
+
+$dj-color-4-lighten-10:                                  lighten($dj-color-4, 10%);
+$dj-color-4-lighten-20:                                  lighten($dj-color-4, 20%);
+$dj-color-4-lighten-30:                                  lighten($dj-color-4, 30%);
+$dj-color-4-lighten-40:                                  lighten($dj-color-4, 40%);
+
+//Color 5
+$dj-color-5-darken-10:                                   darken($dj-color-5, 10%);
+$dj-color-5-darken-20:                                   darken($dj-color-5, 20%);
+$dj-color-5-darken-30:                                   darken($dj-color-5, 30%);
+$dj-color-5-darken-40:                                   darken($dj-color-5, 40%);
+
+$dj-color-5-lighten-10:                                  lighten($dj-color-5, 10%);
+$dj-color-5-lighten-20:                                  lighten($dj-color-5, 20%);
+$dj-color-5-lighten-30:                                  lighten($dj-color-5, 30%);
+$dj-color-5-lighten-40:                                  lighten($dj-color-5, 40%);
+
+//Color 6
+$dj-color-6-darken-10:                                   darken($dj-color-6, 10%);
+$dj-color-6-darken-20:                                   darken($dj-color-6, 20%);
+$dj-color-6-darken-30:                                   darken($dj-color-6, 30%);
+$dj-color-6-darken-40:                                   darken($dj-color-6, 40%);
+
+$dj-color-6-lighten-10:                                  lighten($dj-color-6, 10%);
+$dj-color-6-lighten-20:                                  lighten($dj-color-6, 20%);
+$dj-color-6-lighten-30:                                  lighten($dj-color-6, 30%);
+$dj-color-6-lighten-40:                                  lighten($dj-color-6, 40%);
+
+//Color 7
+$dj-color-7-darken-10:                                   darken($dj-color-7, 10%);
+$dj-color-7-darken-20:                                   darken($dj-color-7, 20%);
+$dj-color-7-darken-30:                                   darken($dj-color-7, 30%);
+$dj-color-7-darken-40:                                   darken($dj-color-7, 40%);
+$dj-color-7-darken-50:                                   darken($dj-color-7, 50%);
+
+$dj-color-7-lighten-10:                                  lighten($dj-color-7, 10%);
+$dj-color-7-lighten-20:                                  lighten($dj-color-7, 20%);
+$dj-color-7-lighten-30:                                  lighten($dj-color-7, 30%);
+$dj-color-7-lighten-40:                                  lighten($dj-color-7, 40%);
+
+//Color 8
+$dj-color-8-darken-10:                                   darken($dj-color-8, 10%);
+$dj-color-8-darken-20:                                   darken($dj-color-8, 20%);
+$dj-color-8-darken-30:                                   darken($dj-color-8, 30%);
+$dj-color-8-darken-40:                                   darken($dj-color-8, 40%);
+$dj-color-8-darken-50:                                   darken($dj-color-8, 50%);
+
+$dj-color-8-lighten-10:                                  lighten($dj-color-8, 10%);
+$dj-color-8-lighten-20:                                  lighten($dj-color-8, 20%);
+$dj-color-8-lighten-30:                                  lighten($dj-color-8, 30%);
+$dj-color-8-lighten-40:                                  lighten($dj-color-8, 40%);
+
+
+//link colors
+$dj-link-color:                                          $dj-color-1;
+$dj-hover-color:                                         $dj-color-1;
+$dj-active-color:                                        $dj-color-7;
+$dj-visited-color:                                       $dj-gray-a;
+

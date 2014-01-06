@@ -1,0 +1,36 @@
+/* import font-awesome */
+@import "font-awesome/scss/font-awesome";
+
+@mixin dj-icon ($dj-icon-before,
+                   $dj-icon-before-font-family: $dj-icon-font-family) {
+  font-family:                                         $dj-icon-before-font-family;
+  content:                                             $dj-icon-before;
+}
+
+@mixin dj-icon-before($dj-icon-before,
+	                 $dj-icon-before-font-family: $dj-icon-font-family) {
+	font-family:                                         $dj-icon-before-font-family;
+  &:before {
+    content:                                           $dj-icon-before;
+  }
+}
+
+@mixin dj-icon-after($dj-icon-after,
+	                 $dj-icon-after-font-family: $dj-icon-font-family) {
+	font-family:                                         $dj-icon-after-font-family;
+  &:after {
+    content:                                           $dj-icon-after;
+  }
+}
+
+@mixin dj-icon-before-after($dj-icon-before,
+	                      $dj-icon-after,
+	                      $dj-icon-before-afer-font-family: $dj-icon-font-family) {
+	font-family:                                         $dj-icon-font-family;
+  &:before {
+    content:                                           $dj-icon-before;
+  }
+  &:after {
+    content:                                           $dj-icon-after;
+  }
+}
