@@ -1,0 +1,4703 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>dj</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <!-- <script src="bower_components/modernizr/modernizr.js"></script>  -->
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+      	<div class="main-nav">
+	        <nav>
+	        	<ul>
+	        		<li>
+	        			<a href="#dj">DJ Mixins</a>
+	        		</li>
+	        		<li>
+	        			<a href="#getting-started">Getting started</a>
+	        		</li>
+	        		<li>
+	        			<a href="#switches">Switches</a>
+	        		</li>
+	        		<li>
+	        			<a href="#grids">Grids</a>
+	        		</li>
+	        		<li>
+	        			<a href="#fonts">Fonts</a>
+	        		</li>
+	        		<li>
+	        			<a href="#typography">Typography</a>
+	        		</li>
+	        		<li>
+	        			<a href="#labels-badges">Labels and Badges</a>
+	        		</li>
+	        		<li>
+	        			<a href="#code">Code</a>
+	        		</li>
+	        		<li>
+	        			<a href="#buttons">Buttons</a>
+	        		</li>
+	        		<li>
+	        			<a href="#forms">Forms</a>
+	        		</li>
+	        		<li>
+	        			<a href="#tables">Tables</a>
+	        		</li>
+	        		<li>
+	        			<a href="#navigation">Navigation</a>
+	        		</li>
+	        		<li>
+	        			<a href="#pagination">Pagination</a>
+	        			</li>
+	        		<li>
+	        			<a href="#panels">Panels</a>
+	        		</li>
+	        		<li>
+	        			<a href="#images">Images</a>
+	        		</li>
+	        		<li>
+	        			<a href="#helpers">Helpers</a>
+	        		</li>
+	        		<li>
+	        			<a href="#units">Units</a>
+	        		</li>
+	        		<li>
+	        			<a href="#colors">Colors</a>
+	        		</li>
+	        		<li>
+	        			<a href="#normalize">Normalize</a>
+	        		</li>
+	        		<li>
+	        			<a href="#font-awesome">Font Awesome</a>
+	        		</li>
+	        		<li>
+	        			<a href="#animations">Animations</a>
+	        		</li>
+	        		<li>
+	        			<a href="#browser-support">Browser support</a>
+	        		</li>
+	        	</ul>
+	        </nav>
+        </div>
+
+
+      <div class="page-content">
+
+			<h1 id="dj">DJ Mixins</h1>
+			<p class="sh1">
+			  Built in SASS and Compass.
+			</p>
+			<p>
+				Dj is a library of mixins.
+				<ul>
+					<li>Help keep HTML semantic</li>
+					<li>Only include the css that is being used</li>
+					<li>Quickly theme your whole website/app</li>
+					<li>HTML5 and CSS3 all major modern browsers</li>
+				</ul>
+			</p>
+      <h2 id="getting-started">Getting started</h2>
+      <h3>Install</h3>
+      <ol class="install-info">
+      	<li>
+      		Install <a href="http://compass-style.org/">Comapass</a>
+      	</li>
+      	<li>
+      		<a href="">Clone</a> or <button>Download</button> DJ mixins into you project
+      	</li>
+      	<li>At the top of your web project .scss file add <code>@import "dj";</code>
+      	</li>
+      </ol>
+      <p>
+      	Information on using SASS can be found at <a href="http://sass-lang.com/">sass-lang.com</a>.
+      </p>
+      <h3>Project structure</h3>
+      <pre class="code-block">
+dj/
+├── demo/
+└── scss/
+    ├── elements/
+    │   ├── _*.scss
+    ├── font-awesome/
+    ├── fonts/
+    ├── themes/
+    │   ├── _theme_*.scss
+    └── _dj.scss</pre>
+    	<p>
+    	   Elements contains all the mixins and themes contains all the variables for elements.
+    	</p>
+
+      <h2 id="switches">Global switches</h2>
+			<table class="table-code">
+		    <thead>
+		      <th>SCSS</th>
+		      <th>Description</th>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>
+              $dj-rounded-corners
+		        </td>
+		        <td>
+              If true, turns on rounder corners on all elements. False to switch them off.
+		        </td>
+          </tr>
+          <tr>
+		        <td>
+              $dj-borderless
+		        </td>
+		        <td>
+              If true, makes all borders on all elements transparent. False to show borders.
+		        </td>
+          </tr>
+          <tr>
+		        <td>
+              $dj-gradiants
+		        </td>
+		        <td>
+              If true, turns on gradiants. False to switch them off.
+		        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <h2 id="grids">Grids</h2>
+			<h3>Grid &amp; nested grid</h3>
+			<span>Example</span>
+			<div class="example">
+				<div class="row-0">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+
+			  <div class="row-1">
+					<div></div>
+				</div>
+
+				<div class="row-2">
+					<div></div>
+					<div></div>
+				</div>
+
+				<div class="row-3">
+					<div></div>
+					<div></div>
+		      <div></div>
+				</div>
+
+				<div class="row-4">
+					<div></div>
+		      <div>
+		    	  <div></div>
+		    	  <div></div>
+		      </div>
+				</div>
+			</div>
+
+			<span>HTML</span>
+			<div class="html">
+			  <pre>
+&lt;div class="row-0"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;1&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row-1"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row-2"&gt;
+  &lt;div&gt;6&lt;/div&gt;
+  &lt;div&gt;6&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row-3"&gt;
+  &lt;div&gt;4&lt;/div&gt;
+  &lt;div&gt;3&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row-4"&gt;
+  &lt;div class="selector"&gt;4&lt;/div&gt;
+  &lt;div class="selector"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+		<pre>
+.row-1 {
+  @include dj-row;
+  div {
+    @include dj-col-base;
+    @include dj-column(1);
+  }
+}
+
+.row-2 {
+@include dj-row;
+ div {
+    @include dj-column(6);
+    @media (min-width: $dj-w-768) {
+       @include dj-column(12);
+    }
+  }
+}
+
+.row-3 {
+@include dj-row;
+ div {
+  @include dj-column(2);
+   &amp;:last-child {
+      @include dj-column(4);
+    }
+    @media (min-width: $dj-w-768) {
+      @include dj-column(3);
+      &amp;:last-child {
+         @include dj-column(9);
+       }
+    }
+  }
+}
+
+.row-4 {
+@include dj-row;
+  div {
+    @include dj-column(2);
+  }
+  div:first-child {
+    @include dj-column(2);
+  }
+  div:nth-child(2) {
+    @include dj-column(1, 1);
+  }
+  @media (min-width: $dj-w-768) {
+    div {
+      @include dj-column(4);
+    }
+    div:first-child {
+      @include dj-column(4);
+    }
+    div:nth-child(2) {
+      @include dj-column(2, 2);
+    }
+  }
+}
+
+.row-5 {
+  @include dj-row;
+  div:first-child {
+    @include dj-column(2);
+    @media (min-width: $dj-w-768) {
+      @include dj-column(4);
+    }
+  }
+  div:last-child {
+    @include dj-col-base;
+    @include dj-column(4);
+    div {
+      @include dj-column-nested(2, 1);
+    }
+    @media (min-width: $dj-w-768) {
+      @include dj-column(8);
+      @include dj-column-edge;
+      div {
+        @include dj-column-nested(4, 2);
+      }
+    }
+    @include dj-column-edge;
+  }
+}</pre>
+			</div>
+
+		  <h3>Device width</h3>
+		  <table class="table-code">
+		    <thead>
+		      <th>SCSS</th>
+		      <th>Value</th>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>
+		          $dj-w-320
+		        </td>
+		        <td>
+		          320px
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>
+		          $dj-w-480
+		        </td>
+		        <td>
+		          480px
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>
+		          $dj-w-768
+		        </td>
+		        <td>
+		          768px
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>
+		          $dj-w-1024
+		        </td>
+		        <td>
+		          1024px
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>
+		          $dj-w-1366
+		        </td>
+		        <td>
+		          1366px
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>
+		          $dj-w-1600
+		        </td>
+		        <td>
+		          1600px
+		        </td>
+		      </tr>
+		    </tbody>
+		  </table>
+
+		  <h3>Device columns</h3>
+		  <table class="table-code">
+		    <thead>
+		      <th>SCSS</th>
+		      <th>Value</th>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>
+		          $dj-c-320
+		        </td>
+		        <td>
+		          6
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>
+		          $dj-c-480
+		        </td>
+		        <td>
+		          6
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>
+		          $dj-c-768
+		        </td>
+		        <td>
+		          12
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>
+		          $dj-c-1024
+		        </td>
+		        <td>
+		          12
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>
+		          $dj-c-1366
+		        </td>
+		        <td>
+		          12
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>
+		          $dj-c-1600
+		        </td>
+		        <td>
+		          12
+		        </td>
+		      </tr>
+		    </tbody>
+		  </table>
+
+		  <h2 id="fonts">Fonts</h2>
+
+		  <h3>Font faces</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <p>
+		      Open Sans &#8212; Sans font.
+		    </p>
+		    <p class="serif">
+		      Lora &#8212; Serif font.
+		    </p>
+		    <p class="code">
+		      Droid Sans Mono &#8212; Code font.
+		    </p>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre>
+&lt;p&gt;
+  Open Sans &#8212; Sans font.
+&lt;/p&gt;
+&lt;p class="serif"&gt;
+  Lora &#8212; Serif font.
+&lt;/p&gt;
+&lt;p class="code"&gt;
+  Droid Sans Mono &#8212; Code font.
+&lt;/p&gt;
+</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		    <pre>
+<span>//Sans</span>
+$dj-sans:                              'Open Sans';
+$dj-sans-url:                          '../styles/fonts/Open_Sans/OpenSans-Regular.ttf';
+$dj-sans-url-italic:                   '../styles/fonts/Open_Sans/OpenSans-Italic.ttf';
+$dj-sans-url-bold:                     '../styles/fonts/Open_Sans/OpenSans-Bold.ttf';
+$dj-sans-url-bold-italic:              '../styles/fonts/Open_Sans/OpenSans-BoldItalic.ttf';
+$dj-font-family-sans:                  $dj-sans, sans-serif;  <span>//defualt sans font.</span>
+
+<span>//Sans</span>
+$dj-serif:                             'Lora';
+$dj-serif-url:                         '../styles/fonts/Lora/Lora-Regular.ttf';
+$dj-serif-url-italic:                  '../styles/fonts/Lora/Lora-Italic.ttf';
+$dj-serif-url-bold:                    '../styles/fonts/Lora/Lora-Bold.ttf';
+$dj-serif-url-bold-italic:             '../styles/fonts/Lora/Lora-BoldItalic.ttf';
+$dj-font-family-serif:                 $dj-serif, serif; <span>//defualt serif font.</span>
+
+<span>//Code font</span>
+$dj-code:                              'Droid Sans Mono';
+$dj-code-url:                          '../styles/fonts/Droid_Sans_Mono/DroidSansMono.ttf';
+$dj-font-family-code:                  'Droid Sans Mono', monospace; <span>//defualt font used for coding.</span>
+
+
+<span>//sans</span>
+@font-face {
+  font-family: 'Open Sans';
+  src: url($dj-sans-url);
+  font-weight:                         normal;
+  font-style:                          normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url($dj-sans-url-italic);
+  font-weight:                         normal;
+  font-style:                          italic;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url($dj-sans-url-bold);
+  font-weight:                         bold;
+  font-style:                          normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url($dj-sans-url-bold-italic);
+  font-weight:                         bold;
+  font-style:                          italic;
+}
+
+<span>//Serif</span>
+@font-face {
+  font-family: 'Lora';
+  src: url($dj-serif-url);
+  font-weight:                         normal;
+  font-style:                          normal;
+}
+@font-face {
+  font-family: 'Lora';
+  src: url($dj-serif-url-italic);
+  font-weight:                         normal;
+  font-style:                          italic;
+}
+@font-face {
+  font-family: 'Lora';
+  src: url($dj-serif-url-bold);
+  font-weight:                         bold;
+  font-style:                          normal;
+}
+@font-face {
+  font-family: 'Lora';
+  src: url($dj-serif-url-bold-italic);
+  font-weight:                         bold;
+  font-style:                          talic;
+}
+
+<span>//Code</span>
+@font-face {
+  font-family: 'Droid Sans Mono';
+  src: url($dj-code-url);
+}
+</pre>
+		  </div>
+
+			<h2 id="typography">Typography</h2>
+
+			<h3>Headings</h3>
+			<span>Example</span>
+		  <div class="example">
+		  	<table>
+					<thead>
+					  <th>Headings</th>
+					  <th>Sub headings</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td><h1>h1</h1></td>
+						  <td><span class="sh1">sh1</span></td>
+						</tr>
+						<tr>
+							<td><h2>h2</h2></td>
+						  <td><span class="sh2">sh2</span></td>
+						</tr>
+						<tr>
+							<td><h3>h3</h3></td>
+						  <td><span class="sh3">sh3</span></td>
+						</tr>
+						<tr>
+							<td><h4>h4</h4></td>
+						  <td><span class="sh4">sh4</span></td>
+						</tr>
+						<tr>
+						  <td><h5>h5</h5></td>
+				  		<td><span class="sh5">sh5</span></td>
+						</tr>
+						<tr>
+							<td><h6>h6</h6></td>
+						  <td><span class="sh6">sh6</span><br></td>
+						</tr>
+					</tbody>
+				</table>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+    <pre>
+&lt;h1&gt;h1&lt;/h1&gt;
+&lt;span class="sh1"&gt;sh1&lt;/span&gt;
+&lt;h2&gt;h2&lt;/h3&gt;
+&lt;span class="sh2"&gt;sh2&lt;/span&gt;
+&lt;h3&gt;h3&lt;/h3&gt;
+&lt;span class="sh3"&gt;sh3&lt;/span&gt;
+&lt;h4&gt;h4&lt;/h4&gt;
+&lt;span class="sh4"&gt;sh4&lt;/span&gt;
+&lt;h5&gt;h5&lt;/h5&gt;
+&lt;span class="sh5"&gt;sh5&lt;/span&gt;
+&lt;h6&gt;h6&lt;/h6&gt;
+&lt;span class="sh6"&gt;sh6&lt;/span&gt;</pre>
+  </div>
+
+
+		  <span>SCSS</span>
+		  <div class="scss">
+    <pre>
+.sh1 { @include dj-sh1; }
+.sh2 { @include dj-sh2; }
+.sh3 { @include dj-sh3; }
+.sh4 { @include dj-sh4; }
+.sh5 { @include dj-sh5; }
+.sh6 { @include dj-sh6; }</pre>
+		  </div>
+
+		  <h3>Body text</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <p>
+		      This is normal body text.
+		    </p>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre>
+&lt;p&gt;
+  This is normal body text.
+&lt;/p&gt;</pre>
+		  </div>
+
+		  <h3>Indenting Paragraphs</h3>
+		  <span>Example</span>
+		  <div class="example indent">
+		  	<p>
+					This is the first paragraph.
+			  </p>
+			  <p>
+			    This is the second paragraph is indented.
+				</p>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre>
+&lt;p&gt;
+  This is the first paragraph.
+&lt;/p&gt;
+&lt;p&gt;
+  This is the second paragraph, of and indented paragraph.
+&lt;/p&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		    <pre>
+p {
+  @include dj-indent;
+}</pre>
+		  </div>
+
+		  <h3>Bold text</h3>
+		  <span>Example</span>
+		  <div class="example">
+			  <p>
+				  <span class="sans"><strong>This text is bold text</strong>, sans-serif.</span><br>
+		      <span class="serif"><strong>This text is bold text</strong>, serif.</span>
+		    </p>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre>
+&lt;p&gt;
+  This text is bold text&lt;/strong&gt;.
+&lt;/p&gt;</pre>
+		  </div>
+
+		  <h3>Italic text</h3>
+		  <span>Example</span>
+		  <div class="example">
+		  	<p>
+				  <span class="sans"><em>This text is italic text</em>, sans-serif.</span><br>
+		      <span class="serif"><em>This text is italic text</em>, serif.</span><br>
+			  </p>
+		  </div>
+
+		  <h3>Bold italic text</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <p>
+		      <span class="sans"><strong><em>This text is bold italic text</em></strong>, sans-serif.</span><br>
+		      <span class="serif"><strong><em>This text is bold italic text</em></strong>, serif.</span>
+		    </p>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		  <pre>
+&lt;p&gt;
+  &lt;strong&gt;&lt;em&gt;This text is italic text&lt;/em&gt;&lt;/strong&gt;.
+&lt;/p&gt;</pre>
+		  </div>
+
+		  <h3>Small text</h3>
+		  <span>Example</span>
+		  <div class="example">
+		  	<p>
+				  <span class="sans"><small>This text is small text, sans-serif. </small></span><br>
+		      <span class="serif"><small>This text is small text, serif.</small></span>
+			  </p>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		  <pre>
+&lt;p&gt;
+  &lt;small&gt;This text is small text&lt;/small&gt;.
+&lt;/p&gt;</pre>
+		  </div>
+
+		  <h3>Hypertext</h3>
+		  <span>Example</span>
+		  <div class="example">
+		  	<a href="" class="link">Normal</a>
+				<a href="" class="visited">Visited</a>
+				<a href="" class="hover">Hover</a>
+				<a href="" class="active">Active</a>
+		  </div>
+		  <span>HTML</span>
+		  <div class="html">
+		  <pre>
+&lt;a href="http://www.url.com"&gt;
+  Link
+&lt;/a&gt;</pre>
+		  </div>
+
+		  <h3>Abbreviated text</h3>
+		  <span>Example</span>
+		  <div class="example">
+		  	<p>This is an
+					<abbr title="Abbreviation">
+						abbr
+					</abbr>.
+				</p>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		<pre>
+&lt;abbr title="Abbreviation"&gt;
+  abbr
+&lt;/abbr&gt;</pre>
+		  </div>
+
+		  <h3>Preserved text</h3>
+		  <span>Example</span>
+		  <div class="example">
+				<pre>This preserves
+		both      spaces and
+		line breaks.</pre>
+				</p>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		<pre>
+&lt;pre&gt;
+This preserves
+both      spaces and
+line breaks.
+&lt;/pre&gt;</pre>
+		  </div>
+
+		  <h3>Single line block quote</h3>
+		  <span>Example</span>
+		  <div class="example">
+		  	<figure class="block-quote">
+					<blockquote><em>This is a single line quote.</em></blockquote>
+					<figcaption>From somebody, 
+						<cite>Taken from somewhere</cite>
+					</figcaption>
+				</figure>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		<pre>
+&lt;figure  class="block-quote"&gt;
+  &lt;blockquote&gt;&lt;em&gt;This is a single line quote.&lt;/em&gt;&lt;/blockquote&gt;
+    &lt;figcaption&gt;From somebody,
+    &lt;cite&gt;Taken from somewhere&lt;/cite&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		<pre>
+.block-quote {
+  @include dj-block-quote;
+}</pre>
+		  </div>
+
+		  <h3>Mulit-line block quote</h3>
+		  <span>Example</span>
+		  <div class="example">
+		  	<figure class="block-quote">
+					<blockquote>
+						<p>
+							<em>This is the first paragraph of a multi-line quote.</em>
+						</p>
+						<p>
+							<em>This is the second paragraph of a multi-line quote.</em>
+						</p>
+					</blockquote>
+					<figcaption>From somebody, <cite><a href="">Taken from somewhere</a></cite></figcaption>
+				</figure>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		<pre>
+&lt;figure class="block-quote">&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;
+      &lt;em&gt;This is the first paragraph of a multi line quote.&lt;/em&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;em&gt;This is the second paragraph of a multi line quote.&lt;/em&gt;
+    &lt;/p&gt;
+  &lt;/blockquote&gt;
+  &lt;figcaption&gt;
+    From somebody,
+    &lt;cite&gt;&lt;a href="url"&gt;
+      Taken from somewhere&lt;/a&gt;
+    &lt;/cite&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		<pre>
+.block-quote {
+  @include dj-block-quote;
+}</pre>
+		  </div>
+
+
+		  <h3>Pull quote</h3>
+		  <span>Example</span>
+		  <div class="example">
+		  	<aside class="pull-quote">
+					<blockquote>
+						<p>
+							<em>This is the a pull quote.</em>
+						</p>
+						<p>
+							<em>It can be single or multi lined.</em>
+						</p>
+					</blockquote>
+				</aside>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		<pre>
+&lt;figure class="pull-quote">&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;
+      &lt;e&gt;This is the a pull quote.&lt;/em&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;e&gt;It can be single or multi lined.&lt;/em&gt;
+    &lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/figure&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		<pre>
+.pull-quote {
+  @include dj-pull-quote;
+}</pre>
+		  </div>
+
+		  <h3>Unorderd list</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <ul>
+		      <li>Unorderd list.</li>
+		      <li>Unorderd list.</li>
+		      <li>Unorderd list.</li>
+		      <li>Unorderd list.</li>
+		      <li>Unorderd list.</li>
+		    </ul>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		<pre>
+&lt;ul&gt;
+  &lt;li&gt;Unorderd list.&lt;/li&gt;
+  &lt;li&gt;Unorderd list.&lt;/li&gt;
+  &lt;li&gt;Unorderd list.&lt;/li&gt;
+  …
+&lt;/ul&gt;</pre>
+		  </div>
+
+
+		  <h3>Ordered list</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <ol>
+		      <li>Ordered list.</li>
+		      <li>Ordered list.</li>
+		      <li>Ordered list.</li>
+		      <li>Ordered list.</li>
+		      <li>Ordered list.</li>
+		    </ol>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		<pre>
+&lt;ol&gt;
+  &lt;li&gt;Orderd list.&lt;/li&gt;
+  &lt;li&gt;Orderd list.&lt;/li&gt;
+  &lt;li&gt;Orderd list.&lt;/li&gt;
+  …
+&lt;/ol&gt;</pre>
+		  </div>
+
+		  <h3>Unstyled list</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <ul class="unstyled-list">
+		      <li>Unstyled list.</li>
+		      <li>Unstyled list.</li>
+		      <li>Unstyled list.</li>
+		      <li>Unstyled list.</li>
+		      <li>Unstyled list.</li>
+		    </ul>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		<pre>
+&lt;ul class="unstyled-list"&gt;
+  &lt;li&gt;Unorderd list.&lt;/li&gt;
+  &lt;li&gt;Unorderd list.&lt;/li&gt;
+  &lt;li&gt;Unorderd list.&lt;/li&gt;
+  …
+&lt;/ul&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		<pre>
+.unstyled-list {
+  @include dj-unstyled-list;
+}</pre>
+		  </div>
+
+		  <h3>Inline List</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <ul class="inline-list">
+		      <li>Inline-list</li>
+		      <li>Inline-list</li>
+		      <li>Inline-list</li>
+		      <li>Inline-list</li>
+		      <li>Inline-list</li>
+		    </ul>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		<pre>
+&lt;ul class="inline-list"&gt;
+  &lt;li&gt;Inline-list.&lt;/li&gt;
+  &lt;li&gt;Inline-list.&lt;/li&gt;
+  &lt;li&gt;Inline-list.&lt;/li&gt;
+  …
+&lt;/ul&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		<pre>
+.inline-list {
+  @include dj-inline-list;
+}</pre>
+		  </div>
+
+
+		  <h3>Description list</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <dl>
+		        <dt>Term</dt>
+		          <dd>I'm a description.</dd>
+		          <dd>I'm a description.</dd>
+		        <dt>Term</dt>
+		          <dd>I'm a description.</dd>
+		          <dd>I'm a description.</dd>
+		      </dl>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		<pre>
+&lt;dl&gt;
+  &lt;dt&gt;Term&lt;/dt&gt;
+    &lt;dd&gt;I'm a decription.&lt;/dd&gt;
+    &lt;dd&gt;I'm a decription.&lt;/dd&gt;
+    …
+&lt;/dl&gt;</pre>
+		  </div>
+
+		  <h3>Inline description list</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <dl class="description-inline">
+		        <dt>Term</dt>
+		          <dd>: Here's my description.</dd>
+		        <dt>Term</dt>
+		          <dd>: Here's my description.</dd>
+		      </dl>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		<pre>
+&lt;dl class="description-inline"&gt;
+  &lt;dt&gt;Term&lt;/dt&gt;
+    &lt;dd&gt;Here's my description.&lt;/dd&gt;
+  &lt;dt&gt;Term&lt;/dt&gt;
+    &lt;dd&gt;Here's my description.&lt;/dd&gt;
+  …
+&lt;/dl&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		<pre>
+.description-inline {
+  @include dj-description-inline;
+}</pre>
+		  </div>
+
+		  <h3>Ordered description list</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <dl class="description-ordered">
+		      <dt>Term</dt>
+		        <dd>This is an ordered description.</dd>
+		        <dd>This is an ordered description.</dd>
+		      <dt>Term</dt>
+		        <dd>This is an ordered description.</dd>
+		        <dd>This is an ordered description.</dd>
+		      </dl>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		<pre>
+&lt;dl class="description-ordered"&gt;
+  &lt;dt&gt;Term&lt;/dt&gt;
+    &lt;dd&gt;This is an ordered  description.&lt;/dd&gt;
+    &lt;dd&gt;This is an ordered  description.&lt;/dd&gt;
+  &lt;dt&gt;Term&lt;/dt&gt;
+    &lt;dd&gt;This is an ordered  description.&lt;/dd&gt;
+    &lt;dd&gt;This is an ordered  description.&lt;/dd&gt;
+  …
+&lt;/dl&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		<pre>
+.description-ordered {
+  @include dj-description-ordered;
+}</pre>
+		  </div>
+
+		  <h3>Numbered description list</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <dl class="description-numbered">
+		        <dt>This is numbered</dt>
+		          <dd>Description.</dd>
+		          <dd>Description.</dd>
+		        <dt>This is numbered</dt>
+		          <dd>Description.</dd>
+		          <dd>Description.</dd>
+		      </dl>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		<pre>
+&lt;dl class="description-numbered"&gt;
+  &lt;dt&gt;Term&lt;/dt&gt;
+    &lt;dd&gt;Here's my description.&lt;/dd&gt;
+    &lt;dd&gt;Here's my description.&lt;/dd&gt;
+  …
+&lt;/dl&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		<pre>
+.description-numbered {
+  @include dj-description-numbered;
+}</pre>
+		  </div>
+
+		  <h3>Address</h3>
+		  <span>Example</span>
+		  <div  class="example">
+		  <address>
+		    <strong>Full Name</strong><br>
+		    Company Name<br>
+		    Address 1<br>
+		    County<br>
+		    City, Post Code<br>
+		    Country<br>
+		    Email: <a href="mailto:#">user.name@mail.co.uk</a><br>
+		    <abbr title="Telephone number">T:</abbr> 020 0000 0000<br>
+		    <abbr title="Mobile number">M:</abbr> +44 7000 000 000<br>
+		  </address>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre>
+&lt;address&gt;
+  &lt;strong&gt;Full Name&lt;/strong&gt;
+  Company Name&lt;/br&gt;
+  Address 1&lt;/br&gt;
+  County&lt;/br&gt;
+  City, Post Code&lt;/br&gt;
+  Country&lt;/br&gt;
+  Email: &lt;a href="mailto:#"&gt;user.name@mail.co.uk&lt;/a&gt;&lt;/br&gt;
+  &lt;abbr title="Telephone number"&gt;T:&lt;/abbr&gt; 020 0000 0000&lt;/br&gt;
+  &lt;abbr title="Mobile number"&gt;M:&lt;/abbr&gt; +44 7000 000 000&lt;/br&gt;
+&lt;/address&gt;</pre>
+		  </div>
+
+		  <h3>Figures</h3>
+		  <span>Example</span>
+		  <div  class="example">
+		    <figure>
+		      <figcaption>
+		        <img class="img-rounded" alt="Image with round corners" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAIVcZHVkU4V1bHWWjoWeyP/ZyLe3yP////L/////////////////////////////////////////////////////2wBDAY6WlsivyP/Z2f//////////////////////////////////////////////////////////////////////////wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALAB/9k=">
+		        <br>
+		        <strong>Fig. 1.0 | </strong>This is a figure
+		      </figcaption>
+		    </figure>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre>
+&lt;figure&gt;
+ &lt;figcaption&gt;
+   placeholder
+   &lt;strong&gt;This is a figure&lt;/strong&gt;
+ &lt;/figcaption&gt;
+&lt;/figure&gt;</pre>
+		  </div>
+
+
+		  <h2 id="labels-badges">Labels and Badges</h2>
+
+		  <h3>Labels</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <p>
+		      <span class="label">Label</span>
+		      <span class="label-primary">Primary</span>
+		      <span class="label-info">Info</span>
+		      <span class="label-success">Success</span>
+		      <span class="label-warning">Warning</span>
+		      <span class="label-danger">Danger</span>
+		    </p>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre>
+&lt;p&gt;
+  &lt;span class="label"&gt;&lt;/span&gt;
+  &lt;span class="label-primary"&gt;&lt;/span&gt;
+  &lt;span class="label-info"&gt;&lt;/span&gt;
+  &lt;span class="label-success"&gt;&lt;/span&gt;
+  &lt;span class="label-warning"&gt;&lt;/span&gt;
+  &lt;span class="label-danger"&gt;&lt;/span&gt;
+&lt;/p&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		    <pre>
+.label {
+  @include dj-label;
+}
+
+.label-primary {
+  @include dj-label-primary;
+}
+
+label-info {
+  @include dj-label-info;
+}
+
+.label-success {
+  @include dj-label-success;
+}
+
+label-warning {
+@include dj-label-warning;
+}
+
+.label-danger {
+  @include dj-label-danger;
+}</pre>
+		  </div>
+
+		  <h3>Badges</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <ul class="badges">
+		      <li>item <span class="badge">1</span></li>
+		      <li>item <span class="badge-primary">3</span></li>
+		      <li>item <span class="badge-info">6</span></li>
+		      <li>item <span class="badge-success">9</span></li>
+		      <li>item <span class="badge-warning">12</span></li>
+		      <li>item <span class="badge-danger">100</span></li>
+		    </ul>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre>
+&lt;p&gt;
+  &lt;li&gt;item &lt;span class="badge"&gt;1&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;item &lt;span class="badge-primary"&gt;3&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;item &lt;span class="badge-info"&gt;6&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;item &lt;span class="badge-success"&gt;9&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;item &lt;span class="badge-warning"&gt;12&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;item &lt;span class="badge-danger"&gt;100&lt;/span&gt;&lt;/li&gt;
+&lt;/p&gt;
+		</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		    <pre >
+.badge {
+  @include dj-badge;
+}
+
+.badge-primary {
+  @include dj-badge-primary;
+}
+
+.badge-info {
+  @include dj-badge-info;
+}
+
+.badge-success {
+  @include dj-badge-success;
+}
+
+.badge-warning {
+  @include dj-badge-warning;
+}
+
+.badge-danger {
+  @include dj-badge-danger;
+}</pre>
+		  </div>
+
+		  <h3>Badge pills</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <ul class="badges">
+		      <li>item <span class="badge-pill">1</span></li>
+		      <li>item <span class="badge-pill-primary">3</span></li>
+		      <li>item <span class="badge-pill-info">6</span></li>
+		      <li>item <span class="badge-pill-success">9</span></li>
+		      <li>item <span class="badge-pill-warning">12</span></li>
+		      <li>item <span class="badge-pill-danger">100</span></li>
+		    </ul>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre>
+&lt;p&gt;
+  &lt;li&gt;item &lt;span class="badge-pill"&gt;1&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;item &lt;span class="badge-pill-primary"&gt;3&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;item &lt;span class="badge-pill-info"&gt;6&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;item &lt;span class="badge-pill-success"&gt;9&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;item &lt;span class="badge-pill-warning"&gt;12&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;item &lt;span class="badge-pill-danger"&gt;100&lt;/span&gt;&lt;/li&gt;
+&lt;/p&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		    <pre>
+.badge-pill {
+  @include dj-badge-pill;
+}
+
+.badge-pill-primary {
+  @include dj-badge-pill-primary;
+}
+
+.badge-pill-info {
+  include badge-pill-info;
+}
+.badge-pill-success {
+  @include dj-badge-pill-success;
+}
+
+.badge-pill-warning {
+  @include dj-badge-pill-warning;
+}
+
+.badge-pill-danger  {
+  @include dj-badge-pill-danger;
+}</pre>
+		  </div>
+
+		  <h2 id="code">Code</h2>
+
+		  <h3>Code inline</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <p>
+		      This is 
+		      <code>
+		        &lt;span&gt;inline code&lt;/span&gt;
+		      </code>
+		    </p>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre >
+&lt;p&gt;
+  This is 
+  &lt;code&gt;
+    &lt;span&gt;inline code&lt;/span&gt;
+  &lt;/code&gt;
+&lt;/p&gt;</pre>
+		  </div>
+
+
+		  <h3>Code block</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <pre class="code-block">
+&lt;p&gt;
+  This is a code block.
+&lt;/p&gt;</pre>
+  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre>
+&lt;pre  class="code-block"&gt;
+&lt;p&gt;
+  This is a code block
+&lt;/p&gt;
+&lt;/pre&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		    <pre>
+.code-block {
+  @include dj-code-block;
+}</pre>
+		  </div>
+
+		  <h3>Numbered code lines</h3>
+		  <span>Example</span>
+		  <div  class="example">
+		    <pre class="code-numbered"><ol><li>&lt;p&gt;</li><li>  This is a code block</li><li>&lt;/p&gt;</li></ol></pre>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre>
+&lt;pre class="code-numbered"&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;p&gt;&lt;/li&gt;
+    &lt;li&gt;  This is a code numbered block.&lt;/li&gt;
+    &lt;li&gt;&lt;/p&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/pre&gt;
+		</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		   <div class="scss">
+		    <pre>
+.code-numbered {
+  @include dj-code-numbered;
+}</pre>
+		  </div>
+
+		  <h2 id="buttons">Buttons</h2>
+
+		  <h3>Buttons</h3>
+		  <span>Example</span>
+			<div class="example">
+				<button class="button">Button</button>
+		    <a class="button" href="#"> Link</a>
+		    <input class="sys-button" type="button" Value="Input">
+		    <input class="sys-button" type="submit" Value="Submit">
+			</div>
+
+			<span>HTML</span>
+			<div class="html">
+				<pre>
+&lt;button&gt;
+  Button
+&lt;button&gt;
+&lt;a href="url" class="button"&gt;
+  Link
+&lt;/a&gt;
+&lt;input type="button" Value="Input"&gt;
+  Input
+&lt;/input&gt;
+&lt;input type="submit" Value="Submit"&gt;
+  Submit
+&lt;/input&gt;</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+				<pre>
+.button {
+  @include dj-button
+}</pre>
+			</div>
+
+			<h3>Button styles</h3>
+			<span>Example</span>
+			<div class="example">
+				<button class="button">Button</button>
+				<button class="button-pill">Pill</button>
+				<button class="button-round">Round</button>
+		    <button class="button-block">Block</button>
+			</div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre>
+&lt;button class="button"&gt;Button&lt;/button&gt;
+&lt;button class="button-pill"&gt;Pill&lt;/button&gt;
+&lt;button class="button-round"&gt;Round&lt;/button&gt;
+&lt;button class="button-block"&gt;Block&lt;/button&gt;</pre>
+		  </div>
+
+			<span>SCSS</span>
+			<div class="scss">
+				<pre>
+.button {
+  @include dj-button;
+}
+
+.button-pill {
+  @include dj-button;
+  @include dj-button-pill;
+}
+
+.button-round {
+  @include dj-butt
+    @include dj-button;on-round;
+}
+
+.buttonBlock {
+  @include dj-button;
+  @include dj-button-block;
+}</pre>
+			</div>
+
+			<h3>Button sizes</h3>
+			<span>Example</span>
+			<div class="example">
+			  <button class="giga-button">Giga</button>
+				<button class="mega-button">Mega</button>
+				<button class="large-button">Large</button>
+				<button class="button-normal">Normal</button>
+				<button class="small-button">Small</button>
+			</div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre>
+&lt;button class="giga-button"&gt;Giga&lt;/button&gt;
+&lt;button class="mega-button"&gt;Mega&lt;/button&gt;
+&lt;button class="large-button"&gt;Large&lt;/button&gt;
+&lt;button class="button-normal"&gt;Normal&lt;/button&gt;
+&lt;button class="small-button"&gt;Small&lt;/button&gt;</pre>
+		  </div>
+
+			<span>SCSS</span>
+			<div class="scss">
+				<pre>
+.giga-button {
+  @include dj-button;
+  @include dj-button-giga;
+}
+
+.mega-button {
+  @include dj-button;
+  @include dj-button-mega;
+}
+
+.large-button {
+  @include dj-button;
+  @include dj-button-large;
+}
+
+.button {
+  @include dj-button;
+}
+
+.small-button {
+  @include dj-button;
+  @include dj-button-small;
+}</pre>
+			</div>
+
+
+		  <h3>Action buttons</h3>
+			<span>Example</span>
+			<div class="example">
+				<button class="button-primary">Primary</button>
+		    <button class="button-info">Info</button>
+		    <button class="button-success">Success</button>
+		    <button class="button-warning">Warning</button>
+		    <button class="button-danger">Danger</button>
+		    <button class="button-disabled">Disabled</button>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre>
+&lt;button class="button-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="button-info"&gt;Info&lt;/button&gt;
+&lt;button class="button-success"&gt;Success&lt;/button&gt;
+&lt;button class="button-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="button-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="button-disabled"&gt;Disabled&lt;/button&gt;</pre>
+		  </div>
+
+			<span>SCSS</span>
+			<div class="scss">
+				<pre>
+.button-primary {
+  @include dj-button;
+  @include dj-button-Primary;
+}
+
+.button-info {
+  @include dj-button;
+  @include dj-button-info;
+}
+
+.button-success {
+  @include dj-button;
+  @include dj-button-success;
+}
+
+.button-warning {
+  @include dj-button;
+  @include dj-button-warning;
+}
+
+.button-danger {
+  @include dj-button;
+  @include dj-button-danger;
+}
+
+.button-danger {
+  @include dj-button;
+  @include dj-button-danger;
+}</pre>
+			</div>
+
+		  <h3>Button Groups</h3>
+			<span>Example</span>
+			<div label="Example" class="example">
+				<ul class="button-group">
+					<li><button>First</button></li>
+					<li><button>Middle</button></li>
+					<li><button>Last</button></li>
+				</ul>
+			</div>
+
+		  <span>HTML</span>
+			<div class="html">
+				<pre>
+&lt;ul class="button-group"&gt;
+  &lt;li&gt;&lt;button&gt;First&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button&gt;Middle&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button&gt;Last&lt;/button&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+			</div>
+
+		  <span>SCSS</span>
+			<div class="scss">
+				<pre>
+		.button-group {
+		  @include dj-button-group;
+		}</pre>
+			</div>
+
+		  <h3>Block button group</h3>
+			<span>Example</span>
+			<div label="Example" class="example">
+				<ul class="button-group-block">
+				<li><button>First</button></li>
+				<li><button>Middle</button></li>
+				<li><button>Last</button></li>
+			</ul>
+			</div>
+
+		  <span>HTML</span>
+			<div class="html">
+				<pre>
+&lt;ul class="button-group-block&gt;
+	&lt;li&gt;&lt;button&gt;First&lt;/button&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;button&gt;Middle&lt;/button&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;button&gt;Last&lt;/button&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+				<pre>
+.button-group-block" {
+	@include dj-button-group-block(3);
+}</pre>
+			</div>
+
+			<h3>Stacked buttons</h3>
+			<span>Example</span>
+			<div label="Example" class="example button-stacks">
+				<section>
+					<ul class="button-stack">
+						<li>
+							<a href="">Top</a>
+						</li>
+						<li>
+							<a href="">Middle</a>
+						</li>
+						<li>
+							<a href="">Bottom</a>
+						</li>
+				  </ul>
+				</section>
+				  <section>
+					<ul class="button-pill-stack">
+						<li>
+							<a href="">Top</a>
+						</li>
+						<li>
+							<a href="">Middle</a>
+						</li>
+						<li>
+							<a href="">Bottom</a>
+						</li>
+				  </ul>
+					</section>
+				  <section>
+					<ul class="button-round-stack">
+						<li>
+							<a href=""><i class="fa fa-facebook"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fa fa-twitter"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fa fa-google-plus"></i></a>
+						</li>
+				  </ul>
+				</section>
+			</div>
+
+		  <span>HTML</span>
+			<div class="html">
+			<pre>
+&lt;ul class="button-stack"&gt;
+  &lt;li&gt;
+    &lt;button&gt;
+      Top
+    &lt;/button&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;button&gt;
+      Middle
+    &lt;/button&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;button&gt;
+      Bottom
+    &lt;/button&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="button-pill-stack"&gt;
+  &lt;li&gt;
+    &lt;button&gt;
+      Top
+    &lt;/button&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;button&gt;
+      Middle
+    &lt;/button&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;button&gt;
+      Bottom
+    &lt;/button&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="button-round-stack"&gt;
+  &lt;li&gt;
+    &lt;a href="http://www.facebook.com"&gt;&lt;/a&gt;
+      &lt;i calss="icon-facebook"&gt;&lt;/i&gt;
+    &lt;/a&gt;;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="http://www.url.com"&gt;&lt;/a&gt;
+      &lt;i calss="icon-twitter"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="http://www.url.com"&gt;&lt;/a&gt;
+      &lt;i calss="icon-pinterest"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+				<pre>
+.button-stack {
+  @include dj-button-stack($unit-9);
+}
+
+.button-pill-stack {
+  @include dj-button-pill-stack($unit-9);
+}
+
+.button-round-stack {
+  @include dj-button-round-stack;
+  <span>//remove left padding on &lt;a&gt; to center icon</span>
+  li a {
+    padding-left: 0;
+  }
+}</pre>
+		  </div>
+
+		  <h3>Button split</h3>
+			<span>Example (doesn't work when zoomed)</span>
+			<div class="example">
+				<div class="button-split">
+					<button>Button</button>
+					<button></button>
+			  </div>
+			  <div class="button-split-save">
+					<button>Button</button>
+					<button></button>
+			  </div>
+			</div>
+
+			<span>HTML</span>
+		  <div class="html">
+		<pre>
+&lt;div class="button-split"&gt;
+  &lt;button&gt;Button&lt;/button&gt;
+  &lt;button&gt;&lt;/button&gt;
+&lt;/div&gt;</pre>
+			</div>
+
+		  <span>SCSS</span>
+			<div class="scss">
+				<pre>
+.button-split {
+  @include dj-button-split($fa-var-caret-down);
+}
+
+.button-split-save {
+  @include dj-button-split($fa-var-floppy-o);
+}</pre>
+			</div>
+
+
+		<h3>Button drop down</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <button class="button-drop-down">Drop down</button>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+    <pre>
+&lt;button class="button-drop-down&gt;Drop down&lt;/button&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		    <pre>
+.button-drop-down {
+  @include dj-button-split($fa-var-caret-down);
+}</pre>
+		  </div>
+
+		  <h2 id="forms">Forms</h2>
+
+			<h3>Inline form</h3>
+		  <span>Example</span>
+			<div class="example">
+				<form>
+					<div>
+					  <label class="form-field" for="text">Text Field</label>
+					  <input type="text" placeholder="Text">
+			    </div>
+
+			    <div>
+					  <label class="form-field" for="password">Password Field</label>
+					  <input type="password" placeholder="Password">
+			    </div>
+
+			    <div>
+					  <label>
+					    Checkbox <input type="checkbox">
+					  </label>
+					</div>
+
+			    <div>
+					  <label>
+					    Checkbox <input type="checkbox">
+					  </label>
+			    </div>
+
+			    <div>
+						<label>
+							Radio 1
+						  <input type="radio" name="radio1" Value="Value1">
+						</label>
+						<label>
+							Radio 2
+					    <input type="radio" name="radio1" Value="Value2">
+					  </label>
+			      </div>
+
+			    <div>
+						<select>
+						  <option Value="Select 1">Select 1</option>
+						  <option Value="Select 2">Select 2</option>
+						  <option Value="Select 3">Select 3</option>
+						  <option Value="Select 4">Select 4</option>
+						</select>
+			      </div>
+
+			    <div>
+						<textarea>Text area</textarea>
+			      </div>
+
+			    <div>
+			    	<input type="file"><br>
+						<input type="submit">
+					</div>
+				</form>
+			</div>
+
+		  <span>HTML</span>
+			<div class="html">
+				<pre>
+&lt;form&gt;
+  &lt;div&gt;
+    &lt;label for="text"&gt;Text Field&lt;/label&gt;
+    &lt;input type="text" placeholder="Text"&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;label for="password"&gt;Password Field&lt;/label&gt;
+    &lt;input type="password" placeholder="Password"&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;label&gt;
+      Checkbox &lt;input type="checkbox"&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;label&gt;
+      Checkbox &lt;input type="checkbox"&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;label&gt;
+      Radio 1
+      &lt;input type="radio" name="radio1" Value="Value1"&gt;
+    &lt;/label&gt;
+    &lt;label&gt;
+      Radio 2
+      &lt;input type="radio" name="radio1" Value="Value2"&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;select&gt;
+      &lt;option Value="Select 1"&gt;Select 1&lt;/option&gt;
+      &lt;option Value="Select 2"&gt;Select 2&lt;/option&gt;
+      &lt;option Value="Select 3"&gt;Select 3&lt;/option&gt;
+      &lt;option Value="Select 4"&gt;Select 4&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;textarea&gt;Text area&lt;/textarea&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;input type="file"&gt;&lt;br&gt;
+    &lt;input type="submit"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
+			</div>
+
+			<h3>Stacked form</h3>
+			<span>Example</span>
+			<div class="example">
+				<form class="form-stack">
+		      <div>
+			      <label for="text">Text Field</label>
+			     <input type="text" placeholder="Text">
+		      </div>
+
+		      <div>
+			      <label for="password">Password Field</label>
+			      <input type="password" placeholder="Password">
+		      </div>
+			  </form>
+			</div>
+
+
+		  <span>HTML</span>
+			<div class="html">
+		    <pre>
+&lt;form class="form-stack"&gt;
+  &lt;div&gt;
+    &lt;label for="text"&gt;Text Field&lt;/label&gt;
+    &lt;input type="text" placeholder="Text"&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;label for="password"&gt;Password Field&lt;/label&gt;
+    &lt;input type="password" placeholder="Password"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
+			</div>
+
+		  <span>SCSS</span>
+			<div class="scss">
+		    <pre>
+.form-stack {
+  @include dj-form-stack;
+}</pre>
+			</div>
+
+		  <h3>Inline checkbox</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <div class="inline-field">
+		      <label for="checkbox">
+		        Checkbox 1 <input type="checkbox">
+		        Checkbox 2 <input type="checkbox">
+		      </label>
+		    </div>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		<pre>
+&lt;div class="inline-field"&gt;
+  &lt;label for="checkbox"&gt;
+    Checkbox 1 &lt;input type="checkbox"&gt;
+    Checkbox 2 &lt;input type="checkbox"&gt;
+  &lt;/label&gt;
+&lt;/div&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		<pre>
+.inline-field {
+  @include dj-inline-field;
+}</pre>
+		  </div>
+
+			<h3>Form help messages</h3>
+			<span>Example</span>
+			<div class="example">
+				<form>
+			    <div>
+		        <label for="text">Text Field</label>
+		        <input type="text" placeholder="Text">
+		      </div>
+			    <div>
+			      <p class="help-text">
+			        This is help text.
+			      </p>
+			    </div>
+		      <div>
+			      <label for="inputPassword">Text Field</label>
+			      <input type="text" placeholder="Text">
+		      </div>
+			    <div>
+			      <p class="invalid-text">
+			        This is invalid text.
+			      </p>
+			    </div>
+			 </form>
+			</div>
+
+		  <span>HTML</span>
+			<div class="html">
+		    <pre>
+&lt;form&gt;
+  &lt;div&gt;
+    &lt;label for="text"&gt;Text Field&lt;/label&gt;
+    &lt;input type="text" placeholder="Text"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;p class="help-text"&gt;
+      This is help text.
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="password"&gt;Text Field&lt;/label&gt;
+    &lt;input type="text" placeholder="Text"&gt;
+  &lt;div&gt;
+    &lt;p class="invalid-text"&gt;
+      This is invalid text.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
+			</div>
+
+		  <span>SCSS</span>
+			<div class="scss">
+			</div>
+
+		  <h3>Form validation</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <form class="validations">
+		    <div>
+		      <label class="form-field" for="text">Unfocused</label>
+		      <input type="text" placeholder="Text">
+		    </div>
+		    <div>
+		      <label class="form-field" for="text">Focused</label>
+		      <input class="validation-focused" type="text" placeholder="Text" novalidate>
+		    </div>
+		    <div>
+		      <label class="form-field" for="text">Valid</label>
+		      <input class="validation-valid" type="text" placeholder="Text" novalidate>
+		    </div>
+		    <div>
+		      <label class="form-field" for="text">Invalid</label>
+		      <input class="validation-invalid" type="text" placeholder="Text" novalidate>
+		    </div>
+		    <div>
+		      <label class="form-field" for="text">Required</label>
+		      <input class="validation-required" type="text" placeholder="Text" required novalidate>
+		    </div>
+		  </form>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		    <pre>
+.input.validation-focused {
+  border:                              $dj-input-focused-border-width $dj-input-focused-border-style $dj-input-focused-border-color;
+}
+
+.input.validation-valid {
+  border:                              $dj-input-valid-border-width $dj-input-focused-border-style $dj-input-valid-border-color;
+}
+
+.input.validation-invalid {
+  border:                              $dj-input-invalid-border-width $dj-input-focused-border-style $dj-input-invalid-border-color;
+}
+
+.input.validation-required {
+  border:                              $dj-input-required-border-width $dj-input-focused-border-style $dj-input-required-border-color;
+}</pre>
+		  </div>
+
+		  <h3>Input button</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <div class="input-button-left">
+		      <button>Search</button>
+		      <input type="text">
+		    </div><br>
+		    <div class="input-button-right">
+		      <input type="text">
+		      <button>Search</button>
+		    </div><br>
+		    <div class="input-button-top">
+		      <button>Search</button>
+		      <input type="text">
+		    </div><br>
+		    <div class="input-button-bottom">
+		      <input type="text">
+		      <button>Search</button>
+		    </div><br>
+		    <!-- <div class="input-button-split-left">
+		      <button>Button</button>
+		      <button></button>
+		      <input type="text">
+		    </div>
+		    <div class="input-button-split-right">
+		      <input type="text">
+		      <button>Button</button>
+		      <button></button>
+		    </div> -->
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		<pre>
+&lt;div class="input-button-left"&gt;
+  &lt;button&gt;Search&lt;/button&gt;
+  &lt;input type="text"&gt;
+&lt;/div&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		    <pre>
+.input-button-left {
+  @include dj-input-button('left');
+}
+
+.input-button-right {
+  @include dj-input-button('right');
+}
+
+.input-button-top {
+  @include dj-input-button('top');
+}
+
+.input-button-bottom {
+  @include dj-input-button('bottom');
+}</pre>
+		  </div>
+
+		  <h3>Input group</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <div class="input-group">
+		      <input type="text" placeholder="User name">
+		      <input type="email" placeholder="Email">
+		      <input type="password" placeholder="Password">
+		    </div>
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre>
+&lt;div class="input-group"&gt;
+  &lt;input type="text" placeholder="User name"&gt;
+  &lt;input type="email" placeholder="Email"&gt;
+  &lt;input type="password" placeholder="Password"&gt;
+&lt;/div&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		    <pre>
+.input-group {
+  @include dj-input-group;
+}</pre>
+		  </div>
+
+			<h2 id="tables">Tables</h2>
+
+			<h3> Table</h3>
+			<span>Example</span>
+			<div class="example">
+				<table>
+					<thead>
+						<tr>
+							<th>Header 1</th>
+							<th>Header 2</th>
+							<th>Header 3</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Cell 1</td>
+							<td>Cell 2</td>
+							<td>Cell 3</td>
+						</tr>
+						<tr>
+							<td>Cell 1</td>
+							<td>Cell 2</td>
+							<td>Cell 3</td>
+						</tr>
+						<tr>
+							<td>Cell 1</td>
+							<td>Cell 2</td>
+							<td>Cell 3</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<span>HTML</span>
+			<div class="html">
+				<pre>
+&lt;table&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Header 1&lt;/th&gt;
+    &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;th&gt;Header 3&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cell 1&lt;/td&gt;
+    &lt;td&gt;Cell 2&lt;/td&gt;
+    &lt;td&gt;Cell 3&lt;/td&gt;
+  &lt;/tr&gt;
+  …
+&lt;/tbody&gt;
+&lt;/table&gt;</pre>
+			</div>
+
+
+			<h3>Table bordered</h3>
+			<span>Example</span>
+			<div class="example">
+				<table class="table-bordered">
+					<thead>
+						<tr>
+							<th>Header 1</th>
+							<th>Header 2</th>
+							<th>Header 3</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Cell 1</td>
+							<td>Cell 2</td>
+							<td>Cell 3</td>
+						</tr>
+						<tr>
+							<td>Cell 1</td>
+							<td>Cell 2</td>
+							<td>Cell 3</td>
+						</tr>
+						<tr>
+							<td>Cell 1</td>
+							<td>Cell 2</td>
+							<td>Cell 3</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<span>HTML</span>
+			<div class="html">
+				<pre>
+&lt;table class="table-bordered"&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Header 1&lt;/th&gt;
+    &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;th&gt;Header 3&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cell 1&lt;/td&gt;
+    &lt;td&gt;Cell 2&lt;/td&gt;
+    &lt;td&gt;Cell 3&lt;/td&gt;
+  &lt;/tr&gt;
+  …
+&lt;/tbody&gt;
+&lt;/table&gt;</pre>
+			</div>
+			<div class="scss">
+				<pre>
+.table-bordered{
+  @include dj-table-bordered;
+}</pre>
+			</div>
+
+
+			<h3>Table striped</h3>
+		  <span>Example</span>
+			<div class="example">
+				<table class="table-striped">
+					<thead>
+						<tr>
+							<th>Header 1</th>
+							<th>Header 2</th>
+							<th>Header 3</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Cell 1</td>
+							<td>Cell 2</td>
+							<td>Cell 3</td>
+						</tr>
+						<tr>
+							<td>Cell 1</td>
+							<td>Cell 2</td>
+							<td>Cell 3</td>
+						</tr>
+						<tr>
+							<td>Cell 1</td>
+							<td>Cell 2</td>
+							<td>Cell 3</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		  <span>HTML</span>
+			<div class="html">
+				<pre>
+&lt;table class="table-striped"&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Header 1&lt;/th&gt;
+    &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;th&gt;Header 3&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cell 1&lt;/td&gt;
+    &lt;td&gt;Cell 2&lt;/td&gt;
+    &lt;td&gt;Cell 3&lt;/td&gt;
+  &lt;/tr&gt;
+  …
+&lt;/tbody&gt;
+&lt;/table&gt;</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+				<pre>
+.table-striped{
+  @include dj-table-striped;
+}</pre>
+			</div>
+
+			<h3 name="styles">Table hovering</h3>
+			<span>Example</span>
+			<div class="example">
+				<table class="table-hover">
+					<thead>
+						<tr>
+							<th>Header 1</th>
+							<th>Header 2</th>
+							<th>Header 3</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Cell 1</td>
+							<td>Cell 2</td>
+							<td>Cell 3</td>
+						</tr>
+						<tr>
+							<td>Cell 1</td>
+							<td>Cell 2</td>
+							<td>Cell 3</td>
+						</tr>
+						<tr>
+							<td>Cell 1</td>
+							<td>Cell 2</td>
+							<td>Cell 3</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<span>HTML</span>
+			<div class="html">
+				<pre>
+&lt;table class="table-hover"&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Header 1&lt;/th&gt;
+    &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;th&gt;Header 3&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cell 1&lt;/td&gt;
+    &lt;td&gt;Cell 2&lt;/td&gt;
+    &lt;td&gt;Cell 3&lt;/td&gt;
+  &lt;/tr&gt;
+  …
+&lt;/tbody&gt;
+&lt;/table&gt;</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+				<pre>
+.table-hover{
+  @include dj-table-hover;
+}</pre>
+			</div>
+
+			<h3 name="styles">Table condensed</h3>
+			<span>Example</span>
+			<div class="example">
+				<table class="table-condensed">
+					<thead>
+						<tr>
+							<th>Header 1</th>
+							<th>Header 2</th>
+							<th>Header 3</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Cell 1</td>
+							<td>Cell 2</td>
+							<td>Cell 3</td>
+						</tr>
+						<tr>
+							<td>Cell 1</td>
+							<td>Cell 2</td>
+							<td>Cell 3</td>
+						</tr>
+						<tr>
+							<td>Cell 1</td>
+							<td>Cell 2</td>
+							<td>Cell 3</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<span>HTML</span>
+			<div class="html">
+				<pre>
+&lt;table class="table-condensed"&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Header 1&lt;/th&gt;
+    &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;th&gt;Header 3&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cell 1&lt;/td&gt;
+    &lt;td&gt;Cell 2&lt;/td&gt;
+    &lt;td&gt;Cell 3&lt;/td&gt;
+  &lt;/tr&gt;
+  …
+&lt;/tbody&gt;
+&lt;/table&gt;</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+				<pre>
+.table-condensed{
+  @include dj-table-condensed;
+}</pre>
+			</div>
+
+			<h3 name="styles">Table combined</h3>
+			<span>Example</span>
+			<div class="example">
+				<table class="table-combined">
+					<thead>
+						<tr>
+							<th>Header 1</th>
+							<th>Header 2</th>
+							<th>Header 3</th>
+		          <th>Header 4</th>
+		          <th>Header 5</th>
+		          <th>Header 6</th>
+		          <th>Header 7</th>
+		          <th>Header 8</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Cell 1</td>
+							<td>Cell 2</td>
+							<td>Cell 3</td>
+		          <td>Cell 4</td>
+		          <td>Cell 5</td>
+		          <td>Cell 6</td>
+		          <td>Cell 7</td>
+		          <td>Cell 8</td>
+						</tr>
+						<tr>
+							<td>Cell 1</td>
+		          <td>Cell 2</td>
+		          <td>Cell 3</td>
+		          <td>Cell 4</td>
+		          <td>Cell 5</td>
+		          <td>Cell 6</td>
+		          <td>Cell 7</td>
+		          <td>Cell 8</td>
+						</tr>
+						<tr>
+							<td>Cell 1</td>
+		          <td>Cell 2</td>
+		          <td>Cell 3</td>
+		          <td>Cell 4</td>
+		          <td>Cell 5</td>
+		          <td>Cell 6</td>
+		          <td>Cell 7</td>
+		          <td>Cell 8</td>
+
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<span>HTML</span>
+			<div class="html">
+				<pre>
+&lt;table class="table-combined"&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Header 1&lt;/th&gt;
+    &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;th&gt;Header 3&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cell 1&lt;/td&gt;
+    &lt;td&gt;Cell 2&lt;/td&gt;
+    &lt;td&gt;Cell 3&lt;/td&gt;
+  &lt;/tr&gt;
+  …
+&lt;/tbody&gt;
+&lt;/table&gt;</pre>
+			</div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+				<pre>
+.table-combined{
+  @include dj-table-bordered;
+  @include dj-table-stripped;
+  @include dj-table-hover;
+  @include dj-table-condensed;
+  @media (max-width: $dj-w-768) {
+    @include dj-table-responsive; // makes table responsive
+  }
+}</pre>
+			</div>
+
+			<h3 name="styles">Table flip combined</h3>
+			<span>Example</span>
+			<div class="example">
+				<table class="table-flip-combined">
+					<thead>
+						<tr>
+							<th>Name </th>
+							<th>Age</th>
+							<th>Gender</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Bill</td>
+							<td>34</td>
+							<td>male</td>
+						</tr>
+						<tr>
+							<td>Jill</td>
+							<td>34</td>
+							<td>Female</td>
+						</tr>
+						<tr>
+							<td>Sue</td>
+							<td>54</td>
+							<td>Female</td>
+						</tr>
+						<tr>
+							<td>Tim</td>
+							<td>13</td>
+							<td>male</td>
+						</tr>
+						<tr>
+							<td>Tom</td>
+							<td>22</td>
+							<td>male</td>
+						</tr>
+						<tr>
+							<td>Ann</td>
+							<td>15</td>
+							<td>Female</td>
+						</tr>
+						<tr>
+							<td>Jenny</td>
+							<td>34</td>
+							<td>Femal</td>
+						</tr>
+						<tr>
+							<td>Sarah</td>
+							<td>78</td>
+							<td>Femal</td>
+						</tr>
+						<tr>
+							<td>Pual</td>
+							<td>26</td>
+							<td>male</td>
+						</tr>
+						<tr>
+							<td>Susan</td>
+							<td>15</td>
+							<td>Female</td>
+						</tr>
+						<tr>
+							<td>Jennya</td>
+							<td>6</td>
+							<td>Femal</td>
+						</tr>
+						<tr>
+							<td>Steve</td>
+							<td>47</td>
+							<td>male</td>
+						</tr>
+						<tr>
+							<td>Karl</td>
+							<td>51</td>
+							<td>male</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<span>SCSS</span>
+		  <div class="scss">
+				<pre>
+//Table flip is auto responsive
+.table-flip-combined{
+  @include dj-table-flip;
+  @include dj-table-bordered;
+  @include dj-table-stripped;
+  @include dj-table-hover;
+  @include dj-table-condensed;
+}</pre>
+			</div>
+
+			<h2 id="navigation">Navigation</h2>
+
+		  <h3>Navigation</h3>
+			<span>Example</span>
+			<div class="example">
+		  	<section class="nav">
+					<ul>
+					  <li><a href="" class="nav-active">Link</a></li>
+					  <li><a href="">Link</a></li>
+					  <li><a href="">Link</a></li>
+					  <li><a href="">Link</a></li>
+					</ul>
+				</section>
+			</div>
+
+			<span>HTML</span>
+			<div class="html">
+		  	<pre>
+&lt;nav class="nav"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href="http://www.url.com " class="nav-active"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="http://www.url.com"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="http://www.url.com"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="http://www.url.com"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+				<pre>
+.nav {
+  @include dj-nav;
+}
+
+.nav-active {
+  @include dj-active;
+}</pre>
+			</div>
+
+			<h3>Navigation stacked</h3>
+
+			<span>Example</span>
+			<div label="Example" class="example">
+			  <section class="nav-stack">
+					<ul>
+						<li><a href="">First</a></li>
+						<li><a href="" class="nav-active" >Middle</a></li>
+						<li><a href="">Last</a></li>
+				  </ul>
+				 </section>
+			</div>
+
+			<span>HTML</span>
+			<div class="html">
+			  		<pre>
+&lt;nav class="nav-stack"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href="http://www.url.com"&gt;First&lt;/a&gt;
+    &lt;/li&gt;
+     &lt;li&gt;
+      &lt;a href="http://www.url.com" class="nav-active"&gt;Middle&lt;/a&gt;
+    &lt;/li&gt;
+     &lt;li&gt;
+      &lt;a href="http://www.url.com"&gt;Last&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+				<pre>
+.nav-stack {
+  @include dj-nav-stack;
+}
+
+.nav-active {
+  @include dj-active;
+}</pre>
+			</div>
+
+			<h3>Navigation pill</h3>
+
+			<span>Example</span>
+			<div class="example">
+				<section class="nav-pill">
+				  <ul>
+					  <li><a href="">Link</a></li>
+					  <li><a href="">Link</a></li>
+					  <li><a href="">Link</a></li>
+					  <li><a href="" class="nav-active">Link</a></li>
+					</ul>
+			  </section>
+			</div>
+
+			<span>HTML</span>
+			<div class="html">
+			  		<pre>
+&lt;nav class="nav-pill"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href="http://www.url.com"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+     &lt;li&gt;
+      &lt;a href="http://www.url.com"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+     &lt;li&gt;
+      &lt;a href="http://www.url.com"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+     &lt;li&gt;
+      &lt;a href="http://www.url.com" class="nav-active"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+				<pre>
+.nav-pill {
+  @include dj-nav-pill;
+}
+
+.nav-active {
+  @include dj-active;
+}</pre>
+			</div>
+
+
+		  <h3>Navigation pill stacked</h3>
+
+		  <span>Example</span>
+			<div class="example">
+				<section class="nav-pill-stack">
+				  <ul>
+					  <li><a href="">Link</a></li>
+					  <li><a href="">Link</a></li>
+					  <li><a href="" class="nav-active">Link</a></li>
+					  <li><a href="">Link</a></li>
+					</ul>
+			</section>
+			</div>
+
+			<span>HTML</span>
+			<div class="html">
+			  		<pre>
+&lt;nav class="nav-pill"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href="http://www.url.com"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="http://www.url.com"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+     &lt;li&gt;
+      &lt;a href="http://www.url.com" class="nav-active"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+     &lt;li&gt;
+      &lt;a href="http://www.url.com"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+				<pre>
+.nav-pill {
+  @include dj-nav-pill-stack;
+}
+
+.nav-active {
+  @include dj-active;
+}</pre>
+			</div>
+
+			<h2 ID="pagination">Pagination</h2>
+
+			<h3>Pagination</h3>
+			<span>Example</span>
+			<div class="example">
+				<ul class="pagination">
+					<li><a href="">Prev</a></li>
+					<li><a href="">1</a></li>
+					<li><a href=""  class="nav-active">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">Next</a></li>
+				</ul>
+			</div>
+
+			<span>HTML</span>
+			<div class="html">
+			<pre class="code-block">
+&lt;ul class="pagination"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" class="nav-active"&gt;2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+				<pre class="code-block">
+.pagination {
+  @include dj-pagination;
+}
+
+.nav-active {
+  @include dj-active;
+}</pre>
+			</div>
+
+
+			<h2 id="panels">Panels</h2>
+
+		  <h3>Panel</h3>
+		  <span>Example</span>
+			<div class="example">
+				<section class="panel">
+					This is a panel.
+				</section>
+			</div>
+
+			<span>HTML</span>
+			<div class="html">
+				<pre>
+&lt;section class="panel"&gt;
+  This is a panel.
+&lt;/section&gt;</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+				<pre>
+.panel {
+  @include dj-panel;
+}</pre>
+			</div>
+
+
+		  <h3>Well</h3>
+		  <span>Example</span>
+			<div class="example">
+				<section class="well">
+					This is a well.
+				</section>
+			</div>
+
+			<span>HTML</span>
+			<div class="html">
+				<pre>
+&lt;section class="well"&gt;
+  This is a well.
+&lt;/section&gt;</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+				<pre>
+.well {
+  @include dj-well;
+}</pre>
+			</div>
+
+
+			<h3>Alerts</h3>
+			<span>Example</span>
+			<div class="example">
+				<section class="alert-info">
+					<strong>Info:</strong> This is a info alert.
+				</section>
+				<section class="alert-success">
+					<strong>Success!</strong> This is a success alert.
+				</section>
+				<section class="alert-warning">
+					<strong>Warning!</strong> This is a warning alert.
+				</section>
+				<section class="alert-danger">
+					<strong>Error!</strong> This is a danger alert.
+				</section>
+			</div>
+
+			<span>HTML</span>
+			<div class="html">
+				<pre>
+&lt;alert-info class="selector"&gt;
+  &lt;strong&gt;Info:&lt;strong&gt;
+  This is an info alert.
+&lt;/section&gt;
+
+&lt;alert-success class="selector"&gt;
+  &lt;strong&gt;Success!&lt;strong&gt;
+  This is a success alert.
+&lt;/section&gt;
+
+&lt;alert-warning class="selector"&gt;
+  &lt;strong&gt;Warning!&lt;strong&gt;
+  This is a warning alert.
+&lt;/section&gt;
+
+&lt;alert-danger class="selector"&gt;
+  &lt;strong&gt;Error!&lt;strong&gt;
+  This is an error alert.
+&lt;/section&gt;
+	</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+		<pre>
+.alert-info {
+  @include dj-alert-info;
+}
+
+.alert-success {
+  @include dj-alert-success;
+}
+
+.alert-warning {
+  @include dj-alert-warning;
+}
+
+.alert-danger {
+  @include dj-alert-danger;
+}</pre>
+			</div>
+
+
+		  <h3>Panel list</h3>
+		  <span>Example</span>
+			<div class="example">
+				<ul class="panel-list">
+				  <li>Panel list item</li>
+				  <li>Panel list item</a></li>
+				  <li>Panel list item</li>
+				  <li>Panel list item</li>
+				</ul>
+			</div>
+
+		  <span>HTML</span>
+			<div class="html">
+			  <pre>
+&lt;ul class="panel-list"&gt;
+  &lt;li&gt;Panel list item&lt;/li&gt;
+  &lt;li&gt;Panel list item&lt;/li&gt;
+  &lt;li&gt;Panel list item&lt;/li&gt;
+  &lt;li&gt;Panel list item&lt;/li&gt;
+&lt;/ul&gt;</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+		<pre>
+.panel-list {
+  @include dj-panel-list;
+}</pre>
+			</div>
+
+			<h3>Panel list hover</h3>
+		  <span>Example</span>
+			<div class="example">
+				<ul class="panel-list-hover">
+				  <li><a href="">Panel list item</a></li>
+				  <li><a href="" class="panel-active">Panel list item</a></a></li>
+				  <li><a href="">Panel list item</a></li>
+				  <li><a href="">Panel list item</a></li>
+				</ul>
+			</div>
+
+		  <span>HTML</span>
+			<div class="html">
+			  <pre>
+&lt;ul class="panel-list-hover"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Panel list item&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" class="panel-active"&gt;Panel list item&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Panel list item&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Panel list item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+			</div>
+
+			<span>SCSS</span>
+			<div class="scss">
+		<pre>
+.panel-list-hover {
+  @include dj-panel-list;
+  @include dj-panel-list-hover;
+}
+
+.panel-active {
+  @include panel-active;
+}</pre>
+			</div>
+
+
+		  <h2 id="images">Images</h2>
+
+		  <h3>Images types</h3>
+		  <span>Example</span>
+		  <div class="example">
+		    <img class="img-rounded" alt="Image with round corners" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAIVcZHVkU4V1bHWWjoWeyP/ZyLe3yP////L/////////////////////////////////////////////////////2wBDAY6WlsivyP/Z2f//////////////////////////////////////////////////////////////////////////wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALAB/9k=">
+
+		    <img class="img-circle" alt="Circlar image" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAIVcZHVkU4V1bHWWjoWeyP/ZyLe3yP////L/////////////////////////////////////////////////////2wBDAY6WlsivyP/Z2f//////////////////////////////////////////////////////////////////////////wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALAB/9k=">
+
+		    <img class="img-thumbnail" alt="Thumbnail image" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAIVcZHVkU4V1bHWWjoWeyP/ZyLe3yP////L/////////////////////////////////////////////////////2wBDAY6WlsivyP/Z2f//////////////////////////////////////////////////////////////////////////wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALAB/9k=">
+
+		    <img class="img-thumbnail-circle" alt="Circlar thumbnail image" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAIVcZHVkU4V1bHWWjoWeyP/ZyLe3yP////L/////////////////////////////////////////////////////2wBDAY6WlsivyP/Z2f//////////////////////////////////////////////////////////////////////////wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALAB/9k=">
+		  </div>
+
+		  <span>HTML</span>
+		  <div class="html">
+		    <pre class="code-block">
+&lt;img class="selector" src="image.png" alt="Image description"&gt;</pre>
+		  </div>
+
+		  <span>SCSS</span>
+		  <div class="scss">
+		    <pre class="code-block">
+
+.img-rounded{
+  @include dj-img-rounded;
+  width:  140px;
+  height: 140px;
+}
+
+.img-circle {
+  @include dj-img-circle(140px);
+}
+
+.img-thumbnail{
+  @include dj-img-thumbnail;
+  width:  140px;
+  height: 140px;
+}
+
+.img-thumbnail-circle {
+  @include dj-img-thumbnail-circle(140px);
+}</pre>
+		  </div>
+
+		<h2 id="helpers">Helpers</h2>
+		<span>SCSS</span>
+	  <div class="scss">
+	  	<pre>
+<span>//Clear floats</span>
+@include dj-clearfix;
+
+
+<span>//Prepend content</span>
+@include dj-prepend('content');
+
+<span>//Append content</span>
+@include dj-append('content');
+
+<span>//Prepend and append content</span>
+@include dj-prepend-append('content');
+
+
+<span>//Round corners</span>
+@include dj-rounded-corners(radiusWidth);
+
+@include dj-rounded-corners-top(radiusWidth);
+
+@include dj-rounded-corners-bottom(radiusWidth);
+
+@include dj-rounded-corners-left(radiusWidth);
+
+@include dj-rounded-corners-right(radiusWidth);
+
+
+<span>//Circle</span>
+@include dj-round(radiusWidth);
+
+@include dj-pill(pillWidth);
+
+<span>//No appearance</span>
+@include dj-no-appearance;
+
+<span>//Word-wrap</span>
+@include dj-word-wrap;
+
+<span>//borderless</span>
+@include dj-borderless;
+
+<span>//Gradient</span>
+@include dj-gradients;
+
+
+<span>//Above all elements. Default 99999</span>
+@include dj-on-top(z-index);
+
+<span>//Center block</span>
+@include dj-center-block(width);
+
+<span>//Positioning. Fixed or absolute (default)</span>
+
+@include dj-full-screen(position);
+
+@include dj-top(position);
+
+@include dj-bottom(position);
+
+@include dj-left(position);
+
+@include dj-right(position);
+
+@include dj-full-width(position);
+
+@include dj-full-width-top(position);
+
+@include dj-full-width-bottom (position);
+
+@include dj-full-height(position);
+
+@include  dj-full-height-left position);
+
+@include dj-full-height-right (position);</pre>
+    </div>
+
+	  <h2 id="units">Units</h2>
+
+	  <h3>Modular scale</h3>
+	  <span>SCSS</span>
+	  <div class="scss">
+	    <pre>
+$dj-scale:          1.618;
+$dj-scale-base:     18;
+$dj-base-font-size: 18px; <span>// default body font size equal to 1rem.</span></pre>
+		  </div>
+
+	  <h3>Unitless Values</h3>
+	  <span>SCSS</span>
+	  <div class="scss">
+	    <pre>
+$dj-1:              1;
+$dj-2:              ($dj-scale-base / 100) + $dj-1;
+$dj-3:              $dj-1  * $dj-scale;
+$dj-4:              $dj-2  * $dj-scale;
+$dj-5:              $dj-3  * $dj-scale;
+$dj-6:              $dj-4  * $dj-scale;
+$dj-7:              $dj-5  * $dj-scale;
+$dj-8:              $dj-6  * $dj-scale;
+$dj-9:              $dj-7  * $dj-scale;
+$dj-10:             $dj-8  * $dj-scale;
+$dj-11:             $dj-9  * $dj-scale;
+$dj-12:             $dj-10 * $dj-scale;
+$dj-13:             $dj-11 * $dj-scale;
+$dj-14:             $dj-12 * $dj-scale;
+$dj-15:             $dj-13 * $dj-scale;
+$dj-16:             $dj-14 * $dj-scale;
+$dj-17:             $dj-15 * $dj-scale;
+$dj-18:             $dj-16 * $dj-scale;
+$dj-19:             $dj-17 * $dj-scale;
+$dj-20:             $dj-18 * $dj-scale;
+
+<span>//Unitless scale below 0</span>
+$dj-01:             $dj-2  / $dj-scale;
+$dj-02:             $dj-1  / $dj-scale;
+$dj-03:             $dj-02 / $dj-scale;
+$dj-04:             $dj-03 / $dj-scale;
+$dj-05:             $dj-04 / $dj-scale;
+$dj-06:             $dj-05 / $dj-scale;
+$dj-07:             $dj-06 / $dj-scale;
+$dj-07:             $dj-06 / $dj-scale;
+</pre>
+		  </div>
+
+		  <h3>Rem units</h3>
+		  <span>SCSS</span>
+		  <div class="scss">
+		    <pre>
+$dj-1-r:            1rem;
+$dj-2-r:            ($dj-scale-base / 100) + $dj-1-r;
+$dj-3-r:            $dj-1-r  * $dj-scale;
+$dj-4-r:            $dj-2-r  * $dj-scale;
+$dj-5-r:            $dj-3-r  * $dj-scale;
+$dj-6-r:            $dj-4-r  * $dj-scale;
+$dj-7-r:            $dj-5-r  * $dj-scale;
+$dj-8-r:            $dj-6-r  * $dj-scale;
+$dj-9-r:            $dj-7-r  * $dj-scale;
+$dj-10-r:           $dj-8-r  * $dj-scale;
+$dj-11-r:           $dj-9-r  * $dj-scale;
+$dj-12-r:           $dj-10-r * $dj-scale;
+$dj-13-r:           $dj-11-r * $dj-scale;
+$dj-14-r:           $dj-12-r * $dj-scale;
+$dj-15-r:           $dj-13-r * $dj-scale;
+$dj-16-r:           $dj-14-r * $dj-scale;
+$dj-17-r:           $dj-15-r * $dj-scale;
+$dj-18-r:           $dj-16-r * $dj-scale;
+$dj-19-r:           $dj-17-r * $dj-scale;
+$dj-20-r:           $dj-18-r * $dj-scale;
+
+<span>//Rem units scale below 0</span>
+$dj-01-r:           $dj-2-r  / $dj-scale;
+$dj-02-r:           $dj-1-r  / $dj-scale;
+$dj-03-r:           $dj-02-r / $dj-scale;
+$dj-04-r:           $dj-03-r / $dj-scale;
+$dj-05-r:           $dj-04-r / $dj-scale;
+$dj-06-r:           $dj-05-r / $dj-scale;
+$dj-07-r:           $dj-06-r / $dj-scale;
+$dj-08-r:           $dj-07-r / $dj-scale;</pre>
+		  </div>
+
+		  <h3>Percentage units</h3>
+		  <span>SCSS</span>
+		  <div class="scss">
+
+		    <pre>
+$dj-1-p:            1rem;
+$dj-2-p:            ($dj-scale-base / 100) + $dj-1-p;
+$dj-3-p:            $dj-1-p  * $dj-scale;
+$dj-4-p:            $dj-2-p  * $dj-scale;
+$dj-5-p:            $dj-3-p  * $dj-scale;
+$dj-6-p:            $dj-4-p  * $dj-scale;
+$dj-7-p:            $dj-5-p  * $dj-scale;
+$dj-8-p:            $dj-6-p  * $dj-scale;
+$dj-9-p:            $dj-7-p  * $dj-scale;
+$dj-10-p:           $dj-8-p  * $dj-scale;
+$dj-11-p:           $dj-9-p  * $dj-scale;
+$dj-12-p:           $dj-10-p * $dj-scale;
+$dj-13-p:           $dj-11-p * $dj-scale;
+$dj-14-p:           $dj-12-p * $dj-scale;
+$dj-15-p:           $dj-13-p * $dj-scale;
+$dj-16-p:           $dj-14-p * $dj-scale;
+$dj-17-p:           $dj-15-p * $dj-scale;
+$dj-18-p:           $dj-16-p * $dj-scale;
+$dj-19-p:           $dj-17-p * $dj-scale;
+$dj-20-p:           $dj-18-p * $dj-scale;
+
+<span>//Percentage units scale below 0</span>
+$dj-01-p:           $dj-2-p  / $dj-scale;
+$dj-02-p:           $dj-1-p  / $dj-scale;
+$dj-03-p:           $dj-02-p / $dj-scale;
+$dj-04-p:           $dj-03-p / $dj-scale;
+$dj-05-p:           $dj-04-p / $dj-scale;
+$dj-06-p:           $dj-05-p / $dj-scale;
+$dj-07-p:           $dj-06-p / $dj-scale;
+$dj-08-p:           $dj-07-p / $dj-scale;</pre>
+		  </div>
+
+		  <h2 id="colors">Colors</h2>
+
+		  <h3>Grays</h3>
+		  <table class="table-code">
+		    <thead>
+		      <tr>
+		        <th>SCSS</th>
+		        <th>Value</th>
+		        <th>Example</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>
+		          <pre>$dj-black</pre>
+		        </td>
+		        <td>
+		          #000000
+		        </td>
+		        <td class="cell-black"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-gray-1</pre>
+		        </td>
+		        <td>
+		          #111111
+		        </td>
+		        <td class="cell-gray-1"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-gray-2</pre>
+		        </td>
+		        <td>
+		          #222222
+		        </td>
+		        <td class="cell-gray-2"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-gray-3</pre>
+		        </td>
+		        <td>
+		          #333333
+		        </td>
+		        <td class="cell-gray-3"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-gray-4</pre>
+		        </td>
+		        <td>
+		          #444444
+		        </td>
+		        <td class="cell-gray-4"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-gray-5</pre>
+		        </td>
+		        <td>
+		          #555555
+		        </td>
+		        <td class="cell-gray-5"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-gray-6</pre>
+		        </td>
+		        <td>
+		          #666666
+		        </td>
+		        <td class="cell-gray-6"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-gray-7</pre>
+		        </td>
+		        <td>
+		          #777777
+		        </td>
+		        <td class="cell-gray-7"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-gray-8</pre>
+		        </td>
+		        <td>
+		          #888888
+		        </td>
+		        <td class="cell-gray-8"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-gray-9</pre>
+		        </td>
+		        <td>
+		          #999999
+		        </td>
+		        <td class="cell-gray-9"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-gray-a</pre>
+		        </td>
+		        <td>
+		          #aaaaaa
+		        </td>
+		        <td class="cell-gray-a"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-gray-b</pre>
+		        </td>
+		        <td>
+		          #bbbbbb
+		        </td>
+		        <td class="cell-gray-b"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-gray-c</pre>
+		        </td>
+		        <td>
+		          #cccccc
+		        </td>
+		        <td class="cell-gray-c"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-gray-d</pre>
+		        </td>
+		        <td>
+		          #dddddd
+		        </td>
+		        <td class="cell-gray-d"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-gray-e</pre>
+		        </td>
+		        <td>
+		          #eeeeee
+		        </td>
+		        <td class="cell-gray-e"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-white</pre>
+		        </td>
+		        <td>
+		          #ffffff
+		        </td>
+		        <td class="cell-white"></td>
+		      </tr>
+		    </tbody>
+		  </table>
+
+		  <h3>Colors</h3>
+
+		  <table class="table-code">
+		    <thead>
+		      <tr>
+		        <th>SCSS</th>
+		        <th>Value</th>
+		        <th>Example</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>
+		          <pre>$dj-color-1</pre>
+		        </td>
+		        <td>
+		          #3498db
+		        </td>
+		        <td class="cell-color-1"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-color-2</pre>
+		        </td>
+		        <td>
+		          #3448db
+		        </td>
+		        <td class="cell-color-2"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-color-3</pre>
+		        </td>
+		        <td>
+		          #2ecc71
+		        </td>
+		        <td class="cell-color-3"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-color-4</pre>
+		        </td>
+		        <td>
+		          #9b59b6
+		        </td>
+		        <td class="cell-color-4"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-color-5</pre>
+		        </td>
+		        <td>
+		          #f1c40f
+		        </td>
+		        <td class="cell-color-5"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-color-6</pre>
+		        </td>
+		        <td>
+		          #e67e22
+		        </td>
+		        <td class="cell-color-6"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-color-7</pre>
+		        </td>
+		        <td>
+		          #e74c3c
+		        </td>
+		        <td class="cell-color-7"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-8</pre>
+		        </td>
+		        <td>
+		          #1F8B39
+		        </td>
+		        <td class="cell-color-8"></td>
+		      </tr>
+
+		    </tbody>
+		  </table>
+
+		  <h3>Color tints and shades</h3>
+		  <table class="table-code">
+		    <thead>
+		      <tr>
+		        <th>SCSS</th>
+		        <th>Value</th>
+		        <th>Example</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>
+		          <pre>$dj-color-1-lighten-40</pre>
+		        </td>
+		        <td>
+		          $dj-color-1 @40%
+		        </td>
+		        <td class="cell-color-1-lighten-40"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-1-lighten-30</pre>
+		        </td>
+		        <td>
+		          $dj-color-1 @30%
+		        </td>
+		        <td class="cell-color-1-lighten-30"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-1-lighten-20</pre>
+		        </td>
+		        <td>
+		          $dj-color-1 @20%
+		        </td>
+		        <td class="cell-color-1-lighten-20"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-1-lighten-10</pre>
+		        </td>
+		        <td>
+		          $dj-color-1 @10%
+		        </td>
+		        <td class="cell-color-1-lighten-10"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-color-1-darken-10</pre>
+		        </td>
+		        <td>
+		          $dj-color-1 @10%
+		        </td>
+		        <td class="cell-color-1-darken-10"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-1-darken-20</pre>
+		        </td>
+		        <td>
+		          $dj-color-1 @20%
+		        </td>
+		        <td class="cell-color-1-darken-20"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-1-darken-30</pre>
+		        </td>
+		        <td>
+		          $dj-color-1 @30%
+		        </td>
+		        <td class="cell-color-1-darken-30"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-1-darken-40</pre>
+		        </td>
+		        <td>
+		          $dj-color-1 @40%
+		        </td>
+		        <td class="cell-color-1-darken-40"></td>
+		      </tr>
+
+		      <tr>
+		        <td>
+		          <pre>$dj-color-2-lighten-40</pre>
+		        </td>
+		        <td>
+		          $dj-color-2 @40%
+		        </td>
+		        <td class="cell-color-2-lighten-40"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-2-lighten-30</pre>
+		        </td>
+		        <td>
+		          $dj-color-2 @30%
+		        </td>
+		        <td class="cell-color-2-lighten-30"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-2-lighten-20</pre>
+		        </td>
+		        <td>
+		          $dj-color-2 @20%
+		        </td>
+		        <td class="cell-color-2-lighten-20"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-2-lighten-10</pre>
+		        </td>
+		        <td>
+		          $dj-color-2 @10%
+		        </td>
+		        <td class="cell-color-2-lighten-10"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-color-2-darken-10</pre>
+		        </td>
+		        <td>
+		          $dj-color-2 @10%
+		        </td>
+		        <td class="cell-color-2-darken-10"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-2-darken-20</pre>
+		        </td>
+		        <td>
+		          $dj-color-2- @20%
+		        </td>
+		        <td class="cell-color-2-darken-20"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-2-darken-30</pre>
+		        </td>
+		        <td>
+		          $dj-color-2 @30%
+		        </td>
+		        <td class="cell-color-2-darken-30"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-2-darken-40</pre>
+		        </td>
+		        <td>
+		          $dj-color-2 @40%
+		        </td>
+		        <td class="cell-color-2-darken-40"></td>
+		      </tr>
+
+		      <tr>
+		        <td>
+		          <pre>$dj-color-3-lighten-40</pre>
+		        </td>
+		        <td>
+		          $dj-color-3 @40%
+		        </td>
+		        <td class="cell-color-3-lighten-40"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-3-lighten-30</pre>
+		        </td>
+		        <td>
+		          $dj-color-3 @30%
+		        </td>
+		        <td class="cell-color-3-lighten-30"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-3-lighten-20</pre>
+		        </td>
+		        <td>
+		          $dj-color-3 @20%
+		        </td>
+		        <td class="cell-color-3-lighten-20"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-3-lighten-10</pre>
+		        </td>
+		        <td>
+		          $dj-color-3 @10%
+		        </td>
+		        <td class="cell-color-3-lighten-10"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-color-3-darken-10</pre>
+		        </td>
+		        <td>
+		          $dj-color3- @10%
+		        </td>
+		        <td class="cell-color-3-darken-10"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-3-darken-20</pre>
+		        </td>
+		        <td>
+		          $dj-color-3 @20%
+		        </td>
+		        <td class="cell-color-3-darken-20"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-3-darken-30</pre>
+		        </td>
+		        <td>
+		          $dj-color-3 @30%
+		        </td>
+		        <td class="cell-color-3-darken-30"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-3-darken-40</pre>
+		        </td>
+		        <td>
+		          $dj-color-3 @40%
+		        </td>
+		        <td class="cell-color-3-darken-40"></td>
+		      </tr>
+
+		      <tr>
+		        <td>
+		          <pre>$dj-color-4-lighten-40</pre>
+		        </td>
+		        <td>
+		          $dj-color-4 @40%
+		        </td>
+		        <td class="cell-color-4-lighten-40"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-4-lighten-30</pre>
+		        </td>
+		        <td>
+		          $dj-color-4 @30%
+		        </td>
+		        <td class="cell-color-4-lighten-30"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-4-lighten-20</pre>
+		        </td>
+		        <td>
+		          $dj-color-4 @20%
+		        </td>
+		        <td class="cell-color-4-lighten-20"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-4-lighten-10</pre>
+		        </td>
+		        <td>
+		          $dj-color-4 @10%
+		        </td>
+		        <td class="cell-color-4-lighten-10"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-color-4-darken-10</pre>
+		        </td>
+		        <td>
+		          $dj-color-4 @10%
+		        </td>
+		        <td class="cell-color-4-darken-10"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-4-darken-20</pre>
+		        </td>
+		        <td>
+		          $dj-color-4 @20%
+		        </td>
+		        <td class="cell-color-4-darken-20"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-4-darken-30</pre>
+		        </td>
+		        <td>
+		          $dj-color-4 @30%
+		        </td>
+		        <td class="cell-color-4-darken-30"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-4-darken-40</pre>
+		        </td>
+		        <td>
+		          $dj-color-4 @40%
+		        </td>
+		        <td class="cell-color-4-darken-40"></td>
+		      </tr>
+
+		      <tr>
+		        <td>
+		          <pre>$dj-color-5-lighten-40</pre>
+		        </td>
+		        <td>
+		          $dj-color-5 @40%
+		        </td>
+		        <td class="cell-color-5-lighten-40"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-5-lighten-30</pre>
+		        </td>
+		        <td>
+		          $dj-color-5 @30%
+		        </td>
+		        <td class="cell-color-5-lighten-30"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-5-lighten-20</pre>
+		        </td>
+		        <td>
+		          $dj-color-5 @20%
+		        </td>
+		        <td class="cell-color-5-lighten-20"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-5-lighten-10</pre>
+		        </td>
+		        <td>
+		          $dj-color-5 @10%
+		        </td>
+		        <td class="cell-color-5-lighten-10"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-color-5-darken-10</pre>
+		        </td>
+		        <td>
+		          $dj-color-5 @10%
+		        </td>
+		        <td class="cell-color-5-darken-10"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-5-darken-20</pre>
+		        </td>
+		        <td>
+		          $dj-color-5 @20%
+		        </td>
+		        <td class="cell-color-5-darken-20"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-5-darken-30</pre>
+		        </td>
+		        <td>
+		          $dj-color-5 @30%
+		        </td>
+		        <td class="cell-color-5-darken-30"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-5-darken-40</pre>
+		        </td>
+		        <td>
+		          $dj-color-5 @40%
+		        </td>
+		        <td class="cell-color-5-darken-40"></td>
+		      </tr>
+
+		      <tr>
+		        <td>
+		          <pre>$dj-color-6-lighten-40</pre>
+		        </td>
+		        <td>
+		          $dj-color-6 @40%
+		        </td>
+		        <td class="cell-color-6-lighten-40"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-6-lighten-30</pre>
+		        </td>
+		        <td>
+		          $dj-color-6 @30%
+		        </td>
+		        <td class="cell-color-6-lighten-30"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-6-lighten-20</pre>
+		        </td>
+		        <td>
+		          $dj-color-6 @20%
+		        </td>
+		        <td class="cell-color-6-lighten-20"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-6-lighten-10</pre>
+		        </td>
+		        <td>
+		          $dj-color-6 @10%
+		        </td>
+		        <td class="cell-color-6-lighten-10"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-color-6-darken-10</pre>
+		        </td>
+		        <td>
+		          $dj-color-6 @10%
+		        </td>
+		        <td class="cell-color-6-darken-10"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-6-darken-20</pre>
+		        </td>
+		        <td>
+		          $dj-color-6 @20%
+		        </td>
+		        <td class="cell-color-6-darken-20"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-6-darken-30</pre>
+		        </td>
+		        <td>
+		          $dj-color-6 @30%
+		        </td>
+		        <td class="cell-color-6-darken-30"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-6-darken-40</pre>
+		        </td>
+		        <td>
+		          $dj-color-6 @40%
+		        </td>
+		        <td class="cell-color-6-darken-40"></td>
+		      </tr>
+
+		      <tr>
+		        <td>
+		          <pre>$dj-color-8-lighten-40</pre>
+		        </td>
+		        <td>
+		          $dj-color-7 @40%
+		        </td>
+		        <td class="cell-color-7-lighten-40"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-7-lighten-30</pre>
+		        </td>
+		        <td>
+		          $dj-color-7 @30%
+		        </td>
+		        <td class="cell-color-7-lighten-30"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-7-lighten-20</pre>
+		        </td>
+		        <td>
+		          $dj-color-7 @20%
+		        </td>
+		        <td class="cell-color-7-lighten-20"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-7-lighten-10</pre>
+		        </td>
+		        <td>
+		          $dj-color-7 @10%
+		        </td>
+		        <td class="cell-color-7-lighten-10"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-color-7-darken-10</pre>
+		        </td>
+		        <td>
+		          $dj-color-7 @10%
+		        </td>
+		        <td class="cell-color-7-darken-10"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-7-darken-20</pre>
+		        </td>
+		        <td>
+		          $dj-color-7 @20%
+		        </td>
+		        <td class="cell-color-7-darken-20"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-7-darken-30</pre>
+		        </td>
+		        <td>
+		          $dj-color-7 @30%
+		        </td>
+		        <td class="cell-color-7-darken-30"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-7-darken-40</pre>
+		        </td>
+		        <td>
+		          $dj-color-7 @40%
+		        </td>
+		        <td class="cell-color-7-darken-40"></td>
+		      </tr>
+
+		      <tr>
+		        <td>
+		          <pre>$dj-color-8-lighten-40</pre>
+		        </td>
+		        <td>
+		          $dj-color-8 @40%
+		        </td>
+		        <td class="cell-color-8-lighten-40"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-8-lighten-30</pre>
+		        </td>
+		        <td>
+		          $dj-color-8 @30%
+		        </td>
+		        <td class="cell-color-8-lighten-30"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-8-lighten-20</pre>
+		        </td>
+		        <td>
+		          $dj-color-8 @20%
+		        </td>
+		        <td class="cell-color-8-lighten-20"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-8-lighten-10</pre>
+		        </td>
+		        <td>
+		          $dj-color-8 @10%
+		        </td>
+		        <td class="cell-color-8-lighten-10"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-color-8-darken-10</pre>
+		        </td>
+		        <td>
+		          $dj-color-8 @10%
+		        </td>
+		        <td class="cell-color-8-darken-10"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-8-darken-20</pre>
+		        </td>
+		        <td>
+		          $dj-color-8 @20%
+		        </td>
+		        <td class="cell-color-8-darken-20"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-8-darken-30</pre>
+		        </td>
+		        <td>
+		          $dj-color-8 @30%
+		        </td>
+		        <td class="cell-color-8-darken-30"></td>
+		      </tr>
+		       <tr>
+		        <td>
+		          <pre>$dj-color-8-darken-40</pre>
+		        </td>
+		        <td>
+		          $dj-color-8 @40%
+		        </td>
+		        <td class="cell-color-8-darken-40"></td>
+		      </tr>
+		    </tbody>
+		  </table>
+
+		  <h3>Action colors</h3>
+		  <table class="table-code">
+		    <thead>
+		      <tr>
+		        <th>SCSS</th>
+		        <th>Value</th>
+		        <th>Example</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>
+		          <pre>$dj-primary-color</pre>
+		        </td>
+		        <td>
+		           #3448db
+		        </td>
+		        <td class="cell-color-2"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-info-color</pre>
+		        </td>
+		        <td>
+		          #3498db
+		        </td>
+		        <td class="cell-color-1"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-success-color</pre>
+		        </td>
+		        <td>
+		          #2ecc71
+		        </td>
+		        <td class="cell-color-3"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-warning-color</pre>
+		        </td>
+		        <td>
+		          #f1c40f
+		        </td>
+		        <td class="cell-color-5"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-danger-color</pre>
+		        </td>
+		        <td>
+		          #e74c3c
+		        </td>
+		        <td class="cell-color-7"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-diabled-color</pre>
+		        </td>
+		        <td>
+		          #eeeeee
+		        </td>
+		        <td class="cell-gray-e"></td>
+		      </tr>
+		    </tbody>
+		  </table>
+
+		  <h3>Link colors</h3>
+		  <table class="table-code">
+		    <thead>
+		      <tr>
+		        <th>SCSS</th>
+		        <th>Value</th>
+		        <th>Example</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>
+		          <pre>$dj-link-color</pre>
+		        </td>
+		        <td>
+		          $dj-color-
+		        </td>
+		        <td class="cell-color-1"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-hover-color</pre>
+		        </td>
+		        <td>
+		          $dj-color-
+		        </td>
+		        <td class="cell-color-1"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-active-color</pre>
+		        </td>
+		        <td>
+		          #e74c3c
+		        </td>
+		        <td class="cell-color-7"></td>
+		      </tr>
+		      <tr>
+		        <td>
+		          <pre>$dj-visited-color</pre>
+		        </td>
+		        <td>
+		          #aaaaaa
+		        </td>
+		        <td class="cell-gray-a"></td>
+		      </tr>
+		    </tbody>
+		  </table>
+
+
+      <h2 id="normalize">Normalize</h2>
+      <p>
+      	For cross browser compatiblity DJ uses <a href="http://necolas.github.io/normalize.css/">Normalize.css</a>, a project by <a href="http://nicolasgallagher.com/">Nicolas Gallagher</a>, co-created with <a href="http://music.thewikies.com/jonneal/">Jonathan Neal</a>.
+      </p>
+
+
+		  <h2 id="font-awesome">Font-Awesome</h2>
+		  <p>
+		  	DJ uses Font Awesome created by <a href="https://twitter.com/davegandy">Dave Gandy</a> for icons. More information and a full list of icons a can be found at <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>.
+		  </p>
+
+		  <h3>Inline icons</h3>
+      <div class="example">
+      	<i class="fa fa-camera-retro"></i> fa-camera-retro
+      </div>
+      <span>HTML</span>
+      <div class="html">
+      	<pre>
+&lt;i class="fa fa-camera-retro"&gt;&lt;/i&gt;</pre>
+      </div>
+
+      <h3>SCSS icons</h3>
+      <span>Exmaple</span>
+      <div class="example">
+      	<span class="icon"> Icon</span>
+      	<div class="icon-before"> Icon before</div>
+      	<div class="icon-after">Icon after </div>
+      	<span class="icon-before-after"> Icon before and after </span>
+      </div>
+
+      <span>HTML</span>
+      <div class="html">
+      	<pre>
+&lt;span class="icon"&gt; Icon&lt;/span&gt;
+&lt;div class="icon-before"&gt; Icon before&lt;/div&gt;
+&lt;div class="icon-after"&gt;Icon after &lt;/div&gt;
+&lt;span class="icon-before-after"&gt; Icon before and after &lt;/span&gt;</pre>
+      </div>
+      <span>HTML</span>
+      <div class="html">
+      	<pre>
+.icon:before {
+  @include dj-icon($fa-var-heart);
+}
+
+.icon-before {
+  @include dj-icon-before($fa-var-cog);
+}
+
+.icon-after {
+  @include dj-icon-after($fa-var-coffee);
+}
+
+.icon-before-after {
+  @include dj-icon-before-after($fa-var-flag, $fa-var-globe);
+}</pre>
+      </div>
+
+		  <h2 id="animations">Animation</h2>
+		  <p>
+		  	Aimation mixins inspired by <a href="https://daneden.me/animate/">animate.css</a> created by <a href="https://twitter.com/_dte">Daniel Eden</a>.
+		  </p>
+
+		<h3>Attention seeking</h3>
+		<div class="animation">
+			<div id="flash">
+				Flash
+			</div>
+			<div id="bounce">
+				Bounce
+			</div>
+			<div id="shake">
+				Shake
+			</div>
+			<div id="tada">
+				Tada
+			</div>
+			<div id="swing">
+				Swing
+			</div>
+			<div id="wobble">
+				Wobble
+			</div>
+			<div id="pulse">
+				Plulse
+			</div>
+			<div id="wiggle">
+				Wiggle
+			</div>
+		</div>
+
+		<h3>Bouncing</h3>
+		<div class="animation">
+			<div id="bounce-in">
+				Bounce In
+			</div>
+			<div id="bounce-in-up">
+				Bounce In Up
+			</div>
+			<div id="bounce-in-down">
+				Bounce In Down
+			</div>
+			<div id="bounce-in-left">
+				Bounce In Left
+			</div>
+			<div id="bounce-in-right">
+				Bounce In Right
+			</div>
+		</div>
+		<div class="animation">
+			<div id="bounce-out">
+				Bounce Out
+			</div>
+			<div id="bounce-out-up">
+				Bounce Out Up
+			</div>
+			<div id="bounce-out-down">
+				Bounce Out Down
+			</div>
+			<div id="bounce-out-left">
+				Bounce Out Left
+			</div>
+			<div id="bounce-out-right">
+				Bounce Out Right
+			</div>
+		</div>
+
+    <h3>Fading</h3>
+    <div class="animation">
+      <div id="fade-in">
+				Fade In
+			</div>
+			<div id="fade-in-up">
+				Fade In Up
+			</div>
+			<div id="fade-in-down">
+				Fade In Down
+			</div>
+			<div id="fade-in-left">
+				Fade In Left
+			</div>
+			<div id="fade-in-right">
+				Fade In Right
+			</div>
+    </div>
+		<div class="animation">
+			<div id="fade-in-up-big">
+				Fade In Up Big
+			</div>
+			<div id="fade-in-down-big">
+				Fade In Down Big
+			</div>
+			<div id="fade-in-left-big">
+				Fade In Left Big
+			</div>
+			<div id="fade-in-right-big">
+				Fade In Right Big
+			</div>
+    </div>
+
+    <div class="animation">
+      <div id="fade-out">
+				Fade Out
+			</div>
+			<div id="fade-out-up">
+				Fade Out Up
+			</div>
+			<div id="fade-out-down">
+				Fade Out Down
+			</div>
+			<div id="fade-out-left">
+				Fade Out Left
+			</div>
+			<div id="fade-out-right">
+				Fade Out Right
+			</div>
+    </div>
+		<div class="animation">
+			<div id="fade-out-up-big">
+				Fade Out Up Big
+			</div>
+			<div id="fade-out-down-big">
+				Fade Out Down Big
+			</div>
+			<div id="fade-out-left-big">
+				Fade Out Left Big
+			</div>
+			<div id="fade-out-right-big">
+				Fade Out Right Big
+			</div>
+    </div>
+    <div class="animation">
+    	<div id="fade-puff-in">
+				Fade In
+			</div>
+      <div id="fade-puff-out">
+				Fade Out
+			</div>
+    </div>
+
+    <h3>Flipping</h3>
+     <div class="animation">
+			<div id="flip">
+				Flip
+			</div>
+			<div id="flip-in-x">
+				Flip In X
+			</div>
+			<div id="flip-out-x">
+				Flip Out X
+			</div>
+			<div id="flip-in-y">
+				Flip In Y
+			</div>
+			<div id="flip-out-y">
+				Flip Out Y
+			</div>
+		</div>
+
+    <h3>Light Speed</h3>
+    <div class="animation">
+			<div id="light-speed-in">
+				Light Speed IN
+			</div>
+			<div id="light-speed-out">
+				Light Speed Out
+			</div>
+		</div>
+
+    <h3>Rotating</h3>
+    <div class="animation">
+			<div id="rotate-in">
+				Rotate In
+			</div>
+			<div id="rotate-in-up-left">
+				Rotate In Up Left
+			</div>
+			<div id="rotate-in-down-left">
+				Rotate In Down Left
+			</div>
+			<div id="rotate-in-up-right">
+				Rotate In Up Right
+			</div>
+			<div id="rotate-in-down-right">
+				Rotate In Down Right
+			</div>
+		</div>
+		<div class="animation">
+			<div id="rotate-out">
+				Rotate Out
+			</div>
+			<div id="rotate-out-up-left">
+				Rotate Out Up Left
+			</div>
+			<div id="rotate-out-down-left">
+				Rotate Out Down Left
+			</div>
+			<div id="rotate-out-up-right">
+				Rotate Out Up Right
+			</div>
+			<div id="rotate-out-down-right">
+				Rotate Out Down Right
+			</div>
+		</div>
+
+    <h3>Open and Close</h3>
+    <div class="animation">
+			<div id="open-up-left">
+				Open Up Left
+			</div>
+			<div id="open-up-right">
+				Open Up Right
+			</div>
+			<div id="open-down-left">
+				Open down Left
+			</div>
+			<div id="open-down-right">
+				Open down Right
+			</div>
+		</div>
+		<div class="animation">
+			<div id="open-up-left-out">
+				Open Up Left
+			</div>
+			<div id="open-up-right-out">
+				Open Up Right
+			</div>
+			<div id="open-down-left-out">
+				Open down Left
+			</div>
+			<div id="open-down-right-out">
+				Open down Right
+			</div>
+		</div>
+
+		<div class="animation">
+			<div id="close-up-left">
+				Close Up Left
+			</div>
+			<div id="close-up-right">
+				Close Up Right
+			</div>
+			<div id="close-down-left">
+				Close down Left
+			</div>
+			<div id="close-down-right">
+				Close down Right
+			</div>
+		</div>
+
+	    <h3>Specials</h3>
+	    <div class="animation">
+			<div id="hinge">
+				Hinge
+			</div>
+			<div id="roll-in">
+				Roll In
+			</div>
+			<div id="roll-out">
+				Roll Out
+			</div>
+		</div>
+
+		<h2 id="browser-support">Browser-Support</h2>
+		<p>
+			DJ supports Chrome, Safari, Firefox,  Opera, Internet Explorer 9+.
+			 <ul>
+			 		<li>
+			 			IE9 does not support placeholders, table round corners and flip table.
+			 		</li>
+			 		<li>Safari does not support image circle and adds a space between inline elements for button group, input groups and pagination.</li>
+			 	</ul>
+			</p>
+    <div class="footer">
+			Dj project by <a href="https://twitter.com/otissv">Otis Virginie</a><br>
+			DJ is licensed under the <a href="http://opensource.org/licenses/MIT">MIT license</a>.
+	  </div>
+	</div>
+
+
+
+
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/plugins.js -->
+        <!-- endbuild -->
+</body>
+</html>
