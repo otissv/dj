@@ -1,19 +1,20 @@
 DJ
 ==
 
-DJ is a set of mixins build in SCSS and Compass.
+DJ is a set of mixins built in SCSS and Compass.
 
 My first attemp at a library.  Done whilst learning  CSS and SASS.
 
 Concept
 -------
 
-The basic concept is quickly theme the UI by just changing variable.
+The basic concept is quickly re-theme the UI.
 
-Having everything as mixins.
-
-1. There are no class names to keeps HTML symantic.
-2. Reduces bloat. If the mixin is not included in a class then it will not be compiled.
+* There are no class names to help keep HTML symantic.
+* Reduces bloat by only compiling CSS mixins that you have included.
+* Quickly theme your app UI by just changing easily found variable.
+* Uses HTML5 and CSS3.
+* Works in all major modern browsers.
 
 
 Browser-Support
